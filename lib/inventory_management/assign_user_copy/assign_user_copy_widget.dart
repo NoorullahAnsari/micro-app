@@ -6,6 +6,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'assign_user_copy_model.dart';
 export 'assign_user_copy_model.dart';
@@ -56,12 +58,12 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
+        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
         child: FutureBuilder<List<UserManagementRow>>(
           future: FFAppState().activeUsers(
-            uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+            uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
             requestFn: () => UserManagementTable().queryRows(
               queryFn: (q) => q
                   .eq(
@@ -93,18 +95,18 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                 snapshot.data!;
             return Container(
               width: double.infinity,
-              constraints: const BoxConstraints(
+              constraints: BoxConstraints(
                 maxWidth: 570.0,
               ),
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).secondaryBackground,
                 borderRadius: BorderRadius.circular(12.0),
                 border: Border.all(
-                  color: const Color(0xFFE0E3E7),
+                  color: Color(0xFFE0E3E7),
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(24.0),
+                padding: EdgeInsets.all(24.0),
                 child: SingleChildScrollView(
                   primary: false,
                   child: Column(
@@ -116,7 +118,7 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                         children: [
                           Expanded(
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 12.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -161,7 +163,7 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                         desktop: false,
                       ))
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 16.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -176,9 +178,9 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                 ),
                                 options: FFButtonOptions(
                                   height: 40.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       24.0, 0.0, 24.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -209,9 +211,9 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                 options: FFButtonOptions(
                                   width: 130.0,
                                   height: 40.0,
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
-                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                  iconPadding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 0.0),
                                   color: FlutterFlowTheme.of(context).primary,
                                   textStyle: FlutterFlowTheme.of(context)
@@ -222,12 +224,12 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                   elevation: 3.0,
-                                  borderSide: const BorderSide(
+                                  borderSide: BorderSide(
                                     color: Colors.transparent,
                                     width: 1.0,
                                   ),
                                   borderRadius: BorderRadius.circular(8.0),
-                                  hoverColor: const Color(0xFF2B16ED),
+                                  hoverColor: Color(0xFF2B16ED),
                                   hoverTextColor: Colors.white,
                                 ),
                               ),
@@ -236,7 +238,7 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                         ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -247,7 +249,7 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                 focusNode: _model.textFieldFocusNode,
                                 onChanged: (_) => EasyDebounce.debounce(
                                   '_model.textController',
-                                  const Duration(milliseconds: 2000),
+                                  Duration(milliseconds: 2000),
                                   () async {
                                     safeSetState(() {
                                       _model.simpleSearchResults = TextSearch(
@@ -261,6 +263,7 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                           .search(_model.textController.text)
                                           .map((r) => r.object)
                                           .toList();
+                                      ;
                                     });
                                   },
                                 ),
@@ -336,7 +339,8 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                       ),
                       Builder(
                         builder: (context) {
-                          if (_model.textController.text == '') {
+                          if (_model.textController.text == null ||
+                              _model.textController.text == '') {
                             return Builder(
                               builder: (context) {
                                 final allUsers =
@@ -350,7 +354,7 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                             (allUsersIndex) {
                                       final allUsersItem =
                                           allUsers[allUsersIndex];
-                                      return SizedBox(
+                                      return Container(
                                         width: double.infinity,
                                         height: 70.0,
                                         child:
@@ -379,14 +383,14 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                                 .clearApprovalUsersCacheKey(
                                                     widget.authenticatedCompany
                                                         ?.id
-                                                        .toString());
+                                                        ?.toString());
                                             Navigator.pop(context);
                                           },
                                         ),
                                       );
                                     })
-                                        .divide(const SizedBox(height: 7.0))
-                                        .around(const SizedBox(height: 7.0)),
+                                        .divide(SizedBox(height: 7.0))
+                                        .around(SizedBox(height: 7.0)),
                                   ),
                                 );
                               },
@@ -407,7 +411,7 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                         (searchUserIndex) {
                                       final searchUserItem =
                                           searchUser[searchUserIndex];
-                                      return SizedBox(
+                                      return Container(
                                         width: double.infinity,
                                         height: 70.0,
                                         child:
@@ -436,7 +440,7 @@ class _AssignUserCopyWidgetState extends State<AssignUserCopyWidget> {
                                                 .clearApprovalUsersCacheKey(
                                                     widget.authenticatedCompany
                                                         ?.id
-                                                        .toString());
+                                                        ?.toString());
                                             Navigator.pop(context);
                                           },
                                         ),

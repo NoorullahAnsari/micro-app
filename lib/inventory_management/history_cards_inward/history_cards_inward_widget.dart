@@ -5,8 +5,11 @@ import '/flutter_flow/flutter_flow_data_table.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'history_cards_inward_model.dart';
 export 'history_cards_inward_model.dart';
 
@@ -56,7 +59,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
   Widget build(BuildContext context) {
     return FutureBuilder<List<UserManagementRow>>(
       future: FFAppState().companyUsers(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => UserManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -136,7 +139,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -205,7 +208,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                     containerInwardInventoryHistoryManagementRowList =
                     snapshot.data!;
                 return Container(
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -227,18 +230,18 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                         ),
                       Expanded(
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, -1.0),
+                          alignment: AlignmentDirectional(0.0, -1.0),
                           child: Container(
                             width: double.infinity,
-                            constraints: const BoxConstraints(
+                            constraints: BoxConstraints(
                               maxWidth: 1170.0,
                             ),
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       7.0, 10.0, 7.0, 0.0),
                                   child: SingleChildScrollView(
                                     child: Column(
@@ -254,7 +257,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                           Container(
                                             width: double.infinity,
                                             height: 24.0,
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                           ),
                                         if (responsiveVisibility(
                                           context: context,
@@ -262,7 +265,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                         ))
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 20.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -281,13 +284,13 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                   Expanded(
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   0.0,
                                                                   10.0,
                                                                   0.0),
-                                                      child: SizedBox(
+                                                      child: Container(
                                                         width: 300.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -381,7 +384,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                           12.0),
                                                             ),
                                                             contentPadding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         20.0,
                                                                         0.0,
@@ -435,11 +438,11 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 10.0, 0.0),
                                                     child: Column(
@@ -455,7 +458,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                         ))
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         0.0,
@@ -512,7 +515,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                       containerInwardInventoryHistoryManagementRowList
                                                           .toList();
                                                   if (values.isEmpty) {
-                                                    return const EmptyWidget();
+                                                    return EmptyWidget();
                                                   }
                                                   return FlutterFlowDataTable<
                                                       InwardInventoryHistoryManagementRow>(
@@ -716,7 +719,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                           .toList(),
                                                     ),
                                                     emptyBuilder: () =>
-                                                        const EmptyWidget(),
+                                                        EmptyWidget(),
                                                     paginated: true,
                                                     selectable: false,
                                                     hidePaginator: false,
@@ -758,9 +761,9 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                           ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Container(
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: SingleChildScrollView(
                                               scrollDirection: Axis.horizontal,
                                               child: Row(
@@ -779,7 +782,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Container(
                                                             height: 70.0,
@@ -789,7 +792,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                       .of(context)
                                                                   .accent1,
                                                               borderRadius:
-                                                                  const BorderRadius
+                                                                  BorderRadius
                                                                       .only(
                                                                 bottomLeft: Radius
                                                                     .circular(
@@ -807,7 +810,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                             ),
                                                             child: Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       -1.0,
                                                                       0.0),
                                                               child: Row(
@@ -819,7 +822,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                     width:
                                                                         200.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -833,7 +836,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                               .start,
                                                                       children: [
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -855,7 +858,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                     width:
                                                                         200.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -869,7 +872,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                               .start,
                                                                       children: [
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -891,7 +894,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                     width:
                                                                         200.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -905,7 +908,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                               .start,
                                                                       children: [
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -927,7 +930,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                     width:
                                                                         200.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -941,7 +944,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                               .start,
                                                                       children: [
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -960,10 +963,10 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                     ),
                                                                   ),
                                                                 ]
-                                                                    .divide(const SizedBox(
+                                                                    .divide(SizedBox(
                                                                         width:
                                                                             12.0))
-                                                                    .around(const SizedBox(
+                                                                    .around(SizedBox(
                                                                         width:
                                                                             12.0)),
                                                               ),
@@ -1000,13 +1003,13 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                             valueIndex];
                                                                     return Container(
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Container(
                                                                         height:
                                                                             60.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Row(
                                                                           mainAxisSize:
@@ -1015,7 +1018,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                               [
                                                                             Container(
                                                                               width: 200.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
@@ -1031,7 +1034,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                             ),
                                                                             Container(
                                                                               width: 200.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1049,7 +1052,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                             ),
                                                                             Container(
                                                                               width: 200.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1071,7 +1074,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                             ),
                                                                             Container(
                                                                               width: 200.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -1087,7 +1090,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                                                                 ],
                                                                               ),
                                                                             ),
-                                                                          ].divide(const SizedBox(width: 12.0)).around(const SizedBox(width: 12.0)),
+                                                                          ].divide(SizedBox(width: 12.0)).around(SizedBox(width: 12.0)),
                                                                         ),
                                                                       ),
                                                                     );
@@ -1105,7 +1108,7 @@ class _HistoryCardsInwardWidgetState extends State<HistoryCardsInwardWidget> {
                                             ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(height: 10.0)),
+                                      ].divide(SizedBox(height: 10.0)),
                                     ),
                                   ),
                                 ),

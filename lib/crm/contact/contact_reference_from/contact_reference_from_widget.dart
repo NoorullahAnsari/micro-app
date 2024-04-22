@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'contact_reference_from_model.dart';
 export 'contact_reference_from_model.dart';
@@ -51,19 +52,19 @@ class _ContactReferenceFromWidgetState
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Color(0xB20B191E),
       ),
       child: Align(
-        alignment: const AlignmentDirectional(0.0, 1.0),
+        alignment: AlignmentDirectional(0.0, 1.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             Align(
-              alignment: const AlignmentDirectional(1.0, 0.0),
+              alignment: AlignmentDirectional(1.0, 0.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 16.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 16.0),
                 child: FlutterFlowIconButton(
                   borderRadius: 30.0,
                   borderWidth: 1.0,
@@ -83,7 +84,7 @@ class _ContactReferenceFromWidgetState
             Material(
               color: Colors.transparent,
               elevation: 5.0,
-              shape: const RoundedRectangleBorder(
+              shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(0.0),
                   bottomRight: Radius.circular(0.0),
@@ -95,7 +96,7 @@ class _ContactReferenceFromWidgetState
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(0.0),
                     bottomRight: Radius.circular(0.0),
                     topLeft: Radius.circular(16.0),
@@ -105,7 +106,7 @@ class _ContactReferenceFromWidgetState
                 child: Stack(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -181,9 +182,9 @@ class _ContactReferenceFromWidgetState
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(10.0, 70.0, 10.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(10.0, 70.0, 10.0, 0.0),
                       child: Container(
-                        constraints: const BoxConstraints(
+                        constraints: BoxConstraints(
                           minHeight: 700.0,
                           maxHeight: 700.0,
                         ),
@@ -200,7 +201,7 @@ class _ContactReferenceFromWidgetState
                                 children:
                                     List.generate(vaalue.length, (vaalueIndex) {
                                   final vaalueItem = vaalue[vaalueIndex];
-                                  return SizedBox(
+                                  return Container(
                                     width: double.infinity,
                                     height: 70.0,
                                     child: custom_widgets.CustomProfileWidget(
@@ -211,7 +212,7 @@ class _ContactReferenceFromWidgetState
                                       onClick: () async {},
                                     ),
                                   );
-                                }).divide(const SizedBox(height: 10.0)),
+                                }).divide(SizedBox(height: 10.0)),
                               ),
                             );
                           },

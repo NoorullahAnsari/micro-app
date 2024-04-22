@@ -1,9 +1,34 @@
+import '/backend/supabase/supabase.dart';
+import '/common_components/tree_structure/tree_structure_widget.dart';
 import '/components/side_nav_widget.dart';
+import '/crm/contact/contacts_action/contacts_action_widget.dart';
+import '/crm/contact/define_contact_types/define_contact_types_widget.dart';
+import '/crm/contact/edit_contact/edit_contact_widget.dart';
+import '/crm/contact/filter_for_contacts/filter_for_contacts_widget.dart';
+import '/crm/contact/import_export_action/import_export_action_widget.dart';
+import '/crm/contact/view_contact/view_contact_widget.dart';
+import '/crm/leads/filter_for_leads/filter_for_leads_widget.dart';
+import '/crm/leads/leads_action/leads_action_widget.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'c_r_m_dashboard_widget.dart' show CRMDashboardWidget;
+import 'package:aligned_tooltip/aligned_tooltip.dart';
+import 'package:aligned_dialog/aligned_dialog.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 
 class CRMDashboardModel extends FlutterFlowModel<CRMDashboardWidget> {
   ///  State fields for stateful widgets in this page.

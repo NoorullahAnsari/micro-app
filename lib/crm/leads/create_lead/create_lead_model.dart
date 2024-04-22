@@ -1,9 +1,22 @@
+import '/backend/supabase/supabase.dart';
+import '/common_components/add_parameters/add_parameters_widget.dart';
 import '/components/side_nav_widget.dart';
+import '/crm/contact/create_contact_component/create_contact_component_widget.dart';
+import '/crm/leads/add_tag_component_leads/add_tag_component_leads_widget.dart';
+import '/crm/leads/lead_source/lead_source_widget.dart';
 import '/flutter_flow/flutter_flow_data_table.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'create_lead_widget.dart' show CreateLeadWidget;
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class CreateLeadModel extends FlutterFlowModel<CreateLeadWidget> {
   ///  State fields for stateful widgets in this page.

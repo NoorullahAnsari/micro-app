@@ -1,8 +1,19 @@
+import '/backend/supabase/supabase.dart';
 import '/components/side_nav_widget.dart';
+import '/crm/contact/add_tag_component_contacts/add_tag_component_contacts_widget.dart';
+import '/crm/contact/contact_reference_from/contact_reference_from_widget.dart';
+import '/crm/contact/create_contact_component/create_contact_component_widget.dart';
+import '/flutter_flow/flutter_flow_choice_chips.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'create_contact_widget.dart' show CreateContactWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class CreateContactModel extends FlutterFlowModel<CreateContactWidget> {
   ///  State fields for stateful widgets in this page.

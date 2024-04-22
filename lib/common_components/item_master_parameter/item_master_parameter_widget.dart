@@ -7,6 +7,7 @@ import '/item_management/define_parameter_inventory/define_parameter_inventory_w
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'item_master_parameter_model.dart';
 export 'item_master_parameter_model.dart';
@@ -73,13 +74,13 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
     context.watch<FFAppState>();
 
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Container(
         width: double.infinity,
         height: double.infinity,
-        decoration: const BoxDecoration(),
+        decoration: BoxDecoration(),
         child: Align(
-          alignment: const AlignmentDirectional(0.0, 0.0),
+          alignment: AlignmentDirectional(0.0, 0.0),
           child: SingleChildScrollView(
             primary: false,
             child: Column(
@@ -87,14 +88,14 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                   child: Container(
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 500.0,
                     ),
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
-                      boxShadow: const [
+                      boxShadow: [
                         BoxShadow(
                           blurRadius: 4.0,
                           color: Color(0x33000000),
@@ -107,7 +108,7 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                       borderRadius: BorderRadius.circular(20.0),
                     ),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Form(
                         key: _model.formKey,
                         autovalidateMode: AutovalidateMode.always,
@@ -117,9 +118,9 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                alignment: AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 0.0, 15.0),
                                   child: AutoSizeText(
                                     FFLocalizations.of(context).getText(
@@ -139,9 +140,9 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                 ),
                               ),
                               Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 20.0, 0.0),
                                   child: SingleChildScrollView(
                                     child: Column(
@@ -192,7 +193,7 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                                                       rowItem
                                                                   ? (widget
                                                                           .dropdown
-                                                                          ?.dropdownValues[
+                                                                          ?.dropdownValues?[
                                                                       rowItem])
                                                                   : '',
                                                             ),
@@ -223,23 +224,23 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                                             size: 30.0,
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 10.0)),
                                                     );
                                                   }).divide(
-                                                      const SizedBox(height: 7.0)),
+                                                      SizedBox(height: 7.0)),
                                                 );
                                               },
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
-                                      ].divide(const SizedBox(height: 10.0)),
+                                      ].divide(SizedBox(height: 10.0)),
                                     ),
                                   ),
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -247,7 +248,7 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.05),
+                                            AlignmentDirectional(0.0, 0.05),
                                         child: FFButtonWidget(
                                           onPressed: () async {
                                             Navigator.pop(context);
@@ -260,10 +261,10 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                             width: 240.0,
                                             height: 40.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .alternate,
@@ -278,7 +279,7 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                                               .primaryText,
                                                       letterSpacing: 0.0,
                                                     ),
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Colors.transparent,
                                               width: 1.0,
                                             ),
@@ -291,7 +292,7 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.05),
+                                            AlignmentDirectional(0.0, 0.05),
                                         child: Builder(
                                           builder: (context) => FFButtonWidget(
                                             onPressed: () async {
@@ -305,7 +306,7 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                                     backgroundColor:
                                                         Colors.transparent,
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                                 0.0, 0.0)
                                                             .resolve(
                                                                 Directionality.of(
@@ -334,9 +335,9 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                             options: FFButtonOptions(
                                               width: 240.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -352,7 +353,7 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                               elevation: 2.0,
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -364,14 +365,14 @@ class _ItemMasterParameterWidgetState extends State<ItemMasterParameterWidget> {
                                       ),
                                     ),
                                   ]
-                                      .divide(const SizedBox(width: 10.0))
-                                      .around(const SizedBox(width: 10.0)),
+                                      .divide(SizedBox(width: 10.0))
+                                      .around(SizedBox(width: 10.0)),
                                 ),
                               ),
                             ]
-                                .divide(const SizedBox(height: 10.0))
-                                .addToStart(const SizedBox(height: 15.0))
-                                .addToEnd(const SizedBox(height: 15.0)),
+                                .divide(SizedBox(height: 10.0))
+                                .addToStart(SizedBox(height: 15.0))
+                                .addToEnd(SizedBox(height: 15.0)),
                           ),
                         ),
                       ),

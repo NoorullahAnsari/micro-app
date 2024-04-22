@@ -1,7 +1,10 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'inve_model.dart';
 export 'inve_model.dart';
 
@@ -49,7 +52,7 @@ class _InveWidgetState extends State<InveWidget> {
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
               size: 30.0,
@@ -69,7 +72,7 @@ class _InveWidgetState extends State<InveWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: true,
           elevation: 2.0,
         ),
@@ -91,12 +94,12 @@ class _InveWidgetState extends State<InveWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                            alignment: AlignmentDirectional(-1.0, 0.0),
                             child: Container(
                               height: 70.0,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context).accent1,
-                                borderRadius: const BorderRadius.only(
+                                borderRadius: BorderRadius.only(
                                   bottomLeft: Radius.circular(0.0),
                                   bottomRight: Radius.circular(0.0),
                                   topLeft: Radius.circular(16.0),
@@ -104,13 +107,13 @@ class _InveWidgetState extends State<InveWidget> {
                                 ),
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                alignment: AlignmentDirectional(-1.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Container(
                                       width: 150.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -138,7 +141,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 150.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -166,7 +169,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -174,7 +177,7 @@ class _InveWidgetState extends State<InveWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(-1.0, 0.0),
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
@@ -198,7 +201,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -206,7 +209,7 @@ class _InveWidgetState extends State<InveWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(-1.0, 0.0),
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
@@ -230,7 +233,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -238,7 +241,7 @@ class _InveWidgetState extends State<InveWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(-1.0, 0.0),
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
@@ -262,7 +265,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 100.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -290,7 +293,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 100.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -318,7 +321,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -346,7 +349,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -374,7 +377,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -402,7 +405,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -430,7 +433,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -458,7 +461,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     ),
                                     Container(
                                       width: 120.0,
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -485,8 +488,8 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                     ),
                                   ]
-                                      .divide(const SizedBox(width: 10.0))
-                                      .around(const SizedBox(width: 10.0)),
+                                      .divide(SizedBox(width: 10.0))
+                                      .around(SizedBox(width: 10.0)),
                                 ),
                               ),
                             ),
@@ -497,10 +500,10 @@ class _InveWidgetState extends State<InveWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Container(
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     minHeight: 50.0,
                                   ),
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
@@ -508,7 +511,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     children: [
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -549,7 +552,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -576,7 +579,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -601,7 +604,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -626,7 +629,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -651,7 +654,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -676,7 +679,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -701,7 +704,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -726,7 +729,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -751,7 +754,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -776,7 +779,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -801,7 +804,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -826,7 +829,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -850,15 +853,15 @@ class _InveWidgetState extends State<InveWidget> {
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                                 Container(
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     minHeight: 50.0,
                                   ),
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
@@ -866,7 +869,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     children: [
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -907,7 +910,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -934,7 +937,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -959,7 +962,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -984,7 +987,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1009,7 +1012,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1034,7 +1037,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1059,7 +1062,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1084,7 +1087,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1109,7 +1112,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1134,7 +1137,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1159,7 +1162,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1184,7 +1187,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1208,15 +1211,15 @@ class _InveWidgetState extends State<InveWidget> {
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                                 Container(
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     minHeight: 50.0,
                                   ),
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
@@ -1224,7 +1227,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     children: [
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1265,7 +1268,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1292,7 +1295,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1317,7 +1320,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1342,7 +1345,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1367,7 +1370,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1392,7 +1395,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1417,7 +1420,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1442,7 +1445,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1467,7 +1470,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1492,7 +1495,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1517,7 +1520,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1542,7 +1545,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1566,15 +1569,15 @@ class _InveWidgetState extends State<InveWidget> {
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                                 Container(
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     minHeight: 50.0,
                                   ),
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
@@ -1582,7 +1585,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     children: [
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1623,7 +1626,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1650,7 +1653,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1675,7 +1678,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1700,7 +1703,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1725,7 +1728,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1750,7 +1753,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1775,7 +1778,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1800,7 +1803,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1825,7 +1828,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1850,7 +1853,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1875,7 +1878,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1900,7 +1903,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1924,15 +1927,15 @@ class _InveWidgetState extends State<InveWidget> {
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                                 Container(
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     minHeight: 50.0,
                                   ),
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
@@ -1940,7 +1943,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     children: [
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -1981,7 +1984,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2008,7 +2011,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2033,7 +2036,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2058,7 +2061,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2083,7 +2086,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2108,7 +2111,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2133,7 +2136,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2158,7 +2161,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2183,7 +2186,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2208,7 +2211,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2233,7 +2236,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2258,7 +2261,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2282,15 +2285,15 @@ class _InveWidgetState extends State<InveWidget> {
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                                 Container(
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     minHeight: 50.0,
                                   ),
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
@@ -2298,7 +2301,7 @@ class _InveWidgetState extends State<InveWidget> {
                                     children: [
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2339,7 +2342,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 150.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2366,7 +2369,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2391,7 +2394,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2416,7 +2419,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2441,7 +2444,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2466,7 +2469,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 100.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2491,7 +2494,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2516,7 +2519,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2541,7 +2544,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2566,7 +2569,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2591,7 +2594,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2616,7 +2619,7 @@ class _InveWidgetState extends State<InveWidget> {
                                       ),
                                       Container(
                                         width: 120.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Column(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -2640,8 +2643,8 @@ class _InveWidgetState extends State<InveWidget> {
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                               ],

@@ -10,6 +10,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'edit_contact_model.dart';
 export 'edit_contact_model.dart';
 
@@ -89,21 +91,21 @@ class _EditContactWidgetState extends State<EditContactWidget> {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
             child: Container(
-              constraints: const BoxConstraints(
+              constraints: BoxConstraints(
                 maxWidth: 670.0,
                 maxHeight: 530.0,
               ),
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
                     blurRadius: 4.0,
                     color: Color(0x33000000),
@@ -116,15 +118,15 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                         child: AutoSizeText(
                           FFLocalizations.of(context).getText(
                             'ara1qbu3' /* Edit Contact : */,
@@ -142,12 +144,12 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                       ),
                     ),
                     Container(
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxHeight: 380.0,
                       ),
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 0.0, 20.0, 0.0),
                         child: SingleChildScrollView(
                           child: Column(
@@ -155,14 +157,14 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     Expanded(
-                                      child: SizedBox(
+                                      child: Container(
                                         width: 120.0,
                                         child: TextFormField(
                                           controller:
@@ -255,7 +257,7 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                       ),
                                     ),
                                     Expanded(
-                                      child: SizedBox(
+                                      child: Container(
                                         width:
                                             MediaQuery.sizeOf(context).width *
                                                 0.3,
@@ -351,7 +353,7 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 10.0)),
+                                  ].divide(SizedBox(width: 10.0)),
                                 ),
                               ),
                               Row(
@@ -441,7 +443,7 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                     ),
                                   ),
                                   Flexible(
-                                    child: SizedBox(
+                                    child: Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.53,
                                       child: TextFormField(
@@ -534,14 +536,14 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 10.0)),
+                                ].divide(SizedBox(width: 10.0)),
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
                                   Expanded(
-                                    child: SizedBox(
+                                    child: Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.3,
                                       child: TextFormField(
@@ -634,7 +636,7 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                     ),
                                   ),
                                   Expanded(
-                                    child: SizedBox(
+                                    child: Container(
                                       width: MediaQuery.sizeOf(context).width *
                                           0.3,
                                       child: TextFormField(
@@ -726,7 +728,7 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 7.0)),
+                                ].divide(SizedBox(width: 7.0)),
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -815,7 +817,7 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                     ),
                                   ),
                                   Expanded(
-                                    child: SizedBox(
+                                    child: Container(
                                       width: 120.0,
                                       child: TextFormField(
                                         controller: _model
@@ -907,7 +909,7 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                       ),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 10.0)),
+                                ].divide(SizedBox(width: 10.0)),
                               ),
                               Wrap(
                                 spacing: 10.0,
@@ -1119,14 +1121,14 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                                 .alternate,
                                         borderWidth: 2.0,
                                         borderRadius: 8.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 4.0, 16.0, 4.0),
                                         hidesUnderline: true,
                                         isOverButton: true,
                                         isSearchable: true,
                                         isMultiSelect: false,
                                       ),
-                                    ].divide(const SizedBox(height: 10.0)),
+                                    ].divide(SizedBox(height: 10.0)),
                                   ),
                                   Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -1215,14 +1217,14 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                                 .alternate,
                                         borderWidth: 2.0,
                                         borderRadius: 8.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 4.0, 16.0, 4.0),
                                         hidesUnderline: true,
                                         isOverButton: true,
                                         isSearchable: true,
                                         isMultiSelect: false,
                                       ),
-                                    ].divide(const SizedBox(height: 10.0)),
+                                    ].divide(SizedBox(height: 10.0)),
                                   ),
                                 ],
                               ),
@@ -1323,14 +1325,14 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                                 .alternate,
                                         borderWidth: 2.0,
                                         borderRadius: 8.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 4.0, 16.0, 4.0),
                                         hidesUnderline: true,
                                         isOverButton: true,
                                         isSearchable: true,
                                         isMultiSelect: false,
                                       ),
-                                    ].divide(const SizedBox(height: 10.0)),
+                                    ].divide(SizedBox(height: 10.0)),
                                   ),
                                   Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -1416,14 +1418,14 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                                 .alternate,
                                         borderWidth: 2.0,
                                         borderRadius: 8.0,
-                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                        margin: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 4.0, 16.0, 4.0),
                                         hidesUnderline: true,
                                         isOverButton: true,
                                         isSearchable: true,
                                         isMultiSelect: false,
                                       ),
-                                    ].divide(const SizedBox(height: 10.0)),
+                                    ].divide(SizedBox(height: 10.0)),
                                   ),
                                 ],
                               ),
@@ -1661,7 +1663,7 @@ class _EditContactWidgetState extends State<EditContactWidget> {
                                           .asValidator(context),
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 7.0)),
+                                ].divide(SizedBox(width: 7.0)),
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1684,7 +1686,7 @@ from: */
                                   ),
                                   Expanded(
                                     child: Container(
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
                                         focusColor: Colors.transparent,
@@ -1702,7 +1704,7 @@ from: */
                                                     MediaQuery.viewInsetsOf(
                                                         context),
                                                 child:
-                                                    const ContactReferenceFromWidget(),
+                                                    ContactReferenceFromWidget(),
                                               );
                                             },
                                           ).then(
@@ -1720,7 +1722,7 @@ from: */
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: const EdgeInsets.all(10.0),
+                                            padding: EdgeInsets.all(10.0),
                                             child: Text(
                                               FFLocalizations.of(context)
                                                   .getText(
@@ -1763,7 +1765,7 @@ from: */
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -1780,7 +1782,7 @@ from: */
                                       },
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 10.0)),
+                                ].divide(SizedBox(width: 10.0)),
                               ),
                               Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1853,7 +1855,7 @@ from: */
                                           .alternate,
                                       borderWidth: 2.0,
                                       borderRadius: 8.0,
-                                      margin: const EdgeInsetsDirectional.fromSTEB(
+                                      margin: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 4.0, 16.0, 4.0),
                                       hidesUnderline: true,
                                       isOverButton: true,
@@ -1884,7 +1886,7 @@ from: */
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -1901,9 +1903,9 @@ from: */
                                       },
                                     ),
                                   ),
-                                ].divide(const SizedBox(width: 7.0)),
+                                ].divide(SizedBox(width: 7.0)),
                               ),
-                            ].divide(const SizedBox(height: 10.0)),
+                            ].divide(SizedBox(height: 10.0)),
                           ),
                         ),
                       ),
@@ -1913,7 +1915,7 @@ from: */
                       children: [
                         Expanded(
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.05),
+                            alignment: AlignmentDirectional(0.0, 0.05),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 Navigator.pop(context);
@@ -1924,9 +1926,9 @@ from: */
                               options: FFButtonOptions(
                                 width: 240.0,
                                 height: 40.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).alternate,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -1937,7 +1939,7 @@ from: */
                                           .primaryText,
                                       letterSpacing: 0.0,
                                     ),
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -1948,7 +1950,7 @@ from: */
                         ),
                         Expanded(
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.05),
+                            alignment: AlignmentDirectional(0.0, 0.05),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 Navigator.pop(context);
@@ -1959,9 +1961,9 @@ from: */
                               options: FFButtonOptions(
                                 width: 240.0,
                                 height: 40.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).secondary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -1973,7 +1975,7 @@ from: */
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 2.0,
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -1983,12 +1985,12 @@ from: */
                           ),
                         ),
                       ]
-                          .divide(const SizedBox(width: 10.0))
-                          .around(const SizedBox(width: 10.0)),
+                          .divide(SizedBox(width: 10.0))
+                          .around(SizedBox(width: 10.0)),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 15.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 15.0)),
                 ),
               ),
             ),

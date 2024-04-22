@@ -6,6 +6,7 @@ import '/item_management/itemparameter/itemparameter_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_item_model.dart';
 export 'create_item_model.dart';
@@ -82,9 +83,9 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Align(
-        alignment: const AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: SingleChildScrollView(
           primary: false,
           child: Column(
@@ -92,14 +93,14 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                 child: Container(
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 500.0,
                   ),
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x33000000),
@@ -112,7 +113,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Form(
                       key: _model.formKey,
                       autovalidateMode: AutovalidateMode.disabled,
@@ -122,9 +123,9 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 15.0),
                                 child: AutoSizeText(
                                   FFLocalizations.of(context).getText(
@@ -144,9 +145,9 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                               ),
                             ),
                             Container(
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 20.0, 0.0),
                                 child: SingleChildScrollView(
                                   child: Column(
@@ -161,7 +162,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Expanded(
-                                                child: SizedBox(
+                                                child: Container(
                                                   width:
                                                       MediaQuery.sizeOf(context)
                                                               .width *
@@ -275,7 +276,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 10.0)),
+                                            ].divide(SizedBox(width: 10.0)),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -390,7 +391,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                 ),
                                               ),
                                               Expanded(
-                                                child: SizedBox(
+                                                child: Container(
                                                   width:
                                                       MediaQuery.sizeOf(context)
                                                               .width *
@@ -504,7 +505,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 7.0)),
+                                            ].divide(SizedBox(width: 7.0)),
                                           ),
                                           Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -513,7 +514,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Expanded(
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: 150.0,
                                                       child: TextFormField(
                                                         controller: _model
@@ -637,7 +638,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                     ),
                                                   ),
                                                   Expanded(
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
@@ -767,15 +768,15 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 7.0)),
+                                                ].divide(SizedBox(width: 7.0)),
                                               ),
-                                            ].divide(const SizedBox(height: 5.0)),
+                                            ].divide(SizedBox(height: 5.0)),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Expanded(
-                                                child: SizedBox(
+                                                child: Container(
                                                   width:
                                                       MediaQuery.sizeOf(context)
                                                               .width *
@@ -890,7 +891,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                 ),
                                               ),
                                               Expanded(
-                                                child: SizedBox(
+                                                child: Container(
                                                   width:
                                                       MediaQuery.sizeOf(context)
                                                               .width *
@@ -1004,15 +1005,15 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 7.0)),
+                                            ].divide(SizedBox(width: 7.0)),
                                           ),
                                           Container(
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: Builder(
                                               builder: (context) {
                                                 final values = widget.dropdown
                                                         ?.dropdownValues
-                                                        .toList() ??
+                                                        ?.toList() ??
                                                     [];
                                                 return SingleChildScrollView(
                                                   primary: false,
@@ -1060,31 +1061,31 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                               child:
                                                                   ItemparameterWidget(
                                                                 key: Key(
-                                                                  'Key27x_$valuesItem',
+                                                                  'Key27x_${valuesItem}',
                                                                 ),
                                                                 readOnly: false,
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 10.0)),
                                                       );
                                                     }).divide(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                                   ),
                                                 );
                                               },
                                             ),
                                           ),
-                                        ].divide(const SizedBox(height: 10.0)),
+                                        ].divide(SizedBox(height: 10.0)),
                                       ),
-                                    ].divide(const SizedBox(height: 10.0)),
+                                    ].divide(SizedBox(height: 10.0)),
                                   ),
                                 ),
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -1092,7 +1093,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                   Expanded(
                                     child: Align(
                                       alignment:
-                                          const AlignmentDirectional(0.0, 0.05),
+                                          AlignmentDirectional(0.0, 0.05),
                                       child: FFButtonWidget(
                                         onPressed: () async {
                                           Navigator.pop(context);
@@ -1105,10 +1106,10 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                           width: 240.0,
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
@@ -1122,7 +1123,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                         .primaryText,
                                                 letterSpacing: 0.0,
                                               ),
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -1135,7 +1136,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                   Expanded(
                                     child: Align(
                                       alignment:
-                                          const AlignmentDirectional(0.0, 0.05),
+                                          AlignmentDirectional(0.0, 0.05),
                                       child: FFButtonWidget(
                                         onPressed: () async {
                                           if (_model.formKey.currentState ==
@@ -1225,7 +1226,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                           }
                                           FFAppState().clearItemsCacheKey(widget
                                               .authenticatedCompany?.id
-                                              .toString());
+                                              ?.toString());
 
                                           context.pushNamed(
                                             'ItemMaster',
@@ -1264,10 +1265,10 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                           width: 240.0,
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .secondary,
@@ -1282,7 +1283,7 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                           elevation: 2.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -1293,13 +1294,13 @@ class _CreateItemWidgetState extends State<CreateItemWidget> {
                                     ),
                                   ),
                                 ]
-                                    .divide(const SizedBox(width: 10.0))
-                                    .around(const SizedBox(width: 10.0)),
+                                    .divide(SizedBox(width: 10.0))
+                                    .around(SizedBox(width: 10.0)),
                               ),
                             ),
                           ]
-                              .addToStart(const SizedBox(height: 15.0))
-                              .addToEnd(const SizedBox(height: 15.0)),
+                              .addToStart(SizedBox(height: 15.0))
+                              .addToEnd(SizedBox(height: 15.0)),
                         ),
                       ),
                     ),

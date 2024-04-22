@@ -10,7 +10,7 @@ class UserManagementTable extends SupabaseTable<UserManagementRow> {
 }
 
 class UserManagementRow extends SupabaseDataRow {
-  UserManagementRow(super.data);
+  UserManagementRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => UserManagementTable();

@@ -1,3 +1,4 @@
+import '/backend/schema/structs/index.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
@@ -9,6 +10,7 @@ import '/inventory_management/add_item_in_outward_lot_wise/add_item_in_outward_l
 import '/item_management/itemparameter/itemparameter_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_outward_material_model.dart';
 export 'create_outward_material_model.dart';
@@ -98,7 +100,7 @@ class _CreateOutwardMaterialWidgetState
 
     return FutureBuilder<List<ItemManagementRow>>(
       future: FFAppState().items(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => ItemManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -179,7 +181,7 @@ class _CreateOutwardMaterialWidgetState
                         ),
                       }.withoutNulls,
                       extra: <String, dynamic>{
-                        kTransitionInfoKey: const TransitionInfo(
+                        kTransitionInfoKey: TransitionInfo(
                           hasTransition: true,
                           transitionType: PageTransitionType.fade,
                           duration: Duration(milliseconds: 0),
@@ -202,7 +204,7 @@ class _CreateOutwardMaterialWidgetState
                   desktop: false,
                 ),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'hlo5av08' /* Outward Material */,
@@ -218,7 +220,7 @@ class _CreateOutwardMaterialWidgetState
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -280,13 +282,13 @@ class _CreateOutwardMaterialWidgetState
                     flex: 2,
                     child: Container(
                       width: double.infinity,
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         minWidth: 350.0,
                       ),
-                      decoration: const BoxDecoration(),
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      decoration: BoxDecoration(),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, -1.0),
+                        alignment: AlignmentDirectional(0.0, -1.0),
                         child: SingleChildScrollView(
                           primary: false,
                           child: Column(
@@ -302,11 +304,11 @@ class _CreateOutwardMaterialWidgetState
                                 Container(
                                   width: double.infinity,
                                   height: 24.0,
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                 ),
                               Container(
                                 width: double.infinity,
-                                constraints: const BoxConstraints(
+                                constraints: BoxConstraints(
                                   maxWidth: 1000.0,
                                 ),
                                 decoration: BoxDecoration(
@@ -314,7 +316,7 @@ class _CreateOutwardMaterialWidgetState
                                       .secondaryBackground,
                                 ),
                                 child: Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     crossAxisAlignment:
@@ -327,7 +329,7 @@ class _CreateOutwardMaterialWidgetState
                                       ))
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 12.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -383,7 +385,7 @@ class _CreateOutwardMaterialWidgetState
                                                     }.withoutNulls,
                                                     extra: <String, dynamic>{
                                                       kTransitionInfoKey:
-                                                          const TransitionInfo(
+                                                          TransitionInfo(
                                                         hasTransition: true,
                                                         transitionType:
                                                             PageTransitionType
@@ -415,7 +417,7 @@ class _CreateOutwardMaterialWidgetState
                                                           letterSpacing: 0.0,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(width: 30.0)),
+                                            ].divide(SizedBox(width: 30.0)),
                                           ),
                                         ),
                                       Form(
@@ -423,7 +425,7 @@ class _CreateOutwardMaterialWidgetState
                                         autovalidateMode:
                                             AutovalidateMode.disabled,
                                         child: Padding(
-                                          padding: const EdgeInsets.all(20.0),
+                                          padding: EdgeInsets.all(20.0),
                                           child: SingleChildScrollView(
                                             primary: false,
                                             child: Column(
@@ -480,7 +482,7 @@ class _CreateOutwardMaterialWidgetState
                                                                   FormFieldController<
                                                                           String>(
                                                                       null),
-                                                              options: const <String>[],
+                                                              options: <String>[],
                                                               onChanged: (val) =>
                                                                   setState(() =>
                                                                       _model.inwardTypeValue1 =
@@ -548,7 +550,7 @@ class _CreateOutwardMaterialWidgetState
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -564,18 +566,18 @@ class _CreateOutwardMaterialWidgetState
                                                                   false,
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 10.0)),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 7.0)),
+                                                        SizedBox(height: 7.0)),
                                                   ),
                                                 Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
                                                     Expanded(
-                                                      child: SizedBox(
+                                                      child: Container(
                                                         width: 120.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -697,7 +699,7 @@ class _CreateOutwardMaterialWidgetState
                                                       ),
                                                     ),
                                                     Expanded(
-                                                      child: SizedBox(
+                                                      child: Container(
                                                         width: 120.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -819,14 +821,14 @@ class _CreateOutwardMaterialWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 10.0)),
+                                                      SizedBox(width: 10.0)),
                                                 ),
                                                 Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
                                                     Expanded(
-                                                      child: SizedBox(
+                                                      child: Container(
                                                         width: 120.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -948,7 +950,7 @@ class _CreateOutwardMaterialWidgetState
                                                       ),
                                                     ),
                                                     Expanded(
-                                                      child: SizedBox(
+                                                      child: Container(
                                                         width: 120.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -1070,7 +1072,7 @@ class _CreateOutwardMaterialWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 10.0)),
+                                                      SizedBox(width: 10.0)),
                                                 ),
                                                 Column(
                                                   mainAxisSize:
@@ -1182,7 +1184,7 @@ class _CreateOutwardMaterialWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -1196,11 +1198,11 @@ class _CreateOutwardMaterialWidgetState
                                                                 false,
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 10.0)),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(height: 7.0)),
+                                                      SizedBox(height: 7.0)),
                                                 ),
                                                 Column(
                                                   mainAxisSize:
@@ -1312,7 +1314,7 @@ class _CreateOutwardMaterialWidgetState
                                                             borderWidth: 2.0,
                                                             borderRadius: 8.0,
                                                             margin:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -1326,11 +1328,11 @@ class _CreateOutwardMaterialWidgetState
                                                                 false,
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 10.0)),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(height: 7.0)),
+                                                      SizedBox(height: 7.0)),
                                                 ),
                                                 Wrap(
                                                   spacing: 10.0,
@@ -1354,7 +1356,7 @@ class _CreateOutwardMaterialWidgetState
                                                           (newValue) async {
                                                         setState(() => _model
                                                                 .switchListTileValue =
-                                                            newValue);
+                                                            newValue!);
                                                       },
                                                       title: Text(
                                                         FFLocalizations.of(
@@ -1639,14 +1641,14 @@ class _CreateOutwardMaterialWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 15.0)),
+                                                      SizedBox(width: 15.0)),
                                                 ),
                                                 Row(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
                                                     Expanded(
-                                                      child: SizedBox(
+                                                      child: Container(
                                                         width: 150.0,
                                                         child: TextFormField(
                                                           controller: _model
@@ -1819,7 +1821,7 @@ class _CreateOutwardMaterialWidgetState
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -1832,7 +1834,7 @@ class _CreateOutwardMaterialWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 10.0)),
+                                                      SizedBox(width: 10.0)),
                                                 ),
                                                 if (_model.issuedtoValue ==
                                                     'Customer')
@@ -1977,7 +1979,7 @@ class _CreateOutwardMaterialWidgetState
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -1993,11 +1995,11 @@ class _CreateOutwardMaterialWidgetState
                                                                   false,
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 10.0)),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 7.0)),
+                                                        SizedBox(height: 7.0)),
                                                   ),
                                                 if (_model.issuedtoValue ==
                                                     'Supplier')
@@ -2142,7 +2144,7 @@ class _CreateOutwardMaterialWidgetState
                                                               borderWidth: 2.0,
                                                               borderRadius: 8.0,
                                                               margin:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           4.0,
@@ -2158,11 +2160,11 @@ class _CreateOutwardMaterialWidgetState
                                                                   false,
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 10.0)),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 7.0)),
+                                                        SizedBox(height: 7.0)),
                                                   ),
                                                 TextFormField(
                                                   controller:
@@ -2277,7 +2279,7 @@ class _CreateOutwardMaterialWidgetState
                                                   children: [
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Text(
                                                         FFLocalizations.of(
@@ -2322,11 +2324,11 @@ class _CreateOutwardMaterialWidgetState
                                                                       12.0),
                                                         ),
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       12.0,
                                                                       0.0,
@@ -2369,7 +2371,7 @@ class _CreateOutwardMaterialWidgetState
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -2423,14 +2425,14 @@ class _CreateOutwardMaterialWidgetState
                                                             FFButtonOptions(
                                                           height: 40.0,
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       24.0,
                                                                       0.0,
                                                                       24.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -2453,7 +2455,7 @@ class _CreateOutwardMaterialWidgetState
                                                                   ),
                                                           elevation: 3.0,
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 1.0,
@@ -2466,7 +2468,7 @@ class _CreateOutwardMaterialWidgetState
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 10.0)),
+                                                      SizedBox(width: 10.0)),
                                                 ),
                                                 if (responsiveVisibility(
                                                   context: context,
@@ -2489,7 +2491,7 @@ class _CreateOutwardMaterialWidgetState
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -2523,7 +2525,7 @@ class _CreateOutwardMaterialWidgetState
                                                       ))
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -2551,14 +2553,14 @@ class _CreateOutwardMaterialWidgetState
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -2597,7 +2599,7 @@ class _CreateOutwardMaterialWidgetState
                                                         phone: false,
                                                         tablet: false,
                                                       ))
-                                                        SizedBox(
+                                                        Container(
                                                           width: 270.0,
                                                           child: TextFormField(
                                                             controller: _model
@@ -2645,7 +2647,7 @@ class _CreateOutwardMaterialWidgetState
                                                               focusedBorder:
                                                                   OutlineInputBorder(
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Color(
                                                                       0x00000000),
                                                                   width: 2.0,
@@ -2658,7 +2660,7 @@ class _CreateOutwardMaterialWidgetState
                                                               errorBorder:
                                                                   OutlineInputBorder(
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Color(
                                                                       0x00000000),
                                                                   width: 2.0,
@@ -2671,7 +2673,7 @@ class _CreateOutwardMaterialWidgetState
                                                               focusedErrorBorder:
                                                                   OutlineInputBorder(
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Color(
                                                                       0x00000000),
                                                                   width: 2.0,
@@ -2733,7 +2735,7 @@ class _CreateOutwardMaterialWidgetState
                                                           children: [
                                                             Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       -1.0,
                                                                       0.0),
                                                               child: Container(
@@ -2744,7 +2746,7 @@ class _CreateOutwardMaterialWidgetState
                                                                           context)
                                                                       .accent1,
                                                                   borderRadius:
-                                                                      const BorderRadius
+                                                                      BorderRadius
                                                                           .only(
                                                                     bottomLeft:
                                                                         Radius.circular(
@@ -2762,7 +2764,7 @@ class _CreateOutwardMaterialWidgetState
                                                                 ),
                                                                 child: Align(
                                                                   alignment:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           -1.0,
                                                                           0.0),
                                                                   child: Row(
@@ -2774,7 +2776,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             150.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2801,7 +2803,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             150.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2828,7 +2830,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2837,7 +2839,7 @@ class _CreateOutwardMaterialWidgetState
                                                                               MainAxisAlignment.center,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   'dnqlg15p' /* Lot No */,
@@ -2855,7 +2857,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2864,7 +2866,7 @@ class _CreateOutwardMaterialWidgetState
                                                                               MainAxisAlignment.center,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   'wqfna9d1' /* UoM */,
@@ -2882,7 +2884,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2891,7 +2893,7 @@ class _CreateOutwardMaterialWidgetState
                                                                               MainAxisAlignment.center,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   '7er3pmcs' /* Available Qty */,
@@ -2909,7 +2911,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             100.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2935,7 +2937,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             100.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2961,7 +2963,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2987,7 +2989,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         builder:
                                                                             (context) {
                                                                           final itemParameters =
-                                                                              widget.itemMasterParameters?.dropdownValues.toList() ?? [];
+                                                                              widget.itemMasterParameters?.dropdownValues?.toList() ?? [];
                                                                           return Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
@@ -2996,7 +2998,7 @@ class _CreateOutwardMaterialWidgetState
                                                                               final itemParametersItem = itemParameters[itemParametersIndex];
                                                                               return Container(
                                                                                 width: 120.0,
-                                                                                decoration: const BoxDecoration(),
+                                                                                decoration: BoxDecoration(),
                                                                                 child: Column(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -3020,7 +3022,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         builder:
                                                                             (context) {
                                                                           final inventoryParameter =
-                                                                              widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                              widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                           return Row(
                                                                             mainAxisSize:
                                                                                 MainAxisSize.max,
@@ -3029,7 +3031,7 @@ class _CreateOutwardMaterialWidgetState
                                                                               final inventoryParameterItem = inventoryParameter[inventoryParameterIndex];
                                                                               return Container(
                                                                                 width: 120.0,
-                                                                                decoration: const BoxDecoration(),
+                                                                                decoration: BoxDecoration(),
                                                                                 child: Column(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -3050,10 +3052,10 @@ class _CreateOutwardMaterialWidgetState
                                                                         },
                                                                       ),
                                                                     ]
-                                                                        .divide(const SizedBox(
+                                                                        .divide(SizedBox(
                                                                             width:
                                                                                 10.0))
-                                                                        .around(const SizedBox(
+                                                                        .around(SizedBox(
                                                                             width:
                                                                                 10.0)),
                                                                   ),
@@ -3080,12 +3082,12 @@ class _CreateOutwardMaterialWidgetState
                                                                               itemIndex];
                                                                       return Container(
                                                                         constraints:
-                                                                            const BoxConstraints(
+                                                                            BoxConstraints(
                                                                           minHeight:
                                                                               50.0,
                                                                         ),
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Row(
                                                                           mainAxisSize:
@@ -3096,7 +3098,7 @@ class _CreateOutwardMaterialWidgetState
                                                                               [
                                                                             Container(
                                                                               width: 150.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -3122,7 +3124,7 @@ class _CreateOutwardMaterialWidgetState
                                                                             ),
                                                                             Container(
                                                                               width: 150.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -3140,7 +3142,7 @@ class _CreateOutwardMaterialWidgetState
                                                                             ),
                                                                             Container(
                                                                               width: 120.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -3159,7 +3161,7 @@ class _CreateOutwardMaterialWidgetState
                                                                             ),
                                                                             Container(
                                                                               width: 120.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -3176,7 +3178,7 @@ class _CreateOutwardMaterialWidgetState
                                                                             ),
                                                                             Container(
                                                                               width: 100.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -3195,7 +3197,7 @@ class _CreateOutwardMaterialWidgetState
                                                                             ),
                                                                             Container(
                                                                               width: 100.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -3214,13 +3216,13 @@ class _CreateOutwardMaterialWidgetState
                                                                             ),
                                                                             Container(
                                                                               width: 120.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Column(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                 children: [
                                                                                   Container(
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: wrapWithModel(
                                                                                       model: _model.itemparameter3Models.getModel(
                                                                                         itemItem.itemId.toString(),
@@ -3241,14 +3243,14 @@ class _CreateOutwardMaterialWidgetState
                                                                             ),
                                                                             Builder(
                                                                               builder: (context) {
-                                                                                final itemParameter = widget.itemMasterParameters?.dropdownValues.toList() ?? [];
+                                                                                final itemParameter = widget.itemMasterParameters?.dropdownValues?.toList() ?? [];
                                                                                 return Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: List.generate(itemParameter.length, (itemParameterIndex) {
                                                                                     final itemParameterItem = itemParameter[itemParameterIndex];
                                                                                     return Container(
                                                                                       width: 120.0,
-                                                                                      decoration: const BoxDecoration(),
+                                                                                      decoration: BoxDecoration(),
                                                                                       child: Column(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -3270,14 +3272,14 @@ class _CreateOutwardMaterialWidgetState
                                                                             ),
                                                                             Builder(
                                                                               builder: (context) {
-                                                                                final inventoryParameters = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                final inventoryParameters = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                 return Row(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   children: List.generate(inventoryParameters.length, (inventoryParametersIndex) {
                                                                                     final inventoryParametersItem = inventoryParameters[inventoryParametersIndex];
                                                                                     return Container(
                                                                                       width: 120.0,
-                                                                                      decoration: const BoxDecoration(),
+                                                                                      decoration: BoxDecoration(),
                                                                                       child: Column(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -3297,7 +3299,7 @@ class _CreateOutwardMaterialWidgetState
                                                                                 );
                                                                               },
                                                                             ),
-                                                                          ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                          ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                         ),
                                                                       );
                                                                     }),
@@ -3329,7 +3331,7 @@ class _CreateOutwardMaterialWidgetState
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Container(
                                                               height: 70.0,
@@ -3339,7 +3341,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         context)
                                                                     .accent1,
                                                                 borderRadius:
-                                                                    const BorderRadius
+                                                                    BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -3357,7 +3359,7 @@ class _CreateOutwardMaterialWidgetState
                                                               ),
                                                               child: Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Row(
@@ -3369,7 +3371,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           150.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3397,7 +3399,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           150.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3425,7 +3427,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3435,7 +3437,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                const AlignmentDirectional(-1.0, 0.0),
+                                                                                AlignmentDirectional(-1.0, 0.0),
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
@@ -3456,7 +3458,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3466,7 +3468,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                const AlignmentDirectional(-1.0, 0.0),
+                                                                                AlignmentDirectional(-1.0, 0.0),
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
@@ -3487,7 +3489,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3497,7 +3499,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                const AlignmentDirectional(-1.0, 0.0),
+                                                                                AlignmentDirectional(-1.0, 0.0),
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
@@ -3518,7 +3520,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           100.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3546,7 +3548,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           100.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3574,7 +3576,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3602,7 +3604,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3630,7 +3632,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3658,7 +3660,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3686,7 +3688,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3714,7 +3716,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3739,10 +3741,10 @@ class _CreateOutwardMaterialWidgetState
                                                                       ),
                                                                     ),
                                                                   ]
-                                                                      .divide(const SizedBox(
+                                                                      .divide(SizedBox(
                                                                           width:
                                                                               10.0))
-                                                                      .around(const SizedBox(
+                                                                      .around(SizedBox(
                                                                           width:
                                                                               10.0)),
                                                                 ),
@@ -3758,12 +3760,12 @@ class _CreateOutwardMaterialWidgetState
                                                               children: [
                                                                 Container(
                                                                   constraints:
-                                                                      const BoxConstraints(
+                                                                      BoxConstraints(
                                                                     minHeight:
                                                                         50.0,
                                                                   ),
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -3776,7 +3778,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             150.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3811,7 +3813,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             150.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3836,7 +3838,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3860,7 +3862,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3884,7 +3886,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3908,7 +3910,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             100.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3932,7 +3934,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             100.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3956,7 +3958,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -3980,7 +3982,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -4004,7 +4006,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -4028,7 +4030,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -4052,7 +4054,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -4076,7 +4078,7 @@ class _CreateOutwardMaterialWidgetState
                                                                         width:
                                                                             120.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -4097,31 +4099,31 @@ class _CreateOutwardMaterialWidgetState
                                                                         ),
                                                                       ),
                                                                     ]
-                                                                        .divide(const SizedBox(
+                                                                        .divide(SizedBox(
                                                                             width:
                                                                                 10.0))
-                                                                        .around(const SizedBox(
+                                                                        .around(SizedBox(
                                                                             width:
                                                                                 10.0)),
                                                                   ),
                                                                 ),
                                                                 Container(
                                                                   constraints:
-                                                                      const BoxConstraints(
+                                                                      BoxConstraints(
                                                                     minHeight:
                                                                         50.0,
                                                                   ),
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                 ),
                                                                 Container(
                                                                   constraints:
-                                                                      const BoxConstraints(
+                                                                      BoxConstraints(
                                                                     minHeight:
                                                                         50.0,
                                                                   ),
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                 ),
                                                               ],
                                                             ),
@@ -4133,11 +4135,11 @@ class _CreateOutwardMaterialWidgetState
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 20.0, 0.0),
                                                     child: FFButtonWidget(
@@ -4199,14 +4201,14 @@ class _CreateOutwardMaterialWidgetState
                                                         width: 270.0,
                                                         height: 50.0,
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     0.0,
                                                                     16.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -4229,7 +4231,7 @@ class _CreateOutwardMaterialWidgetState
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -4241,18 +4243,18 @@ class _CreateOutwardMaterialWidgetState
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(height: 12.0)),
+                                              ].divide(SizedBox(height: 12.0)),
                                             ),
                                           ),
                                         ),
                                       ),
                                     ]
-                                        .addToStart(const SizedBox(height: 10.0))
-                                        .addToEnd(const SizedBox(height: 10.0)),
+                                        .addToStart(SizedBox(height: 10.0))
+                                        .addToEnd(SizedBox(height: 10.0)),
                                   ),
                                 ),
                               ),
-                            ].addToEnd(const SizedBox(height: 72.0)),
+                            ].addToEnd(SizedBox(height: 72.0)),
                           ),
                         ),
                       ),

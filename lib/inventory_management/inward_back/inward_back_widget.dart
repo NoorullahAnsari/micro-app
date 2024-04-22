@@ -1,3 +1,4 @@
+import '/backend/schema/structs/index.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/empty_widget.dart';
 import '/components/side_nav_widget.dart';
@@ -12,6 +13,7 @@ import '/item_management/itemparameter/itemparameter_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'inward_back_model.dart';
 export 'inward_back_model.dart';
@@ -138,7 +140,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
 
     return FutureBuilder<List<ItemManagementRow>>(
       future: FFAppState().items(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => ItemManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -211,7 +213,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                   (e.module == 'Item Master') &&
                                   (e.dropdownName == 'Item Master Parameter'))
                               .toList()
-                              .first,
+                              ?.first,
                           ParamType.SupabaseRow,
                         ),
                         'inventoryParameters': serializeParam(
@@ -220,7 +222,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                   (e.module == 'Inventory') &&
                                   (e.dropdownName == 'Inventory Parameter'))
                               .toList()
-                              .first,
+                              ?.first,
                           ParamType.SupabaseRow,
                         ),
                       }.withoutNulls,
@@ -241,7 +243,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                   desktop: false,
                 ),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'x3dgpy93' /* Approval Inward Material */,
@@ -257,7 +259,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -318,11 +320,11 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                   Flexible(
                     flex: 2,
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: FutureBuilder<List<UserManagementRow>>(
                         future: FFAppState().companyUsers(
                           uniqueQueryKey:
-                              widget.authenticatedCompany?.id.toString(),
+                              widget.authenticatedCompany?.id?.toString(),
                           requestFn: () => UserManagementTable().queryRows(
                             queryFn: (q) => q.eq(
                               'company',
@@ -348,7 +350,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                           List<UserManagementRow>
                               containerUserManagementRowList = snapshot.data!;
                           return Container(
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: FutureBuilder<
                                 List<InwardInventoryTableManagementRow>>(
                               future: FFAppState().inward(
@@ -383,13 +385,13 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                     snapshot.data!;
                                 return Container(
                                   width: double.infinity,
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     minWidth: 350.0,
                                   ),
-                                  decoration: const BoxDecoration(),
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  decoration: BoxDecoration(),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: SingleChildScrollView(
                                       primary: false,
                                       child: Column(
@@ -405,11 +407,11 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                             Container(
                                               width: double.infinity,
                                               height: 24.0,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                             ),
                                           Container(
                                             width: double.infinity,
-                                            constraints: const BoxConstraints(
+                                            constraints: BoxConstraints(
                                               maxWidth: 800.0,
                                             ),
                                             decoration: BoxDecoration(
@@ -418,7 +420,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                       .secondaryBackground,
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
@@ -432,7 +434,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                   ))
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   0.0,
@@ -498,7 +500,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                             (e.dropdownName ==
                                                                                 'Item Master Parameter'))
                                                                         .toList()
-                                                                        .first,
+                                                                        ?.first,
                                                                     ParamType
                                                                         .SupabaseRow,
                                                                   ),
@@ -512,7 +514,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                             (e.dropdownName ==
                                                                                 'Inventory Parameter'))
                                                                         .toList()
-                                                                        .first,
+                                                                        ?.first,
                                                                     ParamType
                                                                         .SupabaseRow,
                                                                   ),
@@ -544,13 +546,13 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 30.0)),
                                                       ),
                                                     ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsets.all(20.0),
+                                                        EdgeInsets.all(20.0),
                                                     child:
                                                         SingleChildScrollView(
                                                       primary: false,
@@ -563,7 +565,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                         children: [
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child:
                                                                 SingleChildScrollView(
@@ -578,12 +580,12 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           20.0,
@@ -617,7 +619,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                             }.withoutNulls,
                                                                             extra: <String,
                                                                                 dynamic>{
-                                                                              kTransitionInfoKey: const TransitionInfo(
+                                                                              kTransitionInfoKey: TransitionInfo(
                                                                                 hasTransition: true,
                                                                                 transitionType: PageTransitionType.fade,
                                                                                 duration: Duration(milliseconds: 0),
@@ -633,12 +635,12 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                             FFButtonOptions(
                                                                           height:
                                                                               40.0,
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               0.0,
                                                                               16.0,
                                                                               0.0),
-                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
                                                                               0.0,
@@ -655,7 +657,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                           elevation:
                                                                               3.0,
                                                                           borderSide:
-                                                                              const BorderSide(
+                                                                              BorderSide(
                                                                             color:
                                                                                 Colors.transparent,
                                                                             width:
@@ -676,7 +678,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                     child:
                                                                         Padding(
                                                                       padding:
-                                                                          const EdgeInsets.all(
+                                                                          EdgeInsets.all(
                                                                               20.0),
                                                                       child:
                                                                           SingleChildScrollView(
@@ -718,7 +720,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                       Expanded(
                                                                                         child: FlutterFlowDropDown<String>(
                                                                                           controller: _model.inwardTypeValueController1 ??= FormFieldController<String>(null),
-                                                                                          options: const <String>[],
+                                                                                          options: <String>[],
                                                                                           onChanged: (val) => setState(() => _model.inwardTypeValue1 = val),
                                                                                           width: 300.0,
                                                                                           height: 50.0,
@@ -750,22 +752,22 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                           borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                           borderWidth: 2.0,
                                                                                           borderRadius: 8.0,
-                                                                                          margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                          margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                           hidesUnderline: true,
                                                                                           isOverButton: true,
                                                                                           isSearchable: true,
                                                                                           isMultiSelect: false,
                                                                                         ),
                                                                                       ),
-                                                                                    ].divide(const SizedBox(width: 10.0)),
+                                                                                    ].divide(SizedBox(width: 10.0)),
                                                                                   ),
-                                                                                ].divide(const SizedBox(height: 7.0)),
+                                                                                ].divide(SizedBox(height: 7.0)),
                                                                               ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Expanded(
-                                                                                  child: SizedBox(
+                                                                                  child: Container(
                                                                                     width: 120.0,
                                                                                     child: TextFormField(
                                                                                       controller: _model.inwardNumberTextController,
@@ -828,7 +830,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                   ),
                                                                                 ),
                                                                                 Expanded(
-                                                                                  child: SizedBox(
+                                                                                  child: Container(
                                                                                     width: 120.0,
                                                                                     child: TextFormField(
                                                                                       controller: _model.inwardedOnTextController,
@@ -890,13 +892,13 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                              ].divide(SizedBox(width: 10.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Expanded(
-                                                                                  child: SizedBox(
+                                                                                  child: Container(
                                                                                     width: 120.0,
                                                                                     child: TextFormField(
                                                                                       controller: _model.inwardedbyTextController1 ??= TextEditingController(
@@ -961,7 +963,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                   ),
                                                                                 ),
                                                                                 Expanded(
-                                                                                  child: SizedBox(
+                                                                                  child: Container(
                                                                                     width: 120.0,
                                                                                     child: TextFormField(
                                                                                       controller: _model.inwardedbyTextController2 ??= TextEditingController(
@@ -1026,7 +1028,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                   ),
                                                                                 ),
                                                                                 Expanded(
-                                                                                  child: SizedBox(
+                                                                                  child: Container(
                                                                                     width: 120.0,
                                                                                     child: TextFormField(
                                                                                       controller: _model.inwardedbyTextController3,
@@ -1088,7 +1090,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                              ].divide(SizedBox(width: 10.0)),
                                                                             ),
                                                                             Column(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -1145,16 +1147,16 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                         borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                         borderWidth: 2.0,
                                                                                         borderRadius: 8.0,
-                                                                                        margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                        margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                         hidesUnderline: true,
                                                                                         isOverButton: true,
                                                                                         isSearchable: true,
                                                                                         isMultiSelect: false,
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(const SizedBox(width: 10.0)),
+                                                                                  ].divide(SizedBox(width: 10.0)),
                                                                                 ),
-                                                                              ].divide(const SizedBox(height: 7.0)),
+                                                                              ].divide(SizedBox(height: 7.0)),
                                                                             ),
                                                                             Column(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -1211,16 +1213,16 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                         borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                         borderWidth: 2.0,
                                                                                         borderRadius: 8.0,
-                                                                                        margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                        margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                         hidesUnderline: true,
                                                                                         isOverButton: true,
                                                                                         isSearchable: true,
                                                                                         isMultiSelect: false,
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(const SizedBox(width: 10.0)),
+                                                                                  ].divide(SizedBox(width: 10.0)),
                                                                                 ),
-                                                                              ].divide(const SizedBox(height: 7.0)),
+                                                                              ].divide(SizedBox(height: 7.0)),
                                                                             ),
                                                                             Wrap(
                                                                               spacing: 10.0,
@@ -1235,7 +1237,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                 SwitchListTile.adaptive(
                                                                                   value: _model.switchListTileValue ??= false,
                                                                                   onChanged: (newValue) async {
-                                                                                    setState(() => _model.switchListTileValue = newValue);
+                                                                                    setState(() => _model.switchListTileValue = newValue!);
                                                                                   },
                                                                                   title: Text(
                                                                                     FFLocalizations.of(context).getText(
@@ -1256,7 +1258,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                 if (_model.switchListTileValue ?? true)
                                                                                   FlutterFlowDropDown<String>(
                                                                                     controller: _model.materialOutwardNumberValueController ??= FormFieldController<String>(null),
-                                                                                    options: const <String>[],
+                                                                                    options: <String>[],
                                                                                     onChanged: (val) => setState(() => _model.materialOutwardNumberValue = val),
                                                                                     width: 300.0,
                                                                                     height: 50.0,
@@ -1288,7 +1290,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                     borderWidth: 2.0,
                                                                                     borderRadius: 8.0,
-                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                     hidesUnderline: true,
                                                                                     isOverButton: true,
                                                                                     isSearchable: true,
@@ -1421,7 +1423,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     validator: _model.referenceNumberTextControllerValidator.asValidator(context),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(const SizedBox(width: 15.0)),
+                                                                              ].divide(SizedBox(width: 15.0)),
                                                                             ),
                                                                             TextFormField(
                                                                               controller: _model.remarkTextController,
@@ -1486,7 +1488,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Align(
-                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                   child: Text(
                                                                                     FFLocalizations.of(context).getText(
                                                                                       'dlhps1ua' /* QR scanner : */,
@@ -1522,7 +1524,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                             elevation: 0,
                                                                                             insetPadding: EdgeInsets.zero,
                                                                                             backgroundColor: Colors.transparent,
-                                                                                            alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                            alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                             child: GestureDetector(
                                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                               child: AddItemCopyWidget(
@@ -1531,15 +1533,15 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                 authenticatedCompanyDropdown: widget.authenticatedCompanyDropdown!,
                                                                                                 itemMasterParameters: widget.itemMasterParameters!,
                                                                                                 inventoryParameters: widget.inventoryParameters!,
-                                                                                                itemName: functions.scanItem('#', _model.scanItem, 3),
-                                                                                                lotNo: functions.scanItem('#', _model.scanItem, 1),
-                                                                                                requireQuantity: functions.scanItem('#', _model.scanItem, 7),
-                                                                                                remark: functions.scanItem('#', _model.scanItem, 8),
-                                                                                                coilNumber: functions.scanItem('#', _model.scanItem, 0),
-                                                                                                finish: functions.scanItem('#', _model.scanItem, 4),
-                                                                                                edge: functions.scanItem('#', _model.scanItem, 5),
-                                                                                                pcs: functions.scanItem('#', _model.scanItem, 6),
-                                                                                                grade: functions.scanItem('#', _model.scanItem, 2),
+                                                                                                itemName: functions.scanItem('#', _model.scanItem!, 3),
+                                                                                                lotNo: functions.scanItem('#', _model.scanItem!, 1),
+                                                                                                requireQuantity: functions.scanItem('#', _model.scanItem!, 7),
+                                                                                                remark: functions.scanItem('#', _model.scanItem!, 8),
+                                                                                                coilNumber: functions.scanItem('#', _model.scanItem!, 0),
+                                                                                                finish: functions.scanItem('#', _model.scanItem!, 4),
+                                                                                                edge: functions.scanItem('#', _model.scanItem!, 5),
+                                                                                                pcs: functions.scanItem('#', _model.scanItem!, 6),
+                                                                                                grade: functions.scanItem('#', _model.scanItem!, 2),
                                                                                               ),
                                                                                             ),
                                                                                           );
@@ -1555,13 +1557,13 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                              ].divide(SizedBox(width: 10.0)),
                                                                             ),
                                                                             Row(
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Align(
-                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                   child: Text(
                                                                                     FFLocalizations.of(context).getText(
                                                                                       'nek9xnxi' /* Inward Table : */,
@@ -1580,9 +1582,9 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                     borderRadius: BorderRadius.circular(12.0),
                                                                                   ),
-                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
                                                                                   child: Padding(
-                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                                                                                     child: Text(
                                                                                       FFAppState().item.length.toString(),
                                                                                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1602,7 +1604,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                             elevation: 0,
                                                                                             insetPadding: EdgeInsets.zero,
                                                                                             backgroundColor: Colors.transparent,
-                                                                                            alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                            alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                             child: GestureDetector(
                                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                               child: AddItemWidget(
@@ -1622,8 +1624,8 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     ),
                                                                                     options: FFButtonOptions(
                                                                                       height: 40.0,
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                             fontFamily: 'Readex Pro',
@@ -1631,7 +1633,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                             letterSpacing: 0.0,
                                                                                           ),
                                                                                       elevation: 3.0,
-                                                                                      borderSide: const BorderSide(
+                                                                                      borderSide: BorderSide(
                                                                                         color: Colors.transparent,
                                                                                         width: 1.0,
                                                                                       ),
@@ -1639,7 +1641,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                              ].divide(SizedBox(width: 10.0)),
                                                                             ),
                                                                             if (responsiveVisibility(
                                                                               context: context,
@@ -1657,7 +1659,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       children: [
                                                                                         Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                           child: Text(
                                                                                             FFLocalizations.of(context).getText(
                                                                                               'oyd7q9k8' /* Card Header */,
@@ -1678,7 +1680,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     tabletLandscape: false,
                                                                                   ))
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 16.0, 0.0),
                                                                                       child: FFButtonWidget(
                                                                                         onPressed: () {
                                                                                           print('Button pressed ...');
@@ -1693,8 +1695,8 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                         ),
                                                                                         options: FFButtonOptions(
                                                                                           height: 40.0,
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                          iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                          iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                           color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                           textStyle: FlutterFlowTheme.of(context).bodySmall.override(
                                                                                                 fontFamily: 'Readex Pro',
@@ -1714,7 +1716,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     phone: false,
                                                                                     tablet: false,
                                                                                   ))
-                                                                                    SizedBox(
+                                                                                    Container(
                                                                                       width: 270.0,
                                                                                       child: TextFormField(
                                                                                         controller: _model.textController9,
@@ -1739,21 +1741,21 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                             borderRadius: BorderRadius.circular(8.0),
                                                                                           ),
                                                                                           focusedBorder: OutlineInputBorder(
-                                                                                            borderSide: const BorderSide(
+                                                                                            borderSide: BorderSide(
                                                                                               color: Color(0x00000000),
                                                                                               width: 2.0,
                                                                                             ),
                                                                                             borderRadius: BorderRadius.circular(8.0),
                                                                                           ),
                                                                                           errorBorder: OutlineInputBorder(
-                                                                                            borderSide: const BorderSide(
+                                                                                            borderSide: BorderSide(
                                                                                               color: Color(0x00000000),
                                                                                               width: 2.0,
                                                                                             ),
                                                                                             borderRadius: BorderRadius.circular(8.0),
                                                                                           ),
                                                                                           focusedErrorBorder: OutlineInputBorder(
-                                                                                            borderSide: const BorderSide(
+                                                                                            borderSide: BorderSide(
                                                                                               color: Color(0x00000000),
                                                                                               width: 2.0,
                                                                                             ),
@@ -1786,12 +1788,12 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                       children: [
                                                                                         Align(
-                                                                                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                           child: Container(
                                                                                             height: 50.0,
                                                                                             decoration: BoxDecoration(
                                                                                               color: FlutterFlowTheme.of(context).accent1,
-                                                                                              borderRadius: const BorderRadius.only(
+                                                                                              borderRadius: BorderRadius.only(
                                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                                 bottomRight: Radius.circular(0.0),
                                                                                                 topLeft: Radius.circular(16.0),
@@ -1799,17 +1801,17 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                               ),
                                                                                             ),
                                                                                             child: Align(
-                                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                               child: Row(
                                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                                 children: [
                                                                                                   Container(
                                                                                                     width: 50.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 150.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1830,7 +1832,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 150.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1850,14 +1852,14 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 120.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                       children: [
                                                                                                         Align(
-                                                                                                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                           child: Text(
                                                                                                             FFLocalizations.of(context).getText(
                                                                                                               'l9a1agyx' /* UoM */,
@@ -1873,7 +1875,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 120.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1895,9 +1897,9 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 100.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Align(
-                                                                                                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                      alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -1918,7 +1920,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 100.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1939,7 +1941,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 120.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1959,14 +1961,14 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                   ),
                                                                                                   Builder(
                                                                                                     builder: (context) {
-                                                                                                      final itemParameters = widget.itemMasterParameters?.dropdownValues.toList() ?? [];
+                                                                                                      final itemParameters = widget.itemMasterParameters?.dropdownValues?.toList() ?? [];
                                                                                                       return Row(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         children: List.generate(itemParameters.length, (itemParametersIndex) {
                                                                                                           final itemParametersItem = itemParameters[itemParametersIndex];
                                                                                                           return Container(
                                                                                                             width: 120.0,
-                                                                                                            decoration: const BoxDecoration(),
+                                                                                                            decoration: BoxDecoration(),
                                                                                                             child: Column(
                                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -1982,20 +1984,20 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                               ],
                                                                                                             ),
                                                                                                           );
-                                                                                                        }).divide(const SizedBox(width: 5.0)),
+                                                                                                        }).divide(SizedBox(width: 5.0)),
                                                                                                       );
                                                                                                     },
                                                                                                   ),
                                                                                                   Builder(
                                                                                                     builder: (context) {
-                                                                                                      final inventoryParameter = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                                      final inventoryParameter = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                                       return Row(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         children: List.generate(inventoryParameter.length, (inventoryParameterIndex) {
                                                                                                           final inventoryParameterItem = inventoryParameter[inventoryParameterIndex];
                                                                                                           return Container(
                                                                                                             width: 120.0,
-                                                                                                            decoration: const BoxDecoration(),
+                                                                                                            decoration: BoxDecoration(),
                                                                                                             child: Column(
                                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -2011,13 +2013,13 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                               ],
                                                                                                             ),
                                                                                                           );
-                                                                                                        }).divide(const SizedBox(width: 5.0)),
+                                                                                                        }).divide(SizedBox(width: 5.0)),
                                                                                                       );
                                                                                                     },
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 120.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -2038,7 +2040,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                   ),
                                                                                                   Container(
                                                                                                     width: 120.0,
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -2057,7 +2059,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                       ],
                                                                                                     ),
                                                                                                   ),
-                                                                                                ].divide(const SizedBox(width: 12.0)).around(const SizedBox(width: 12.0)),
+                                                                                                ].divide(SizedBox(width: 12.0)).around(SizedBox(width: 12.0)),
                                                                                               ),
                                                                                             ),
                                                                                           ),
@@ -2072,14 +2074,14 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                 children: List.generate(item.length, (itemIndex) {
                                                                                                   final itemItem = item[itemIndex];
                                                                                                   return Container(
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       crossAxisAlignment: CrossAxisAlignment.center,
                                                                                                       children: [
                                                                                                         Container(
                                                                                                           width: 50.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -2094,7 +2096,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 150.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -2112,7 +2114,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -2128,21 +2130,21 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                           ),
                                                                                                         ),
                                                                                                         Align(
-                                                                                                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                           child: Container(
                                                                                                             width: 120.0,
-                                                                                                            decoration: const BoxDecoration(),
+                                                                                                            decoration: BoxDecoration(),
                                                                                                             child: Align(
-                                                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                               child: Column(
                                                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                                                 crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                 children: [
                                                                                                                   Align(
-                                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                     child: Container(
                                                                                                                       width: 100.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: wrapWithModel(
                                                                                                                         model: _model.requiredquantityModels.getModel(
                                                                                                                           itemItem.itemId.toString(),
@@ -2166,7 +2168,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -2184,13 +2186,13 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                             children: [
                                                                                                               Container(
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: wrapWithModel(
                                                                                                                   model: _model.receivequantityModels.getModel(
                                                                                                                     itemItem.itemId.toString(),
@@ -2211,15 +2213,15 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                             children: [
                                                                                                               Container(
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Align(
-                                                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                   child: wrapWithModel(
                                                                                                                     model: _model.rateModels.getModel(
                                                                                                                       itemItem.itemId.toString(),
@@ -2241,14 +2243,14 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                         ),
                                                                                                         Builder(
                                                                                                           builder: (context) {
-                                                                                                            final itemParameter = widget.itemMasterParameters?.dropdownValues.toList() ?? [];
+                                                                                                            final itemParameter = widget.itemMasterParameters?.dropdownValues?.toList() ?? [];
                                                                                                             return Row(
                                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                                               children: List.generate(itemParameter.length, (itemParameterIndex) {
                                                                                                                 final itemParameterItem = itemParameter[itemParameterIndex];
                                                                                                                 return Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2264,20 +2266,20 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                                     ],
                                                                                                                   ),
                                                                                                                 );
-                                                                                                              }).divide(const SizedBox(width: 5.0)),
+                                                                                                              }).divide(SizedBox(width: 5.0)),
                                                                                                             );
                                                                                                           },
                                                                                                         ),
                                                                                                         Builder(
                                                                                                           builder: (context) {
-                                                                                                            final inventoryParameters = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                                            final inventoryParameters = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                                             return Row(
                                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                                               children: List.generate(inventoryParameters.length, (inventoryParametersIndex) {
                                                                                                                 final inventoryParametersItem = inventoryParameters[inventoryParametersIndex];
                                                                                                                 return Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2293,19 +2295,19 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                                     ],
                                                                                                                   ),
                                                                                                                 );
-                                                                                                              }).divide(const SizedBox(width: 5.0)),
+                                                                                                              }).divide(SizedBox(width: 5.0)),
                                                                                                             );
                                                                                                           },
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                             children: [
                                                                                                               Container(
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: wrapWithModel(
                                                                                                                   model: _model.remarkModels.getModel(
                                                                                                                     itemItem.itemId.toString(),
@@ -2326,7 +2328,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -2342,7 +2344,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                                             ],
                                                                                                           ),
                                                                                                         ),
-                                                                                                      ].divide(const SizedBox(width: 12.0)).around(const SizedBox(width: 12.0)),
+                                                                                                      ].divide(SizedBox(width: 12.0)).around(SizedBox(width: 12.0)),
                                                                                                     ),
                                                                                                   );
                                                                                                 }),
@@ -2370,22 +2372,22 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                         letterSpacing: 0.0,
                                                                                       ),
                                                                                 ),
-                                                                              ].divide(const SizedBox(width: 15.0)),
+                                                                              ].divide(SizedBox(width: 15.0)),
                                                                             ),
                                                                             Container(
                                                                               width: double.infinity,
-                                                                              constraints: const BoxConstraints(
+                                                                              constraints: BoxConstraints(
                                                                                 minHeight: 100.0,
                                                                               ),
                                                                               decoration: BoxDecoration(
                                                                                 color: FlutterFlowTheme.of(context).primaryBackground,
                                                                                 borderRadius: BorderRadius.circular(12.0),
                                                                                 border: Border.all(
-                                                                                  color: const Color(0xFFFBFBFB),
+                                                                                  color: Color(0xFFFBFBFB),
                                                                                 ),
                                                                               ),
                                                                               child: Padding(
-                                                                                padding: const EdgeInsets.all(10.0),
+                                                                                padding: EdgeInsets.all(10.0),
                                                                                 child: Column(
                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -2393,14 +2395,14 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                   children: [
                                                                                     Container(
                                                                                       width: double.infinity,
-                                                                                      decoration: const BoxDecoration(),
+                                                                                      decoration: BoxDecoration(),
                                                                                       child: Visibility(
                                                                                         visible: widget.attachment != null && (widget.attachment)!.isNotEmpty,
                                                                                         child: Builder(
                                                                                           builder: (context) {
                                                                                             final uploadedFiles = functions.stringListToImagePathList(widget.attachment!.toList()).toList();
                                                                                             if (uploadedFiles.isEmpty) {
-                                                                                              return const EmptyWidget();
+                                                                                              return EmptyWidget();
                                                                                             }
                                                                                             return Wrap(
                                                                                               spacing: 10.0,
@@ -2428,7 +2430,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(const SizedBox(height: 10.0)),
+                                                                                  ].divide(SizedBox(height: 10.0)),
                                                                                 ),
                                                                               ),
                                                                             ),
@@ -2436,7 +2438,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Align(
-                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                   child: Text(
                                                                                     FFLocalizations.of(context).getText(
                                                                                       '50m9sfpw' /* Report Conclusion: */,
@@ -2496,7 +2498,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     borderColor: FlutterFlowTheme.of(context).alternate,
                                                                                     borderWidth: 2.0,
                                                                                     borderRadius: 8.0,
-                                                                                    margin: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
+                                                                                    margin: EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 4.0),
                                                                                     hidesUnderline: true,
                                                                                     disabled: true,
                                                                                     isOverButton: true,
@@ -2504,7 +2506,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                                     isMultiSelect: false,
                                                                                   ),
                                                                                 ),
-                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                              ].divide(SizedBox(width: 10.0)),
                                                                             ),
                                                                             TextFormField(
                                                                               controller: _model.textController10,
@@ -2566,34 +2568,34 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                               minLines: 1,
                                                                               validator: _model.textController10Validator.asValidator(context),
                                                                             ),
-                                                                          ].divide(const SizedBox(height: 12.0)),
+                                                                          ].divide(SizedBox(height: 12.0)),
                                                                         ),
                                                                       ),
                                                                     ),
                                                                   ),
                                                                 ]
                                                                     .addToStart(
-                                                                        const SizedBox(
+                                                                        SizedBox(
                                                                             height:
                                                                                 10.0))
-                                                                    .addToEnd(const SizedBox(
+                                                                    .addToEnd(SizedBox(
                                                                         height:
                                                                             10.0)),
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 12.0)),
                                                       ),
                                                     ),
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2617,14 +2619,14 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                               builder:
                                                                   (alertDialogContext) {
                                                                 return AlertDialog(
-                                                                  title: const Text(
+                                                                  title: Text(
                                                                       'Select Inward Type'),
                                                                   actions: [
                                                                     TextButton(
                                                                       onPressed:
                                                                           () =>
                                                                               Navigator.pop(alertDialogContext),
-                                                                      child: const Text(
+                                                                      child: Text(
                                                                           'Ok'),
                                                                     ),
                                                                   ],
@@ -2641,14 +2643,14 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                               builder:
                                                                   (alertDialogContext) {
                                                                 return AlertDialog(
-                                                                  title: const Text(
+                                                                  title: Text(
                                                                       'Select Inward Location'),
                                                                   actions: [
                                                                     TextButton(
                                                                       onPressed:
                                                                           () =>
                                                                               Navigator.pop(alertDialogContext),
-                                                                      child: const Text(
+                                                                      child: Text(
                                                                           'Ok'),
                                                                     ),
                                                                   ],
@@ -2868,7 +2870,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                             extra: <String,
                                                                 dynamic>{
                                                               kTransitionInfoKey:
-                                                                  const TransitionInfo(
+                                                                  TransitionInfo(
                                                                 hasTransition:
                                                                     true,
                                                                 transitionType:
@@ -2892,14 +2894,14 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                           width: 270.0,
                                                           height: 50.0,
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       0.0,
                                                                       16.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -2922,7 +2924,7 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                                   ),
                                                           elevation: 3.0,
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 1.0,
@@ -2937,13 +2939,13 @@ class _InwardBackWidgetState extends State<InwardBackWidget> {
                                                   ),
                                                 ]
                                                     .addToStart(
-                                                        const SizedBox(height: 10.0))
+                                                        SizedBox(height: 10.0))
                                                     .addToEnd(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                               ),
                                             ),
                                           ),
-                                        ].addToEnd(const SizedBox(height: 72.0)),
+                                        ].addToEnd(SizedBox(height: 72.0)),
                                       ),
                                     ),
                                   ),

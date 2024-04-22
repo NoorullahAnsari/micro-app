@@ -14,6 +14,7 @@ import '/inventory_management/define_parameter_inventory_copy/define_parameter_i
 import '/item_management/itemparameter/itemparameter_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'inventory_dash_board_model.dart';
 export 'inventory_dash_board_model.dart';
@@ -76,7 +77,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
 
     return FutureBuilder<List<InwardInventoryManagementRow>>(
       future: FFAppState().inwards(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => InwardInventoryManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -158,7 +159,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -183,7 +184,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                           ),
                         }.withoutNulls,
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 0),
@@ -206,7 +207,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
               top: true,
               child: FutureBuilder<List<UserManagementRow>>(
                 future: FFAppState().companyUsers(
-                  uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+                  uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
                   requestFn: () => UserManagementTable().queryRows(
                     queryFn: (q) => q.eq(
                       'company',
@@ -232,11 +233,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                   List<UserManagementRow> containerUserManagementRowList =
                       snapshot.data!;
                   return Container(
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: FutureBuilder<List<ApprovalUserRow>>(
                       future: FFAppState().approvalUsers(
                         uniqueQueryKey:
-                            widget.authenticatedCompany?.id.toString(),
+                            widget.authenticatedCompany?.id?.toString(),
                         requestFn: () => ApprovalUserTable().queryRows(
                           queryFn: (q) => q.eq(
                             'company',
@@ -262,12 +263,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                         List<ApprovalUserRow> containerApprovalUserRowList =
                             snapshot.data!;
                         return Container(
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: FutureBuilder<
                               List<LotWiseInventoryManagementRow>>(
                             future: FFAppState().lotWiseInventory(
                               uniqueQueryKey:
-                                  widget.authenticatedCompany?.id.toString(),
+                                  widget.authenticatedCompany?.id?.toString(),
                               requestFn: () =>
                                   LotWiseInventoryManagementTable().queryRows(
                                 queryFn: (q) => q.eq(
@@ -295,12 +296,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                   containerLotWiseInventoryManagementRowList =
                                   snapshot.data!;
                               return Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: FutureBuilder<List<ItemManagementRow>>(
                                   future: FFAppState().items(
                                     uniqueQueryKey: widget
                                         .authenticatedCompany?.id
-                                        .toString(),
+                                        ?.toString(),
                                     requestFn: () =>
                                         ItemManagementTable().queryRows(
                                       queryFn: (q) => q.eq(
@@ -330,7 +331,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                         containerItemManagementRowList =
                                         snapshot.data!;
                                     return Container(
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: FutureBuilder<
                                           List<
                                               MovingAverageInventoryManagementRow>>(
@@ -338,7 +339,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                             FFAppState().movingAverageInventory(
                                           uniqueQueryKey: widget
                                               .authenticatedCompany?.id
-                                              .toString(),
+                                              ?.toString(),
                                           requestFn: () =>
                                               MovingAverageInventoryManagementTable()
                                                   .queryRows(
@@ -371,14 +372,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                               containerMovingAverageInventoryManagementRowList =
                                               snapshot.data!;
                                           return Container(
-                                            decoration: const BoxDecoration(),
+                                            decoration: BoxDecoration(),
                                             child: FutureBuilder<
                                                 List<
                                                     OutwardInventoryManagementRow>>(
                                               future: FFAppState().outwards(
                                                 uniqueQueryKey: widget
                                                     .authenticatedCompany?.id
-                                                    .toString(),
+                                                    ?.toString(),
                                                 requestFn: () =>
                                                     OutwardInventoryManagementTable()
                                                         .queryRows(
@@ -413,7 +414,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                     containerOutwardInventoryManagementRowList =
                                                     snapshot.data!;
                                                 return Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Row(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -449,22 +450,22 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                       Expanded(
                                                         child: Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, -1.0),
                                                           child: Container(
                                                             width:
                                                                 double.infinity,
                                                             constraints:
-                                                                const BoxConstraints(
+                                                                BoxConstraints(
                                                               maxWidth: 1470.0,
                                                             ),
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Column(
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      const Alignment(
+                                                                      Alignment(
                                                                           0.0,
                                                                           0),
                                                                   child: TabBar(
@@ -498,7 +499,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                         FlutterFlowTheme.of(context)
                                                                             .primary,
                                                                     padding:
-                                                                        const EdgeInsets.all(
+                                                                        EdgeInsets.all(
                                                                             4.0),
                                                                     tabs: [
                                                                       Tab(
@@ -544,7 +545,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                         builder:
                                                                             (context) =>
                                                                                 Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               10.0,
@@ -556,7 +557,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                               mainAxisSize: MainAxisSize.max,
                                                                               children: [
                                                                                 Align(
-                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                   child: Wrap(
                                                                                     spacing: 10.0,
                                                                                     runSpacing: 10.0,
@@ -568,14 +569,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                     clipBehavior: Clip.none,
                                                                                     children: [
                                                                                       Align(
-                                                                                        alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                        alignment: AlignmentDirectional(1.0, 0.0),
                                                                                         child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                                                                                           child: Row(
                                                                                             mainAxisSize: MainAxisSize.min,
                                                                                             children: [
                                                                                               Align(
-                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Builder(
                                                                                                   builder: (context) => FFButtonWidget(
                                                                                                     onPressed: () async {
@@ -586,7 +587,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             elevation: 0,
                                                                                                             insetPadding: EdgeInsets.zero,
                                                                                                             backgroundColor: Colors.transparent,
-                                                                                                            alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                            alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                             child: GestureDetector(
                                                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                               child: DefineParameterInventoryCopyWidget(
@@ -605,8 +606,8 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     options: FFButtonOptions(
                                                                                                       height: 40.0,
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                       color: FlutterFlowTheme.of(context).primary,
                                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                             fontFamily: 'Readex Pro',
@@ -614,7 +615,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                       elevation: 3.0,
-                                                                                                      borderSide: const BorderSide(
+                                                                                                      borderSide: BorderSide(
                                                                                                         color: Colors.transparent,
                                                                                                         width: 1.0,
                                                                                                       ),
@@ -647,11 +648,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         true,
                                                                                                       ),
                                                                                                       'inwardType': serializeParam(
-                                                                                                        widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inward Material - Inward Type')).toList().first,
+                                                                                                        widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inward Material - Inward Type')).toList()?.first,
                                                                                                         ParamType.SupabaseRow,
                                                                                                       ),
                                                                                                       'inwardLocation': serializeParam(
-                                                                                                        widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inward Material - Inward Location')).toList().first,
+                                                                                                        widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inward Material - Inward Location')).toList()?.first,
                                                                                                         ParamType.SupabaseRow,
                                                                                                       ),
                                                                                                       'inwardNo': serializeParam(
@@ -663,16 +664,16 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ParamType.SupabaseRow,
                                                                                                       ),
                                                                                                       'itemMasterParameters': serializeParam(
-                                                                                                        widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Item Master') && (e.dropdownName == 'Item Master Parameter')).toList().first,
+                                                                                                        widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Item Master') && (e.dropdownName == 'Item Master Parameter')).toList()?.first,
                                                                                                         ParamType.SupabaseRow,
                                                                                                       ),
                                                                                                       'inventoryParameters': serializeParam(
-                                                                                                        widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inventory Parameter')).toList().first,
+                                                                                                        widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inventory Parameter')).toList()?.first,
                                                                                                         ParamType.SupabaseRow,
                                                                                                       ),
                                                                                                     }.withoutNulls,
                                                                                                     extra: <String, dynamic>{
-                                                                                                      kTransitionInfoKey: const TransitionInfo(
+                                                                                                      kTransitionInfoKey: TransitionInfo(
                                                                                                         hasTransition: true,
                                                                                                         transitionType: PageTransitionType.fade,
                                                                                                         duration: Duration(milliseconds: 0),
@@ -683,14 +684,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                 text: FFLocalizations.of(context).getText(
                                                                                                   'v1zhnxw0' /* New */,
                                                                                                 ),
-                                                                                                icon: const Icon(
+                                                                                                icon: Icon(
                                                                                                   Icons.add,
                                                                                                   size: 15.0,
                                                                                                 ),
                                                                                                 options: FFButtonOptions(
                                                                                                   height: 40.0,
-                                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                  iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                  iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                   color: FlutterFlowTheme.of(context).secondary,
                                                                                                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                         fontFamily: 'Readex Pro',
@@ -698,14 +699,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         letterSpacing: 0.0,
                                                                                                       ),
                                                                                                   elevation: 3.0,
-                                                                                                  borderSide: const BorderSide(
+                                                                                                  borderSide: BorderSide(
                                                                                                     color: Colors.transparent,
                                                                                                     width: 1.0,
                                                                                                   ),
                                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                                 ),
                                                                                               ),
-                                                                                            ].divide(const SizedBox(width: 10.0)),
+                                                                                            ].divide(SizedBox(width: 10.0)),
                                                                                           ),
                                                                                         ),
                                                                                       ),
@@ -720,7 +721,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                         ],
                                                                                         onChanged: (val) async {
                                                                                           setState(() => _model.desktopChoiceChipsValue = val?.firstOrNull);
-                                                                                          FFAppState().clearInwardsCacheKey(widget.authenticatedCompany?.id.toString());
+                                                                                          FFAppState().clearInwardsCacheKey(widget.authenticatedCompany?.id?.toString());
                                                                                         },
                                                                                         selectedChipStyle: ChipStyle(
                                                                                           backgroundColor: FlutterFlowTheme.of(context).accent1,
@@ -732,7 +733,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               ),
                                                                                           iconColor: FlutterFlowTheme.of(context).primaryText,
                                                                                           iconSize: 18.0,
-                                                                                          labelPadding: const EdgeInsets.all(5.0),
+                                                                                          labelPadding: EdgeInsets.all(5.0),
                                                                                           elevation: 0.0,
                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                         ),
@@ -746,7 +747,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               ),
                                                                                           iconColor: FlutterFlowTheme.of(context).secondaryText,
                                                                                           iconSize: 18.0,
-                                                                                          labelPadding: const EdgeInsets.all(5.0),
+                                                                                          labelPadding: EdgeInsets.all(5.0),
                                                                                           elevation: 0.0,
                                                                                           borderRadius: BorderRadius.circular(4.0),
                                                                                         ),
@@ -763,7 +764,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                         wrapped: false,
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                        alignment: AlignmentDirectional(1.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.min,
                                                                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -792,7 +793,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         elevation: 0,
                                                                                                         insetPadding: EdgeInsets.zero,
                                                                                                         backgroundColor: Colors.transparent,
-                                                                                                        alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                        alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                         child: GestureDetector(
                                                                                                           onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                           child: AssignUserWidget(
@@ -815,13 +816,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   child: Container(
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                       children: [
                                                                                                         Padding(
-                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 0.0, 0.0),
+                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 0.0, 0.0),
                                                                                                           child: Text(
                                                                                                             containerUserManagementRowList.where((e) => e.id == containerApprovalUserRowList.where((e) => e.processName == 'Inventory Inward').toList().first.user).toList().first.fullName,
                                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -831,7 +832,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                           ),
                                                                                                         ),
                                                                                                         Padding(
-                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 0.0, 0.0),
+                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 0.0, 0.0),
                                                                                                           child: Text(
                                                                                                             containerUserManagementRowList.where((e) => e.id == containerApprovalUserRowList.where((e) => e.processName == 'Inventory Inward').toList().first.user).toList().first.email,
                                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -840,13 +841,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 ),
                                                                                                           ),
                                                                                                         ),
-                                                                                                      ].divide(const SizedBox(height: 5.0)).around(const SizedBox(height: 5.0)),
+                                                                                                      ].divide(SizedBox(height: 5.0)).around(SizedBox(height: 5.0)),
                                                                                                     ),
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
                                                                                             ),
-                                                                                          ].divide(const SizedBox(width: 10.0)),
+                                                                                          ].divide(SizedBox(width: 10.0)),
                                                                                         ),
                                                                                       ),
                                                                                       if (responsiveVisibility(
@@ -866,7 +867,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     elevation: 0,
                                                                                                     insetPadding: EdgeInsets.zero,
                                                                                                     backgroundColor: Colors.transparent,
-                                                                                                    alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                    alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                     child: GestureDetector(
                                                                                                       onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                       child: AssignUserWidget(
@@ -884,8 +885,8 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                             ),
                                                                                             options: FFButtonOptions(
                                                                                               height: 40.0,
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
-                                                                                              iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                                                                                              iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                               color: FlutterFlowTheme.of(context).accent1,
                                                                                               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                     fontFamily: 'Readex Pro',
@@ -893,7 +894,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     fontSize: 13.0,
                                                                                                     letterSpacing: 0.0,
                                                                                                   ),
-                                                                                              borderSide: const BorderSide(
+                                                                                              borderSide: BorderSide(
                                                                                                 color: Colors.transparent,
                                                                                               ),
                                                                                               borderRadius: BorderRadius.circular(8.0),
@@ -905,7 +906,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                 ),
                                                                                 if (_model.desktopChoiceChipsValue == 'Assigned To Me')
                                                                                   Align(
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                     child: SingleChildScrollView(
                                                                                       scrollDirection: Axis.horizontal,
                                                                                       child: Row(
@@ -918,12 +919,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Align(
-                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Container(
                                                                                                   height: 55.0,
                                                                                                   decoration: BoxDecoration(
                                                                                                     color: FlutterFlowTheme.of(context).accent1,
-                                                                                                    borderRadius: const BorderRadius.only(
+                                                                                                    borderRadius: BorderRadius.only(
                                                                                                       bottomLeft: Radius.circular(0.0),
                                                                                                       bottomRight: Radius.circular(0.0),
                                                                                                       topLeft: Radius.circular(12.0),
@@ -935,7 +936,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     children: [
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -957,7 +958,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 130.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -979,13 +980,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
                                                                                                           children: [
                                                                                                             Align(
-                                                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                               child: Text(
                                                                                                                 FFLocalizations.of(context).getText(
                                                                                                                   'wz7vqllm' /* Type */,
@@ -1003,7 +1004,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1025,7 +1026,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1047,7 +1048,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 100.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1069,7 +1070,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 100.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1091,7 +1092,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 100.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1111,7 +1112,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                           ],
                                                                                                         ),
                                                                                                       ),
-                                                                                                    ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                    ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
@@ -1125,14 +1126,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       children: List.generate(values.length, (valuesIndex) {
                                                                                                         final valuesItem = values[valuesIndex];
                                                                                                         return Align(
-                                                                                                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                           child: Container(
-                                                                                                            constraints: const BoxConstraints(
+                                                                                                            constraints: BoxConstraints(
                                                                                                               minHeight: 70.0,
                                                                                                             ),
                                                                                                             decoration: BoxDecoration(
                                                                                                               color: FlutterFlowTheme.of(context).accent4,
-                                                                                                              borderRadius: const BorderRadius.only(
+                                                                                                              borderRadius: BorderRadius.only(
                                                                                                                 bottomLeft: Radius.circular(5.0),
                                                                                                                 bottomRight: Radius.circular(5.0),
                                                                                                                 topLeft: Radius.circular(0.0),
@@ -1144,7 +1145,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                             ),
                                                                                                             child: Padding(
-                                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                               child: InkWell(
                                                                                                                 splashColor: Colors.transparent,
                                                                                                                 focusColor: Colors.transparent,
@@ -1262,13 +1263,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                     while (FFAppState().loopIndex < _model.item!.length) {
                                                                                                                       setState(() {
                                                                                                                         FFAppState().addToItem(InwardDataStruct(
-                                                                                                                          remark: _model.item?[FFAppState().loopIndex].remarks,
-                                                                                                                          qrVerified: _model.item?[FFAppState().loopIndex].qrVerified,
-                                                                                                                          lotNo: _model.item?[FFAppState().loopIndex].lotNo,
-                                                                                                                          itemId: _model.item?[FFAppState().loopIndex].item,
-                                                                                                                          rate: _model.item?[FFAppState().loopIndex].rate,
-                                                                                                                          requireQuantity: _model.item?[FFAppState().loopIndex].requireQuantity,
-                                                                                                                          receiveQuantity: _model.item?[FFAppState().loopIndex].receivedQuantity,
+                                                                                                                          remark: _model.item?[FFAppState().loopIndex]?.remarks,
+                                                                                                                          qrVerified: _model.item?[FFAppState().loopIndex]?.qrVerified,
+                                                                                                                          lotNo: _model.item?[FFAppState().loopIndex]?.lotNo,
+                                                                                                                          itemId: _model.item?[FFAppState().loopIndex]?.item,
+                                                                                                                          rate: _model.item?[FFAppState().loopIndex]?.rate,
+                                                                                                                          requireQuantity: _model.item?[FFAppState().loopIndex]?.requireQuantity,
+                                                                                                                          receiveQuantity: _model.item?[FFAppState().loopIndex]?.receivedQuantity,
                                                                                                                         ));
                                                                                                                         FFAppState().loopIndex = FFAppState().loopIndex + 1;
                                                                                                                       });
@@ -1352,11 +1353,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                           ParamType.int,
                                                                                                                         ),
                                                                                                                         'inwardTypeDropdowm': serializeParam(
-                                                                                                                          widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inward Material - Inward Type')).toList().first,
+                                                                                                                          widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inward Material - Inward Type')).toList()?.first,
                                                                                                                           ParamType.SupabaseRow,
                                                                                                                         ),
                                                                                                                         'inwardLocationDropdown': serializeParam(
-                                                                                                                          widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inward Material - Inward Location')).toList().first,
+                                                                                                                          widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Inward Material - Inward Location')).toList()?.first,
                                                                                                                           ParamType.SupabaseRow,
                                                                                                                         ),
                                                                                                                         'itemMasterParameters': serializeParam(
@@ -1379,13 +1380,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                   children: [
                                                                                                                     Container(
                                                                                                                       width: 120.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                         children: [
                                                                                                                           Align(
-                                                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                             child: Text(
                                                                                                                               valuesItem.inwardNumber,
                                                                                                                               textAlign: TextAlign.center,
@@ -1398,12 +1399,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   ),
                                                                                                                             ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 130.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1432,12 +1433,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 120.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1452,12 +1453,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 120.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1472,12 +1473,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 120.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1492,12 +1493,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 100.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1512,12 +1513,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 100.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1532,12 +1533,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 100.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1552,10 +1553,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
-                                                                                                                  ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                  ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                                 ),
                                                                                                               ),
                                                                                                             ),
@@ -1568,13 +1569,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               ),
                                                                                             ],
                                                                                           ),
-                                                                                        ].addToStart(const SizedBox(width: 10.0)).addToEnd(const SizedBox(width: 10.0)),
+                                                                                        ].addToStart(SizedBox(width: 10.0)).addToEnd(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ),
                                                                                 if (_model.desktopChoiceChipsValue == 'All')
                                                                                   Align(
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                     child: SingleChildScrollView(
                                                                                       scrollDirection: Axis.horizontal,
                                                                                       child: Row(
@@ -1586,12 +1587,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Align(
-                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Container(
                                                                                                   height: 55.0,
                                                                                                   decoration: BoxDecoration(
                                                                                                     color: FlutterFlowTheme.of(context).accent1,
-                                                                                                    borderRadius: const BorderRadius.only(
+                                                                                                    borderRadius: BorderRadius.only(
                                                                                                       bottomLeft: Radius.circular(0.0),
                                                                                                       bottomRight: Radius.circular(0.0),
                                                                                                       topLeft: Radius.circular(12.0),
@@ -1603,7 +1604,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     children: [
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1625,7 +1626,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 130.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1647,13 +1648,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
                                                                                                           children: [
                                                                                                             Align(
-                                                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                               child: Text(
                                                                                                                 FFLocalizations.of(context).getText(
                                                                                                                   'gt69t5a7' /* Type */,
@@ -1671,7 +1672,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1693,7 +1694,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1715,7 +1716,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 100.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1737,7 +1738,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 100.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1759,7 +1760,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                       Container(
                                                                                                         width: 100.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -1779,7 +1780,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                           ],
                                                                                                         ),
                                                                                                       ),
-                                                                                                    ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                    ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                   ),
                                                                                                 ),
                                                                                               ),
@@ -1793,14 +1794,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       children: List.generate(values.length, (valuesIndex) {
                                                                                                         final valuesItem = values[valuesIndex];
                                                                                                         return Align(
-                                                                                                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                           child: Container(
-                                                                                                            constraints: const BoxConstraints(
+                                                                                                            constraints: BoxConstraints(
                                                                                                               minHeight: 70.0,
                                                                                                             ),
                                                                                                             decoration: BoxDecoration(
                                                                                                               color: FlutterFlowTheme.of(context).accent4,
-                                                                                                              borderRadius: const BorderRadius.only(
+                                                                                                              borderRadius: BorderRadius.only(
                                                                                                                 bottomLeft: Radius.circular(5.0),
                                                                                                                 bottomRight: Radius.circular(5.0),
                                                                                                                 topLeft: Radius.circular(0.0),
@@ -1812,7 +1813,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                             ),
                                                                                                             child: Padding(
-                                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                               child: InkWell(
                                                                                                                 splashColor: Colors.transparent,
                                                                                                                 focusColor: Colors.transparent,
@@ -1917,13 +1918,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                   children: [
                                                                                                                     Container(
                                                                                                                       width: 120.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                         children: [
                                                                                                                           Align(
-                                                                                                                            alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                            alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                             child: Text(
                                                                                                                               valuesItem.inwardNumber,
                                                                                                                               textAlign: TextAlign.center,
@@ -1936,12 +1937,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   ),
                                                                                                                             ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 130.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1970,12 +1971,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 120.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1990,12 +1991,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 120.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -2010,12 +2011,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 120.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -2030,12 +2031,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 100.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -2050,12 +2051,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 100.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -2070,12 +2071,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
                                                                                                                     Container(
                                                                                                                       width: 100.0,
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Column(
                                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -2090,10 +2091,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                   fontWeight: FontWeight.normal,
                                                                                                                                 ),
                                                                                                                           ),
-                                                                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                                                                        ].divide(SizedBox(height: 7.0)),
                                                                                                                       ),
                                                                                                                     ),
-                                                                                                                  ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                  ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                                 ),
                                                                                                               ),
                                                                                                             ),
@@ -2106,11 +2107,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               ),
                                                                                             ],
                                                                                           ),
-                                                                                        ].addToStart(const SizedBox(width: 10.0)).addToEnd(const SizedBox(width: 10.0)),
+                                                                                        ].addToStart(SizedBox(width: 10.0)).addToEnd(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                              ].divide(const SizedBox(height: 10.0)).addToStart(const SizedBox(height: 20.0)).addToEnd(const SizedBox(height: 20.0)),
+                                                                              ].divide(SizedBox(height: 10.0)).addToStart(SizedBox(height: 20.0)).addToEnd(SizedBox(height: 20.0)),
                                                                             ),
                                                                           ),
                                                                         ),
@@ -2127,9 +2128,9 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                 [
                                                                               if (widget.authenticatedUser!.isSuperAdmin || (widget.authenticatedUser?.itemMasterModule == 'Admin') || (widget.authenticatedUser?.itemMasterModule == 'Operate') || (widget.authenticatedUser?.itemMasterModule == 'View') || (widget.authenticatedUser?.itemMasterModule == 'Support'))
                                                                                 Align(
-                                                                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(1.0, 0.0),
                                                                                   child: Padding(
-                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                                                                                     child: FFButtonWidget(
                                                                                       onPressed: () async {
                                                                                         context.pushNamed(
@@ -2149,12 +2150,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               true,
                                                                                             ),
                                                                                             'dropdown': serializeParam(
-                                                                                              widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Item Master') && (e.dropdownName == 'Item Master Parameter')).toList().first,
+                                                                                              widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Item Master') && (e.dropdownName == 'Item Master Parameter')).toList()?.first,
                                                                                               ParamType.SupabaseRow,
                                                                                             ),
                                                                                           }.withoutNulls,
                                                                                           extra: <String, dynamic>{
-                                                                                            kTransitionInfoKey: const TransitionInfo(
+                                                                                            kTransitionInfoKey: TransitionInfo(
                                                                                               hasTransition: true,
                                                                                               transitionType: PageTransitionType.fade,
                                                                                               duration: Duration(milliseconds: 0),
@@ -2167,8 +2168,8 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                       ),
                                                                                       options: FFButtonOptions(
                                                                                         height: 40.0,
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                         color: FlutterFlowTheme.of(context).secondary,
                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'Readex Pro',
@@ -2176,7 +2177,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               letterSpacing: 0.0,
                                                                                             ),
                                                                                         elevation: 3.0,
-                                                                                        borderSide: const BorderSide(
+                                                                                        borderSide: BorderSide(
                                                                                           color: Colors.transparent,
                                                                                           width: 1.0,
                                                                                         ),
@@ -2187,7 +2188,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                 ),
                                                                               if (widget.authenticatedCompany?.inventoryCalculationMethod == 'Lot Wise')
                                                                                 Align(
-                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                   child: SingleChildScrollView(
                                                                                     scrollDirection: Axis.horizontal,
                                                                                     child: Row(
@@ -2199,12 +2200,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
                                                                                           children: [
                                                                                             Align(
-                                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                               child: Container(
                                                                                                 height: 55.0,
                                                                                                 decoration: BoxDecoration(
                                                                                                   color: FlutterFlowTheme.of(context).accent1,
-                                                                                                  borderRadius: const BorderRadius.only(
+                                                                                                  borderRadius: BorderRadius.only(
                                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                                     bottomRight: Radius.circular(0.0),
                                                                                                     topLeft: Radius.circular(12.0),
@@ -2216,7 +2217,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                   children: [
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2238,13 +2239,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
                                                                                                         children: [
                                                                                                           Align(
-                                                                                                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                            alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                             child: Text(
                                                                                                               FFLocalizations.of(context).getText(
                                                                                                                 'v34hzmrp' /* Item Name */,
@@ -2262,7 +2263,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2284,7 +2285,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2306,7 +2307,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2328,7 +2329,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2350,7 +2351,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2372,7 +2373,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2394,7 +2395,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2416,7 +2417,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2438,7 +2439,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2460,7 +2461,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2481,10 +2482,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                     ),
                                                                                                     Align(
-                                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                       child: Builder(
                                                                                                         builder: (context) {
-                                                                                                          final itemParameters = widget.itemParameters?.dropdownValues.toList() ?? [];
+                                                                                                          final itemParameters = widget.itemParameters?.dropdownValues?.toList() ?? [];
                                                                                                           return Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.start,
@@ -2493,7 +2494,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               final itemParametersItem = itemParameters[itemParametersIndex];
                                                                                                               return Container(
                                                                                                                 width: 150.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -2511,16 +2512,16 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                   ],
                                                                                                                 ),
                                                                                                               );
-                                                                                                            }).divide(const SizedBox(width: 10.0)),
+                                                                                                            }).divide(SizedBox(width: 10.0)),
                                                                                                           );
                                                                                                         },
                                                                                                       ),
                                                                                                     ),
                                                                                                     Align(
-                                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                       child: Builder(
                                                                                                         builder: (context) {
-                                                                                                          final inventoryParameters = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                                          final inventoryParameters = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                                           return Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.start,
@@ -2528,10 +2529,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             children: List.generate(inventoryParameters.length, (inventoryParametersIndex) {
                                                                                                               final inventoryParametersItem = inventoryParameters[inventoryParametersIndex];
                                                                                                               return Align(
-                                                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                 child: Container(
                                                                                                                   width: 150.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -2550,7 +2551,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                   ),
                                                                                                                 ),
                                                                                                               );
-                                                                                                            }).divide(const SizedBox(width: 10.0)),
+                                                                                                            }).divide(SizedBox(width: 10.0)),
                                                                                                           );
                                                                                                         },
                                                                                                       ),
@@ -2564,7 +2565,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ))
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -2586,7 +2587,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                     Container(
                                                                                                       width: 180.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2608,7 +2609,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2628,7 +2629,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ],
                                                                                                       ),
                                                                                                     ),
-                                                                                                  ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                  ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                 ),
                                                                                               ),
                                                                                             ),
@@ -2642,11 +2643,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     children: List.generate(lotWiseInventory.length, (lotWiseInventoryIndex) {
                                                                                                       final lotWiseInventoryItem = lotWiseInventory[lotWiseInventoryIndex];
                                                                                                       return Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -2658,14 +2659,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: Row(
                                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                               children: [
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2680,12 +2681,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2700,12 +2701,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2720,12 +2721,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2740,12 +2741,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2760,12 +2761,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2780,12 +2781,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2800,12 +2801,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2820,12 +2821,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2840,12 +2841,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2860,12 +2861,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2880,12 +2881,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -2900,19 +2901,19 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Builder(
                                                                                                                   builder: (context) {
-                                                                                                                    final itemparameters = widget.itemParameters?.dropdownValues.toList() ?? [];
+                                                                                                                    final itemparameters = widget.itemParameters?.dropdownValues?.toList() ?? [];
                                                                                                                     return Row(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       children: List.generate(itemparameters.length, (itemparametersIndex) {
                                                                                                                         final itemparametersItem = itemparameters[itemparametersIndex];
                                                                                                                         return Container(
                                                                                                                           width: 150.0,
-                                                                                                                          decoration: const BoxDecoration(),
+                                                                                                                          decoration: BoxDecoration(),
                                                                                                                           child: Column(
                                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -2927,23 +2928,23 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                       fontWeight: FontWeight.normal,
                                                                                                                                     ),
                                                                                                                               ),
-                                                                                                                            ].divide(const SizedBox(height: 7.0)),
+                                                                                                                            ].divide(SizedBox(height: 7.0)),
                                                                                                                           ),
                                                                                                                         );
-                                                                                                                      }).divide(const SizedBox(width: 10.0)),
+                                                                                                                      }).divide(SizedBox(width: 10.0)),
                                                                                                                     );
                                                                                                                   },
                                                                                                                 ),
                                                                                                                 Builder(
                                                                                                                   builder: (context) {
-                                                                                                                    final inventoryparameters = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                                                    final inventoryparameters = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                                                     return Row(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       children: List.generate(inventoryparameters.length, (inventoryparametersIndex) {
                                                                                                                         final inventoryparametersItem = inventoryparameters[inventoryparametersIndex];
                                                                                                                         return Container(
                                                                                                                           width: 150.0,
-                                                                                                                          decoration: const BoxDecoration(),
+                                                                                                                          decoration: BoxDecoration(),
                                                                                                                           child: Column(
                                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -2958,16 +2959,16 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                       fontWeight: FontWeight.normal,
                                                                                                                                     ),
                                                                                                                               ),
-                                                                                                                            ].divide(const SizedBox(height: 7.0)),
+                                                                                                                            ].divide(SizedBox(height: 7.0)),
                                                                                                                           ),
                                                                                                                         );
-                                                                                                                      }).divide(const SizedBox(width: 10.0)),
+                                                                                                                      }).divide(SizedBox(width: 10.0)),
                                                                                                                     );
                                                                                                                   },
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 180.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Row(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     children: [
@@ -2981,14 +2982,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                         color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                                         size: 24.0,
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(width: 10.0)),
+                                                                                                                    ].divide(SizedBox(width: 10.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Align(
-                                                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -3004,11 +3005,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                 ),
-                                                                                                              ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                              ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
@@ -3020,13 +3021,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                             ),
                                                                                           ],
                                                                                         ),
-                                                                                      ].addToStart(const SizedBox(width: 10.0)).addToEnd(const SizedBox(width: 10.0)),
+                                                                                      ].addToStart(SizedBox(width: 10.0)).addToEnd(SizedBox(width: 10.0)),
                                                                                     ),
                                                                                   ),
                                                                                 ),
                                                                               if (widget.authenticatedCompany?.inventoryCalculationMethod == 'Moving Average')
                                                                                 Align(
-                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                   child: SingleChildScrollView(
                                                                                     scrollDirection: Axis.horizontal,
                                                                                     child: Row(
@@ -3038,12 +3039,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
                                                                                           children: [
                                                                                             Align(
-                                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                               child: Container(
                                                                                                 height: 55.0,
                                                                                                 decoration: BoxDecoration(
                                                                                                   color: FlutterFlowTheme.of(context).accent1,
-                                                                                                  borderRadius: const BorderRadius.only(
+                                                                                                  borderRadius: BorderRadius.only(
                                                                                                     bottomLeft: Radius.circular(0.0),
                                                                                                     bottomRight: Radius.circular(0.0),
                                                                                                     topLeft: Radius.circular(12.0),
@@ -3055,7 +3056,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                   children: [
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3077,13 +3078,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
                                                                                                         children: [
                                                                                                           Align(
-                                                                                                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                            alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                             child: Text(
                                                                                                               FFLocalizations.of(context).getText(
                                                                                                                 'w5r1s5uj' /* Item Name */,
@@ -3101,7 +3102,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3123,7 +3124,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3145,7 +3146,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3167,7 +3168,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3189,7 +3190,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 100.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3211,7 +3212,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3233,7 +3234,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3255,7 +3256,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3277,7 +3278,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3298,10 +3299,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                     ),
                                                                                                     Align(
-                                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                       child: Builder(
                                                                                                         builder: (context) {
-                                                                                                          final itemParameter = widget.itemParameters?.dropdownValues.toList() ?? [];
+                                                                                                          final itemParameter = widget.itemParameters?.dropdownValues?.toList() ?? [];
                                                                                                           return Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.start,
@@ -3309,16 +3310,16 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             children: List.generate(itemParameter.length, (itemParameterIndex) {
                                                                                                               final itemParameterItem = itemParameter[itemParameterIndex];
                                                                                                               return Align(
-                                                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                 child: Container(
                                                                                                                   width: 150.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     mainAxisAlignment: MainAxisAlignment.center,
                                                                                                                     children: [
                                                                                                                       Align(
-                                                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                         child: Text(
                                                                                                                           itemParameterItem,
                                                                                                                           style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -3333,16 +3334,16 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                   ),
                                                                                                                 ),
                                                                                                               );
-                                                                                                            }).divide(const SizedBox(width: 10.0)),
+                                                                                                            }).divide(SizedBox(width: 10.0)),
                                                                                                           );
                                                                                                         },
                                                                                                       ),
                                                                                                     ),
                                                                                                     Align(
-                                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                      alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                       child: Builder(
                                                                                                         builder: (context) {
-                                                                                                          final inventoryParameters = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                                          final inventoryParameters = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                                           return Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.start,
@@ -3350,16 +3351,16 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             children: List.generate(inventoryParameters.length, (inventoryParametersIndex) {
                                                                                                               final inventoryParametersItem = inventoryParameters[inventoryParametersIndex];
                                                                                                               return Align(
-                                                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                 child: Container(
                                                                                                                   width: 150.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     mainAxisAlignment: MainAxisAlignment.center,
                                                                                                                     children: [
                                                                                                                       Align(
-                                                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                         child: Text(
                                                                                                                           inventoryParametersItem,
                                                                                                                           style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -3374,7 +3375,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                   ),
                                                                                                                 ),
                                                                                                               );
-                                                                                                            }).divide(const SizedBox(width: 10.0)),
+                                                                                                            }).divide(SizedBox(width: 10.0)),
                                                                                                           );
                                                                                                         },
                                                                                                       ),
@@ -3386,7 +3387,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ))
                                                                                                       Container(
                                                                                                         width: 120.0,
-                                                                                                        decoration: const BoxDecoration(),
+                                                                                                        decoration: BoxDecoration(),
                                                                                                         child: Column(
                                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                                           mainAxisAlignment: MainAxisAlignment.center,
@@ -3408,7 +3409,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       ),
                                                                                                     Container(
                                                                                                       width: 180.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3430,7 +3431,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                     Container(
                                                                                                       width: 120.0,
-                                                                                                      decoration: const BoxDecoration(),
+                                                                                                      decoration: BoxDecoration(),
                                                                                                       child: Column(
                                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                                         mainAxisAlignment: MainAxisAlignment.center,
@@ -3450,7 +3451,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ],
                                                                                                       ),
                                                                                                     ),
-                                                                                                  ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                  ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                 ),
                                                                                               ),
                                                                                             ),
@@ -3464,11 +3465,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     children: List.generate(movingAverageInventory.length, (movingAverageInventoryIndex) {
                                                                                                       final movingAverageInventoryItem = movingAverageInventory[movingAverageInventoryIndex];
                                                                                                       return Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -3480,14 +3481,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: Row(
                                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                               children: [
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3502,12 +3503,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3522,12 +3523,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3542,12 +3543,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3562,12 +3563,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3582,12 +3583,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3602,12 +3603,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3622,12 +3623,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3642,12 +3643,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3662,12 +3663,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3682,12 +3683,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3702,19 +3703,19 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Builder(
                                                                                                                   builder: (context) {
-                                                                                                                    final itemparameter = widget.itemParameters?.dropdownValues.toList() ?? [];
+                                                                                                                    final itemparameter = widget.itemParameters?.dropdownValues?.toList() ?? [];
                                                                                                                     return Row(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       children: List.generate(itemparameter.length, (itemparameterIndex) {
                                                                                                                         final itemparameterItem = itemparameter[itemparameterIndex];
                                                                                                                         return Container(
                                                                                                                           width: 150.0,
-                                                                                                                          decoration: const BoxDecoration(),
+                                                                                                                          decoration: BoxDecoration(),
                                                                                                                           child: Column(
                                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -3729,23 +3730,23 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                       fontWeight: FontWeight.normal,
                                                                                                                                     ),
                                                                                                                               ),
-                                                                                                                            ].divide(const SizedBox(height: 7.0)),
+                                                                                                                            ].divide(SizedBox(height: 7.0)),
                                                                                                                           ),
                                                                                                                         );
-                                                                                                                      }).divide(const SizedBox(width: 10.0)),
+                                                                                                                      }).divide(SizedBox(width: 10.0)),
                                                                                                                     );
                                                                                                                   },
                                                                                                                 ),
                                                                                                                 Builder(
                                                                                                                   builder: (context) {
-                                                                                                                    final inventoryparameter = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                                                    final inventoryparameter = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                                                     return Row(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       children: List.generate(inventoryparameter.length, (inventoryparameterIndex) {
                                                                                                                         final inventoryparameterItem = inventoryparameter[inventoryparameterIndex];
                                                                                                                         return Container(
                                                                                                                           width: 150.0,
-                                                                                                                          decoration: const BoxDecoration(),
+                                                                                                                          decoration: BoxDecoration(),
                                                                                                                           child: Column(
                                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -3760,10 +3761,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                       fontWeight: FontWeight.normal,
                                                                                                                                     ),
                                                                                                                               ),
-                                                                                                                            ].divide(const SizedBox(height: 7.0)),
+                                                                                                                            ].divide(SizedBox(height: 7.0)),
                                                                                                                           ),
                                                                                                                         );
-                                                                                                                      }).divide(const SizedBox(width: 10.0)),
+                                                                                                                      }).divide(SizedBox(width: 10.0)),
                                                                                                                     );
                                                                                                                   },
                                                                                                                 ),
@@ -3776,7 +3777,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 ))
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -3791,12 +3792,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                 Container(
                                                                                                                   width: 180.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Row(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     children: [
@@ -3810,12 +3811,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                         color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                                         size: 24.0,
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(width: 10.0)),
+                                                                                                                    ].divide(SizedBox(width: 10.0)),
                                                                                                                   ),
                                                                                                                 ),
                                                                                                                 Container(
                                                                                                                   width: 120.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -3830,10 +3831,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                               fontWeight: FontWeight.normal,
                                                                                                                             ),
                                                                                                                       ),
-                                                                                                                    ].divide(const SizedBox(height: 7.0)),
+                                                                                                                    ].divide(SizedBox(height: 7.0)),
                                                                                                                   ),
                                                                                                                 ),
-                                                                                                              ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                              ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
@@ -3845,11 +3846,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                             ),
                                                                                           ],
                                                                                         ),
-                                                                                      ].addToStart(const SizedBox(width: 10.0)).addToEnd(const SizedBox(width: 10.0)),
+                                                                                      ].addToStart(SizedBox(width: 10.0)).addToEnd(SizedBox(width: 10.0)),
                                                                                     ),
                                                                                   ),
                                                                                 ),
-                                                                            ].divide(const SizedBox(height: 10.0)).addToStart(const SizedBox(height: 20.0)).addToEnd(const SizedBox(height: 20.0)),
+                                                                            ].divide(SizedBox(height: 10.0)).addToStart(SizedBox(height: 20.0)).addToEnd(SizedBox(height: 20.0)),
                                                                           ),
                                                                         ),
                                                                       ),
@@ -3857,7 +3858,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                         builder:
                                                                             (context) =>
                                                                                 Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               10.0,
                                                                               0.0,
                                                                               10.0,
@@ -3875,7 +3876,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                   mainAxisAlignment: MainAxisAlignment.end,
                                                                                   children: [
                                                                                     Align(
-                                                                                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                      alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                       child: Builder(
                                                                                         builder: (context) => FFButtonWidget(
                                                                                           onPressed: () async {
@@ -3886,7 +3887,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                   elevation: 0,
                                                                                                   insetPadding: EdgeInsets.zero,
                                                                                                   backgroundColor: Colors.transparent,
-                                                                                                  alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                  alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                   child: GestureDetector(
                                                                                                     onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                     child: DefineParameterInventoryCopyWidget(
@@ -3905,8 +3906,8 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                           ),
                                                                                           options: FFButtonOptions(
                                                                                             height: 40.0,
-                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                            padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                             color: FlutterFlowTheme.of(context).primary,
                                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                   fontFamily: 'Readex Pro',
@@ -3914,7 +3915,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                   letterSpacing: 0.0,
                                                                                                 ),
                                                                                             elevation: 3.0,
-                                                                                            borderSide: const BorderSide(
+                                                                                            borderSide: BorderSide(
                                                                                               color: Colors.transparent,
                                                                                               width: 1.0,
                                                                                             ),
@@ -3924,9 +3925,9 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                       ),
                                                                                     ),
                                                                                     Align(
-                                                                                      alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                      alignment: AlignmentDirectional(1.0, 0.0),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
+                                                                                        padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                                                                                         child: FFButtonWidget(
                                                                                           onPressed: () async {
                                                                                             setState(() {
@@ -3951,11 +3952,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                   true,
                                                                                                 ),
                                                                                                 'outwardType': serializeParam(
-                                                                                                  widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Outward Material - Outward Type')).toList().first,
+                                                                                                  widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Outward Material - Outward Type')).toList()?.first,
                                                                                                   ParamType.SupabaseRow,
                                                                                                 ),
                                                                                                 'outwardLocation': serializeParam(
-                                                                                                  widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Outward Material - Outward Location')).toList().first,
+                                                                                                  widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Outward Material - Outward Location')).toList()?.first,
                                                                                                   ParamType.SupabaseRow,
                                                                                                 ),
                                                                                                 'outwardNo': serializeParam(
@@ -3975,12 +3976,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                   ParamType.SupabaseRow,
                                                                                                 ),
                                                                                                 'issueTo': serializeParam(
-                                                                                                  widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Outward Material - Issue To')).toList().first,
+                                                                                                  widget.authenticatedCompanyDropdown?.where((e) => (e.module == 'Inventory') && (e.dropdownName == 'Outward Material - Issue To')).toList()?.first,
                                                                                                   ParamType.SupabaseRow,
                                                                                                 ),
                                                                                               }.withoutNulls,
                                                                                               extra: <String, dynamic>{
-                                                                                                kTransitionInfoKey: const TransitionInfo(
+                                                                                                kTransitionInfoKey: TransitionInfo(
                                                                                                   hasTransition: true,
                                                                                                   transitionType: PageTransitionType.fade,
                                                                                                   duration: Duration(milliseconds: 0),
@@ -3991,14 +3992,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                           text: FFLocalizations.of(context).getText(
                                                                                             'fllqvf94' /* New */,
                                                                                           ),
-                                                                                          icon: const Icon(
+                                                                                          icon: Icon(
                                                                                             Icons.add,
                                                                                             size: 15.0,
                                                                                           ),
                                                                                           options: FFButtonOptions(
                                                                                             height: 40.0,
-                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                            iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                            iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                             color: FlutterFlowTheme.of(context).secondary,
                                                                                             textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                   fontFamily: 'Readex Pro',
@@ -4006,7 +4007,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                   letterSpacing: 0.0,
                                                                                                 ),
                                                                                             elevation: 3.0,
-                                                                                            borderSide: const BorderSide(
+                                                                                            borderSide: BorderSide(
                                                                                               color: Colors.transparent,
                                                                                               width: 1.0,
                                                                                             ),
@@ -4015,10 +4016,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                         ),
                                                                                       ),
                                                                                     ),
-                                                                                  ].divide(const SizedBox(width: 10.0)),
+                                                                                  ].divide(SizedBox(width: 10.0)),
                                                                                 ),
                                                                                 Align(
-                                                                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                  alignment: AlignmentDirectional(1.0, 0.0),
                                                                                   child: Wrap(
                                                                                     spacing: 10.0,
                                                                                     runSpacing: 10.0,
@@ -4030,7 +4031,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                     clipBehavior: Clip.none,
                                                                                     children: [
                                                                                       Align(
-                                                                                        alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                        alignment: AlignmentDirectional(1.0, 0.0),
                                                                                         child: Row(
                                                                                           mainAxisSize: MainAxisSize.min,
                                                                                           mainAxisAlignment: MainAxisAlignment.end,
@@ -4058,7 +4059,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         elevation: 0,
                                                                                                         insetPadding: EdgeInsets.zero,
                                                                                                         backgroundColor: Colors.transparent,
-                                                                                                        alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                        alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                         child: GestureDetector(
                                                                                                           onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                           child: AssignUserCopyWidget(
@@ -4081,13 +4082,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   child: Container(
-                                                                                                    decoration: const BoxDecoration(),
+                                                                                                    decoration: BoxDecoration(),
                                                                                                     child: Column(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                       children: [
                                                                                                         Padding(
-                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 0.0, 0.0),
+                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 0.0, 0.0),
                                                                                                           child: Text(
                                                                                                             containerUserManagementRowList.where((e) => e.id == containerApprovalUserRowList.where((e) => e.processName == 'Inventory Outward').toList().first.user).toList().first.fullName,
                                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -4097,7 +4098,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                           ),
                                                                                                         ),
                                                                                                         Padding(
-                                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 0.0, 0.0),
+                                                                                                          padding: EdgeInsetsDirectional.fromSTEB(3.0, 0.0, 0.0, 0.0),
                                                                                                           child: Text(
                                                                                                             containerUserManagementRowList.where((e) => e.id == containerApprovalUserRowList.where((e) => e.processName == 'Inventory Outward').toList().first.user).toList().first.email,
                                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -4106,7 +4107,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 ),
                                                                                                           ),
                                                                                                         ),
-                                                                                                      ].divide(const SizedBox(height: 5.0)).around(const SizedBox(height: 5.0)),
+                                                                                                      ].divide(SizedBox(height: 5.0)).around(SizedBox(height: 5.0)),
                                                                                                     ),
                                                                                                   ),
                                                                                                 ),
@@ -4116,7 +4117,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                         child: FlutterFlowChoiceChips(
                                                                                           options: [
                                                                                             ChipData(FFLocalizations.of(context).getText(
@@ -4137,7 +4138,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                 ),
                                                                                             iconColor: FlutterFlowTheme.of(context).primaryText,
                                                                                             iconSize: 18.0,
-                                                                                            labelPadding: const EdgeInsets.all(5.0),
+                                                                                            labelPadding: EdgeInsets.all(5.0),
                                                                                             elevation: 0.0,
                                                                                             borderRadius: BorderRadius.circular(4.0),
                                                                                           ),
@@ -4151,7 +4152,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                 ),
                                                                                             iconColor: FlutterFlowTheme.of(context).secondaryText,
                                                                                             iconSize: 18.0,
-                                                                                            labelPadding: const EdgeInsets.all(5.0),
+                                                                                            labelPadding: EdgeInsets.all(5.0),
                                                                                             elevation: 0.0,
                                                                                             borderRadius: BorderRadius.circular(4.0),
                                                                                           ),
@@ -4181,7 +4182,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                   desktop: false,
                                                                                 ))
                                                                                   Align(
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                     child: SingleChildScrollView(
                                                                                       scrollDirection: Axis.horizontal,
                                                                                       child: Row(
@@ -4193,12 +4194,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
                                                                                             children: [
                                                                                               Align(
-                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                 child: Container(
                                                                                                   height: 50.0,
                                                                                                   decoration: BoxDecoration(
                                                                                                     color: FlutterFlowTheme.of(context).accent1,
-                                                                                                    borderRadius: const BorderRadius.only(
+                                                                                                    borderRadius: BorderRadius.only(
                                                                                                       bottomLeft: Radius.circular(0.0),
                                                                                                       bottomRight: Radius.circular(0.0),
                                                                                                       topLeft: Radius.circular(16.0),
@@ -4206,13 +4207,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     ),
                                                                                                   ),
                                                                                                   child: Align(
-                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                     child: Row(
                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                       children: [
                                                                                                         Container(
                                                                                                           width: 150.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4233,7 +4234,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 150.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4254,13 +4255,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
                                                                                                             children: [
                                                                                                               Align(
-                                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                 child: Text(
                                                                                                                   FFLocalizations.of(context).getText(
                                                                                                                     '717ncvxm' /* UoM */,
@@ -4276,7 +4277,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4304,7 +4305,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ))
                                                                                                           Container(
                                                                                                             width: 100.0,
-                                                                                                            decoration: const BoxDecoration(),
+                                                                                                            decoration: BoxDecoration(),
                                                                                                             child: Column(
                                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -4331,7 +4332,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ))
                                                                                                           Container(
                                                                                                             width: 100.0,
-                                                                                                            decoration: const BoxDecoration(),
+                                                                                                            decoration: BoxDecoration(),
                                                                                                             child: Column(
                                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -4351,7 +4352,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                           ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4371,7 +4372,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4391,7 +4392,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4411,7 +4412,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4431,7 +4432,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4449,7 +4450,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ],
                                                                                                           ),
                                                                                                         ),
-                                                                                                      ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                      ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                     ),
                                                                                                   ),
                                                                                                 ),
@@ -4463,17 +4464,17 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       children: List.generate(item.length, (itemIndex) {
                                                                                                         final itemItem = item[itemIndex];
                                                                                                         return Container(
-                                                                                                          constraints: const BoxConstraints(
+                                                                                                          constraints: BoxConstraints(
                                                                                                             minHeight: 50.0,
                                                                                                           ),
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Row(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             crossAxisAlignment: CrossAxisAlignment.center,
                                                                                                             children: [
                                                                                                               Container(
                                                                                                                 width: 150.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -4499,7 +4500,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                               Container(
                                                                                                                 width: 150.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -4517,7 +4518,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                               Container(
                                                                                                                 width: 120.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -4541,7 +4542,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ))
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -4567,7 +4568,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ))
                                                                                                                 Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Column(
                                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -4585,20 +4586,20 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                   ),
                                                                                                                 ),
                                                                                                               Align(
-                                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                 child: Container(
                                                                                                                   width: 100.0,
-                                                                                                                  decoration: const BoxDecoration(),
+                                                                                                                  decoration: BoxDecoration(),
                                                                                                                   child: Align(
-                                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                       children: [
                                                                                                                         Container(
-                                                                                                                          decoration: const BoxDecoration(),
+                                                                                                                          decoration: BoxDecoration(),
                                                                                                                           child: Align(
-                                                                                                                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                            alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                             child: wrapWithModel(
                                                                                                                               model: _model.itemparameter1Models.getModel(
                                                                                                                                 itemItem.itemId.toString(),
@@ -4622,7 +4623,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                               Container(
                                                                                                                 width: 100.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -4640,13 +4641,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                               Container(
                                                                                                                 width: 100.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                   children: [
                                                                                                                     Container(
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: wrapWithModel(
                                                                                                                         model: _model.itemparameter2Models.getModel(
                                                                                                                           itemItem.itemId.toString(),
@@ -4667,15 +4668,15 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                               Container(
                                                                                                                 width: 120.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                   children: [
                                                                                                                     Container(
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: Align(
-                                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                         child: wrapWithModel(
                                                                                                                           model: _model.itemparameter3Models1.getModel(
                                                                                                                             itemItem.itemId.toString(),
@@ -4697,13 +4698,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                               Container(
                                                                                                                 width: 120.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                   children: [
                                                                                                                     Container(
-                                                                                                                      decoration: const BoxDecoration(),
+                                                                                                                      decoration: BoxDecoration(),
                                                                                                                       child: wrapWithModel(
                                                                                                                         model: _model.itemparameter3Models2.getModel(
                                                                                                                           itemItem.itemId.toString(),
@@ -4724,7 +4725,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                               ),
                                                                                                               Container(
                                                                                                                 width: 120.0,
-                                                                                                                decoration: const BoxDecoration(),
+                                                                                                                decoration: BoxDecoration(),
                                                                                                                 child: Column(
                                                                                                                   mainAxisSize: MainAxisSize.max,
                                                                                                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -4740,7 +4741,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                   ],
                                                                                                                 ),
                                                                                                               ),
-                                                                                                            ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                            ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                           ),
                                                                                                         );
                                                                                                       }),
@@ -4756,7 +4757,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                   ),
                                                                                 if (_model.outwardChoiceChipsValue == 'All')
                                                                                   Align(
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                     child: SingleChildScrollView(
                                                                                       scrollDirection: Axis.horizontal,
                                                                                       child: Row(
@@ -4771,12 +4772,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                                               children: [
                                                                                                 Align(
-                                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                   child: Container(
                                                                                                     height: 55.0,
                                                                                                     decoration: BoxDecoration(
                                                                                                       color: FlutterFlowTheme.of(context).accent1,
-                                                                                                      borderRadius: const BorderRadius.only(
+                                                                                                      borderRadius: BorderRadius.only(
                                                                                                         bottomLeft: Radius.circular(0.0),
                                                                                                         bottomRight: Radius.circular(0.0),
                                                                                                         topLeft: Radius.circular(12.0),
@@ -4788,7 +4789,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       children: [
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4810,7 +4811,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 130.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4832,13 +4833,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
                                                                                                             children: [
                                                                                                               Align(
-                                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                 child: Text(
                                                                                                                   FFLocalizations.of(context).getText(
                                                                                                                     'wb81py9q' /* Type */,
@@ -4856,7 +4857,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4878,7 +4879,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4900,7 +4901,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4922,7 +4923,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4944,7 +4945,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -4964,7 +4965,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ],
                                                                                                           ),
                                                                                                         ),
-                                                                                                      ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                      ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                     ),
                                                                                                   ),
                                                                                                 ),
@@ -4974,14 +4975,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                     children: [
                                                                                                       Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
-                                                                                                          constraints: const BoxConstraints(
+                                                                                                          constraints: BoxConstraints(
                                                                                                             minHeight: 70.0,
                                                                                                           ),
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -4993,7 +4994,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: InkWell(
                                                                                                               splashColor: Colors.transparent,
                                                                                                               focusColor: Colors.transparent,
@@ -5037,13 +5038,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 children: [
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                       children: [
                                                                                                                         Align(
-                                                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                           child: Text(
                                                                                                                             FFLocalizations.of(context).getText(
                                                                                                                               'q46cz7m4' /* 1 */,
@@ -5058,12 +5059,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 ),
                                                                                                                           ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 130.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5092,12 +5093,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5114,12 +5115,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5136,12 +5137,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5158,12 +5159,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5180,12 +5181,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5202,12 +5203,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5224,24 +5225,24 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
-                                                                                                                ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
                                                                                                       ),
                                                                                                       Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
-                                                                                                          constraints: const BoxConstraints(
+                                                                                                          constraints: BoxConstraints(
                                                                                                             minHeight: 70.0,
                                                                                                           ),
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -5253,7 +5254,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: InkWell(
                                                                                                               splashColor: Colors.transparent,
                                                                                                               focusColor: Colors.transparent,
@@ -5297,13 +5298,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 children: [
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                       children: [
                                                                                                                         Align(
-                                                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                           child: Text(
                                                                                                                             FFLocalizations.of(context).getText(
                                                                                                                               'jcogehrz' /* 2 */,
@@ -5318,12 +5319,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 ),
                                                                                                                           ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 130.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5352,12 +5353,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5374,12 +5375,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5396,12 +5397,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5418,12 +5419,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5440,12 +5441,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5462,12 +5463,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5484,24 +5485,24 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
-                                                                                                                ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
                                                                                                       ),
                                                                                                       Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
-                                                                                                          constraints: const BoxConstraints(
+                                                                                                          constraints: BoxConstraints(
                                                                                                             minHeight: 70.0,
                                                                                                           ),
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -5513,7 +5514,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: InkWell(
                                                                                                               splashColor: Colors.transparent,
                                                                                                               focusColor: Colors.transparent,
@@ -5557,13 +5558,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 children: [
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                       children: [
                                                                                                                         Align(
-                                                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                           child: Text(
                                                                                                                             FFLocalizations.of(context).getText(
                                                                                                                               'l0lhi80f' /* 3 */,
@@ -5578,12 +5579,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 ),
                                                                                                                           ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 130.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5612,12 +5613,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5634,12 +5635,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5656,12 +5657,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5678,12 +5679,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5700,12 +5701,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5722,12 +5723,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5744,24 +5745,24 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
-                                                                                                                ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
                                                                                                       ),
                                                                                                       Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
-                                                                                                          constraints: const BoxConstraints(
+                                                                                                          constraints: BoxConstraints(
                                                                                                             minHeight: 70.0,
                                                                                                           ),
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -5773,7 +5774,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: InkWell(
                                                                                                               splashColor: Colors.transparent,
                                                                                                               focusColor: Colors.transparent,
@@ -5817,13 +5818,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 children: [
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                       children: [
                                                                                                                         Align(
-                                                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                           child: Text(
                                                                                                                             FFLocalizations.of(context).getText(
                                                                                                                               '0jq1wnfo' /* 4 */,
@@ -5838,12 +5839,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 ),
                                                                                                                           ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 130.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5872,12 +5873,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5894,12 +5895,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5916,12 +5917,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5938,12 +5939,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5960,12 +5961,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -5982,12 +5983,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6004,24 +6005,24 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
-                                                                                                                ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
                                                                                                       ),
                                                                                                       Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
-                                                                                                          constraints: const BoxConstraints(
+                                                                                                          constraints: BoxConstraints(
                                                                                                             minHeight: 70.0,
                                                                                                           ),
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -6033,7 +6034,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: InkWell(
                                                                                                               splashColor: Colors.transparent,
                                                                                                               focusColor: Colors.transparent,
@@ -6077,13 +6078,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 children: [
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                       children: [
                                                                                                                         Align(
-                                                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                           child: Text(
                                                                                                                             FFLocalizations.of(context).getText(
                                                                                                                               '7xjt3hni' /* 5 */,
@@ -6098,12 +6099,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 ),
                                                                                                                           ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 130.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6132,12 +6133,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6154,12 +6155,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6176,12 +6177,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6198,12 +6199,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6220,12 +6221,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6242,12 +6243,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6264,10 +6265,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
-                                                                                                                ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
@@ -6279,13 +6280,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               ],
                                                                                             ),
                                                                                           ),
-                                                                                        ].addToStart(const SizedBox(width: 10.0)).addToEnd(const SizedBox(width: 10.0)),
+                                                                                        ].addToStart(SizedBox(width: 10.0)).addToEnd(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ),
                                                                                 if (_model.outwardChoiceChipsValue == 'Assigned To Me')
                                                                                   Align(
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0),
                                                                                     child: SingleChildScrollView(
                                                                                       scrollDirection: Axis.horizontal,
                                                                                       child: Row(
@@ -6300,12 +6301,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               crossAxisAlignment: CrossAxisAlignment.start,
                                                                                               children: [
                                                                                                 Align(
-                                                                                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                   child: Container(
                                                                                                     height: 55.0,
                                                                                                     decoration: BoxDecoration(
                                                                                                       color: FlutterFlowTheme.of(context).accent1,
-                                                                                                      borderRadius: const BorderRadius.only(
+                                                                                                      borderRadius: BorderRadius.only(
                                                                                                         bottomLeft: Radius.circular(0.0),
                                                                                                         bottomRight: Radius.circular(0.0),
                                                                                                         topLeft: Radius.circular(12.0),
@@ -6317,7 +6318,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                       children: [
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -6339,7 +6340,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 130.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -6361,13 +6362,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
                                                                                                             children: [
                                                                                                               Align(
-                                                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                                alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                                 child: Text(
                                                                                                                   FFLocalizations.of(context).getText(
                                                                                                                     'ohcfgr5t' /* Type */,
@@ -6385,7 +6386,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -6407,7 +6408,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 120.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -6429,7 +6430,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -6451,7 +6452,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -6473,7 +6474,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                         ),
                                                                                                         Container(
                                                                                                           width: 100.0,
-                                                                                                          decoration: const BoxDecoration(),
+                                                                                                          decoration: BoxDecoration(),
                                                                                                           child: Column(
                                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                                             mainAxisAlignment: MainAxisAlignment.center,
@@ -6493,7 +6494,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ],
                                                                                                           ),
                                                                                                         ),
-                                                                                                      ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                      ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                     ),
                                                                                                   ),
                                                                                                 ),
@@ -6503,14 +6504,14 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                     children: [
                                                                                                       Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
-                                                                                                          constraints: const BoxConstraints(
+                                                                                                          constraints: BoxConstraints(
                                                                                                             minHeight: 70.0,
                                                                                                           ),
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -6522,7 +6523,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: InkWell(
                                                                                                               splashColor: Colors.transparent,
                                                                                                               focusColor: Colors.transparent,
@@ -6566,13 +6567,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 children: [
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                       children: [
                                                                                                                         Align(
-                                                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                           child: Text(
                                                                                                                             FFLocalizations.of(context).getText(
                                                                                                                               '0x9kyxpr' /* 6 */,
@@ -6587,12 +6588,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 ),
                                                                                                                           ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 130.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6621,12 +6622,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6643,12 +6644,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6665,12 +6666,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6687,12 +6688,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6709,12 +6710,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6731,12 +6732,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6753,24 +6754,24 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
-                                                                                                                ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
                                                                                                         ),
                                                                                                       ),
                                                                                                       Align(
-                                                                                                        alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                        alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                         child: Container(
-                                                                                                          constraints: const BoxConstraints(
+                                                                                                          constraints: BoxConstraints(
                                                                                                             minHeight: 70.0,
                                                                                                           ),
                                                                                                           decoration: BoxDecoration(
                                                                                                             color: FlutterFlowTheme.of(context).accent4,
-                                                                                                            borderRadius: const BorderRadius.only(
+                                                                                                            borderRadius: BorderRadius.only(
                                                                                                               bottomLeft: Radius.circular(5.0),
                                                                                                               bottomRight: Radius.circular(5.0),
                                                                                                               topLeft: Radius.circular(0.0),
@@ -6782,7 +6783,7 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                             ),
                                                                                                           ),
                                                                                                           child: Padding(
-                                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                                                                                                            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                                                                                                             child: InkWell(
                                                                                                               splashColor: Colors.transparent,
                                                                                                               focusColor: Colors.transparent,
@@ -6826,13 +6827,13 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                 children: [
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
                                                                                                                       children: [
                                                                                                                         Align(
-                                                                                                                          alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                                                          alignment: AlignmentDirectional(0.0, 0.0),
                                                                                                                           child: Text(
                                                                                                                             FFLocalizations.of(context).getText(
                                                                                                                               'p64r5h49' /* 4 */,
@@ -6847,12 +6848,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 ),
                                                                                                                           ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 130.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6881,12 +6882,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6903,12 +6904,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6925,12 +6926,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 120.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6947,12 +6948,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6969,12 +6970,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -6991,12 +6992,12 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
                                                                                                                   Container(
                                                                                                                     width: 100.0,
-                                                                                                                    decoration: const BoxDecoration(),
+                                                                                                                    decoration: BoxDecoration(),
                                                                                                                     child: Column(
                                                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                                                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -7013,10 +7014,10 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                                                                 fontWeight: FontWeight.normal,
                                                                                                                               ),
                                                                                                                         ),
-                                                                                                                      ].divide(const SizedBox(height: 7.0)),
+                                                                                                                      ].divide(SizedBox(height: 7.0)),
                                                                                                                     ),
                                                                                                                   ),
-                                                                                                                ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                                                ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                                               ),
                                                                                                             ),
                                                                                                           ),
@@ -7028,11 +7029,11 @@ class _InventoryDashBoardWidgetState extends State<InventoryDashBoardWidget>
                                                                                               ],
                                                                                             ),
                                                                                           ),
-                                                                                        ].addToStart(const SizedBox(width: 10.0)).addToEnd(const SizedBox(width: 10.0)),
+                                                                                        ].addToStart(SizedBox(width: 10.0)).addToEnd(SizedBox(width: 10.0)),
                                                                                       ),
                                                                                     ),
                                                                                   ),
-                                                                              ].divide(const SizedBox(height: 20.0)).around(const SizedBox(height: 20.0)),
+                                                                              ].divide(SizedBox(height: 20.0)).around(SizedBox(height: 20.0)),
                                                                             ),
                                                                           ),
                                                                         ),

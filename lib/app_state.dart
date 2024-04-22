@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'flutter_flow/request_manager.dart';
 import '/backend/schema/structs/index.dart';
+import 'backend/api_requests/api_manager.dart';
 import 'backend/supabase/supabase.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
@@ -35,102 +36,102 @@ class FFAppState extends ChangeNotifier {
 
   List<String> _stringsSelected = [];
   List<String> get stringsSelected => _stringsSelected;
-  set stringsSelected(List<String> value) {
-    _stringsSelected = value;
+  set stringsSelected(List<String> _value) {
+    _stringsSelected = _value;
   }
 
-  void addToStringsSelected(String value) {
-    _stringsSelected.add(value);
+  void addToStringsSelected(String _value) {
+    _stringsSelected.add(_value);
   }
 
-  void removeFromStringsSelected(String value) {
-    _stringsSelected.remove(value);
+  void removeFromStringsSelected(String _value) {
+    _stringsSelected.remove(_value);
   }
 
-  void removeAtIndexFromStringsSelected(int index) {
-    _stringsSelected.removeAt(index);
+  void removeAtIndexFromStringsSelected(int _index) {
+    _stringsSelected.removeAt(_index);
   }
 
   void updateStringsSelectedAtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _stringsSelected[index] = updateFn(_stringsSelected[index]);
+    _stringsSelected[_index] = updateFn(_stringsSelected[_index]);
   }
 
-  void insertAtIndexInStringsSelected(int index, String value) {
-    _stringsSelected.insert(index, value);
+  void insertAtIndexInStringsSelected(int _index, String _value) {
+    _stringsSelected.insert(_index, _value);
   }
 
   bool _navOpen = false;
   bool get navOpen => _navOpen;
-  set navOpen(bool value) {
-    _navOpen = value;
-    prefs.setBool('ff_navOpen', value);
+  set navOpen(bool _value) {
+    _navOpen = _value;
+    prefs.setBool('ff_navOpen', _value);
   }
 
   bool _lightdark = false;
   bool get lightdark => _lightdark;
-  set lightdark(bool value) {
-    _lightdark = value;
+  set lightdark(bool _value) {
+    _lightdark = _value;
   }
 
   List<String> _datatablelist = ['Disha', 'Amit'];
   List<String> get datatablelist => _datatablelist;
-  set datatablelist(List<String> value) {
-    _datatablelist = value;
+  set datatablelist(List<String> _value) {
+    _datatablelist = _value;
   }
 
-  void addToDatatablelist(String value) {
-    _datatablelist.add(value);
+  void addToDatatablelist(String _value) {
+    _datatablelist.add(_value);
   }
 
-  void removeFromDatatablelist(String value) {
-    _datatablelist.remove(value);
+  void removeFromDatatablelist(String _value) {
+    _datatablelist.remove(_value);
   }
 
-  void removeAtIndexFromDatatablelist(int index) {
-    _datatablelist.removeAt(index);
+  void removeAtIndexFromDatatablelist(int _index) {
+    _datatablelist.removeAt(_index);
   }
 
   void updateDatatablelistAtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _datatablelist[index] = updateFn(_datatablelist[index]);
+    _datatablelist[_index] = updateFn(_datatablelist[_index]);
   }
 
-  void insertAtIndexInDatatablelist(int index, String value) {
-    _datatablelist.insert(index, value);
+  void insertAtIndexInDatatablelist(int _index, String _value) {
+    _datatablelist.insert(_index, _value);
   }
 
   List<String> _datatablelist2 = ['Amit Shah', 'Disha Jain', 'Nishant Desai'];
   List<String> get datatablelist2 => _datatablelist2;
-  set datatablelist2(List<String> value) {
-    _datatablelist2 = value;
+  set datatablelist2(List<String> _value) {
+    _datatablelist2 = _value;
   }
 
-  void addToDatatablelist2(String value) {
-    _datatablelist2.add(value);
+  void addToDatatablelist2(String _value) {
+    _datatablelist2.add(_value);
   }
 
-  void removeFromDatatablelist2(String value) {
-    _datatablelist2.remove(value);
+  void removeFromDatatablelist2(String _value) {
+    _datatablelist2.remove(_value);
   }
 
-  void removeAtIndexFromDatatablelist2(int index) {
-    _datatablelist2.removeAt(index);
+  void removeAtIndexFromDatatablelist2(int _index) {
+    _datatablelist2.removeAt(_index);
   }
 
   void updateDatatablelist2AtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _datatablelist2[index] = updateFn(_datatablelist2[index]);
+    _datatablelist2[_index] = updateFn(_datatablelist2[_index]);
   }
 
-  void insertAtIndexInDatatablelist2(int index, String value) {
-    _datatablelist2.insert(index, value);
+  void insertAtIndexInDatatablelist2(int _index, String _value) {
+    _datatablelist2.insert(_index, _value);
   }
 
   List<String> _databaselist3 = [
@@ -141,66 +142,66 @@ class FFAppState extends ChangeNotifier {
     'Sagar Katke'
   ];
   List<String> get databaselist3 => _databaselist3;
-  set databaselist3(List<String> value) {
-    _databaselist3 = value;
+  set databaselist3(List<String> _value) {
+    _databaselist3 = _value;
   }
 
-  void addToDatabaselist3(String value) {
-    _databaselist3.add(value);
+  void addToDatabaselist3(String _value) {
+    _databaselist3.add(_value);
   }
 
-  void removeFromDatabaselist3(String value) {
-    _databaselist3.remove(value);
+  void removeFromDatabaselist3(String _value) {
+    _databaselist3.remove(_value);
   }
 
-  void removeAtIndexFromDatabaselist3(int index) {
-    _databaselist3.removeAt(index);
+  void removeAtIndexFromDatabaselist3(int _index) {
+    _databaselist3.removeAt(_index);
   }
 
   void updateDatabaselist3AtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _databaselist3[index] = updateFn(_databaselist3[index]);
+    _databaselist3[_index] = updateFn(_databaselist3[_index]);
   }
 
-  void insertAtIndexInDatabaselist3(int index, String value) {
-    _databaselist3.insert(index, value);
+  void insertAtIndexInDatabaselist3(int _index, String _value) {
+    _databaselist3.insert(_index, _value);
   }
 
   List<String> _emptyList = [];
   List<String> get emptyList => _emptyList;
-  set emptyList(List<String> value) {
-    _emptyList = value;
+  set emptyList(List<String> _value) {
+    _emptyList = _value;
   }
 
-  void addToEmptyList(String value) {
-    _emptyList.add(value);
+  void addToEmptyList(String _value) {
+    _emptyList.add(_value);
   }
 
-  void removeFromEmptyList(String value) {
-    _emptyList.remove(value);
+  void removeFromEmptyList(String _value) {
+    _emptyList.remove(_value);
   }
 
-  void removeAtIndexFromEmptyList(int index) {
-    _emptyList.removeAt(index);
+  void removeAtIndexFromEmptyList(int _index) {
+    _emptyList.removeAt(_index);
   }
 
   void updateEmptyListAtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _emptyList[index] = updateFn(_emptyList[index]);
+    _emptyList[_index] = updateFn(_emptyList[_index]);
   }
 
-  void insertAtIndexInEmptyList(int index, String value) {
-    _emptyList.insert(index, value);
+  void insertAtIndexInEmptyList(int _index, String _value) {
+    _emptyList.insert(_index, _value);
   }
 
   int _loopIndex = 0;
   int get loopIndex => _loopIndex;
-  set loopIndex(int value) {
-    _loopIndex = value;
+  set loopIndex(int _value) {
+    _loopIndex = _value;
   }
 
   List<DropdownModuleStruct> _dropdowns = [
@@ -220,130 +221,130 @@ class FFAppState extends ChangeNotifier {
         '{\"dropdownName\":\"Outward Material - Issue To\",\"moduleName\":\"Inventory\"}'))
   ];
   List<DropdownModuleStruct> get dropdowns => _dropdowns;
-  set dropdowns(List<DropdownModuleStruct> value) {
-    _dropdowns = value;
+  set dropdowns(List<DropdownModuleStruct> _value) {
+    _dropdowns = _value;
   }
 
-  void addToDropdowns(DropdownModuleStruct value) {
-    _dropdowns.add(value);
+  void addToDropdowns(DropdownModuleStruct _value) {
+    _dropdowns.add(_value);
   }
 
-  void removeFromDropdowns(DropdownModuleStruct value) {
-    _dropdowns.remove(value);
+  void removeFromDropdowns(DropdownModuleStruct _value) {
+    _dropdowns.remove(_value);
   }
 
-  void removeAtIndexFromDropdowns(int index) {
-    _dropdowns.removeAt(index);
+  void removeAtIndexFromDropdowns(int _index) {
+    _dropdowns.removeAt(_index);
   }
 
   void updateDropdownsAtIndex(
-    int index,
+    int _index,
     DropdownModuleStruct Function(DropdownModuleStruct) updateFn,
   ) {
-    _dropdowns[index] = updateFn(_dropdowns[index]);
+    _dropdowns[_index] = updateFn(_dropdowns[_index]);
   }
 
-  void insertAtIndexInDropdowns(int index, DropdownModuleStruct value) {
-    _dropdowns.insert(index, value);
+  void insertAtIndexInDropdowns(int _index, DropdownModuleStruct _value) {
+    _dropdowns.insert(_index, _value);
   }
 
   List<int> _rowsKey = [];
   List<int> get rowsKey => _rowsKey;
-  set rowsKey(List<int> value) {
-    _rowsKey = value;
+  set rowsKey(List<int> _value) {
+    _rowsKey = _value;
   }
 
-  void addToRowsKey(int value) {
-    _rowsKey.add(value);
+  void addToRowsKey(int _value) {
+    _rowsKey.add(_value);
   }
 
-  void removeFromRowsKey(int value) {
-    _rowsKey.remove(value);
+  void removeFromRowsKey(int _value) {
+    _rowsKey.remove(_value);
   }
 
-  void removeAtIndexFromRowsKey(int index) {
-    _rowsKey.removeAt(index);
+  void removeAtIndexFromRowsKey(int _index) {
+    _rowsKey.removeAt(_index);
   }
 
   void updateRowsKeyAtIndex(
-    int index,
+    int _index,
     int Function(int) updateFn,
   ) {
-    _rowsKey[index] = updateFn(_rowsKey[index]);
+    _rowsKey[_index] = updateFn(_rowsKey[_index]);
   }
 
-  void insertAtIndexInRowsKey(int index, int value) {
-    _rowsKey.insert(index, value);
+  void insertAtIndexInRowsKey(int _index, int _value) {
+    _rowsKey.insert(_index, _value);
   }
 
   List<dynamic> _ineventoryParameters = [];
   List<dynamic> get ineventoryParameters => _ineventoryParameters;
-  set ineventoryParameters(List<dynamic> value) {
-    _ineventoryParameters = value;
+  set ineventoryParameters(List<dynamic> _value) {
+    _ineventoryParameters = _value;
   }
 
-  void addToIneventoryParameters(dynamic value) {
-    _ineventoryParameters.add(value);
+  void addToIneventoryParameters(dynamic _value) {
+    _ineventoryParameters.add(_value);
   }
 
-  void removeFromIneventoryParameters(dynamic value) {
-    _ineventoryParameters.remove(value);
+  void removeFromIneventoryParameters(dynamic _value) {
+    _ineventoryParameters.remove(_value);
   }
 
-  void removeAtIndexFromIneventoryParameters(int index) {
-    _ineventoryParameters.removeAt(index);
+  void removeAtIndexFromIneventoryParameters(int _index) {
+    _ineventoryParameters.removeAt(_index);
   }
 
   void updateIneventoryParametersAtIndex(
-    int index,
+    int _index,
     dynamic Function(dynamic) updateFn,
   ) {
-    _ineventoryParameters[index] = updateFn(_ineventoryParameters[index]);
+    _ineventoryParameters[_index] = updateFn(_ineventoryParameters[_index]);
   }
 
-  void insertAtIndexInIneventoryParameters(int index, dynamic value) {
-    _ineventoryParameters.insert(index, value);
+  void insertAtIndexInIneventoryParameters(int _index, dynamic _value) {
+    _ineventoryParameters.insert(_index, _value);
   }
 
   List<InwardDataStruct> _item = [];
   List<InwardDataStruct> get item => _item;
-  set item(List<InwardDataStruct> value) {
-    _item = value;
+  set item(List<InwardDataStruct> _value) {
+    _item = _value;
   }
 
-  void addToItem(InwardDataStruct value) {
-    _item.add(value);
+  void addToItem(InwardDataStruct _value) {
+    _item.add(_value);
   }
 
-  void removeFromItem(InwardDataStruct value) {
-    _item.remove(value);
+  void removeFromItem(InwardDataStruct _value) {
+    _item.remove(_value);
   }
 
-  void removeAtIndexFromItem(int index) {
-    _item.removeAt(index);
+  void removeAtIndexFromItem(int _index) {
+    _item.removeAt(_index);
   }
 
   void updateItemAtIndex(
-    int index,
+    int _index,
     InwardDataStruct Function(InwardDataStruct) updateFn,
   ) {
-    _item[index] = updateFn(_item[index]);
+    _item[_index] = updateFn(_item[_index]);
   }
 
-  void insertAtIndexInItem(int index, InwardDataStruct value) {
-    _item.insert(index, value);
+  void insertAtIndexInItem(int _index, InwardDataStruct _value) {
+    _item.insert(_index, _value);
   }
 
   dynamic _emptyJson;
   dynamic get emptyJson => _emptyJson;
-  set emptyJson(dynamic value) {
-    _emptyJson = value;
+  set emptyJson(dynamic _value) {
+    _emptyJson = _value;
   }
 
   int _inventoryTabIndex = 0;
   int get inventoryTabIndex => _inventoryTabIndex;
-  set inventoryTabIndex(int value) {
-    _inventoryTabIndex = value;
+  set inventoryTabIndex(int _value) {
+    _inventoryTabIndex = _value;
   }
 
   List<String> _yAxisList = [
@@ -355,66 +356,66 @@ class FFAppState extends ChangeNotifier {
     'Profit Ability'
   ];
   List<String> get yAxisList => _yAxisList;
-  set yAxisList(List<String> value) {
-    _yAxisList = value;
+  set yAxisList(List<String> _value) {
+    _yAxisList = _value;
   }
 
-  void addToYAxisList(String value) {
-    _yAxisList.add(value);
+  void addToYAxisList(String _value) {
+    _yAxisList.add(_value);
   }
 
-  void removeFromYAxisList(String value) {
-    _yAxisList.remove(value);
+  void removeFromYAxisList(String _value) {
+    _yAxisList.remove(_value);
   }
 
-  void removeAtIndexFromYAxisList(int index) {
-    _yAxisList.removeAt(index);
+  void removeAtIndexFromYAxisList(int _index) {
+    _yAxisList.removeAt(_index);
   }
 
   void updateYAxisListAtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _yAxisList[index] = updateFn(_yAxisList[index]);
+    _yAxisList[_index] = updateFn(_yAxisList[_index]);
   }
 
-  void insertAtIndexInYAxisList(int index, String value) {
-    _yAxisList.insert(index, value);
+  void insertAtIndexInYAxisList(int _index, String _value) {
+    _yAxisList.insert(_index, _value);
   }
 
   List<int> _xAxisList = [100, 80, 40, 80, 50, 20];
   List<int> get xAxisList => _xAxisList;
-  set xAxisList(List<int> value) {
-    _xAxisList = value;
+  set xAxisList(List<int> _value) {
+    _xAxisList = _value;
   }
 
-  void addToXAxisList(int value) {
-    _xAxisList.add(value);
+  void addToXAxisList(int _value) {
+    _xAxisList.add(_value);
   }
 
-  void removeFromXAxisList(int value) {
-    _xAxisList.remove(value);
+  void removeFromXAxisList(int _value) {
+    _xAxisList.remove(_value);
   }
 
-  void removeAtIndexFromXAxisList(int index) {
-    _xAxisList.removeAt(index);
+  void removeAtIndexFromXAxisList(int _index) {
+    _xAxisList.removeAt(_index);
   }
 
   void updateXAxisListAtIndex(
-    int index,
+    int _index,
     int Function(int) updateFn,
   ) {
-    _xAxisList[index] = updateFn(_xAxisList[index]);
+    _xAxisList[_index] = updateFn(_xAxisList[_index]);
   }
 
-  void insertAtIndexInXAxisList(int index, int value) {
-    _xAxisList.insert(index, value);
+  void insertAtIndexInXAxisList(int _index, int _value) {
+    _xAxisList.insert(_index, _value);
   }
 
   String _choiceChips = '';
   String get choiceChips => _choiceChips;
-  set choiceChips(String value) {
-    _choiceChips = value;
+  set choiceChips(String _value) {
+    _choiceChips = _value;
   }
 
   List<String> _contactname = [
@@ -425,31 +426,31 @@ class FFAppState extends ChangeNotifier {
     'Rohit Chaudhury'
   ];
   List<String> get contactname => _contactname;
-  set contactname(List<String> value) {
-    _contactname = value;
+  set contactname(List<String> _value) {
+    _contactname = _value;
   }
 
-  void addToContactname(String value) {
-    _contactname.add(value);
+  void addToContactname(String _value) {
+    _contactname.add(_value);
   }
 
-  void removeFromContactname(String value) {
-    _contactname.remove(value);
+  void removeFromContactname(String _value) {
+    _contactname.remove(_value);
   }
 
-  void removeAtIndexFromContactname(int index) {
-    _contactname.removeAt(index);
+  void removeAtIndexFromContactname(int _index) {
+    _contactname.removeAt(_index);
   }
 
   void updateContactnameAtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _contactname[index] = updateFn(_contactname[index]);
+    _contactname[_index] = updateFn(_contactname[_index]);
   }
 
-  void insertAtIndexInContactname(int index, String value) {
-    _contactname.insert(index, value);
+  void insertAtIndexInContactname(int _index, String _value) {
+    _contactname.insert(_index, _value);
   }
 
   List<String> _contactcity = [
@@ -460,31 +461,31 @@ class FFAppState extends ChangeNotifier {
     'Chennai'
   ];
   List<String> get contactcity => _contactcity;
-  set contactcity(List<String> value) {
-    _contactcity = value;
+  set contactcity(List<String> _value) {
+    _contactcity = _value;
   }
 
-  void addToContactcity(String value) {
-    _contactcity.add(value);
+  void addToContactcity(String _value) {
+    _contactcity.add(_value);
   }
 
-  void removeFromContactcity(String value) {
-    _contactcity.remove(value);
+  void removeFromContactcity(String _value) {
+    _contactcity.remove(_value);
   }
 
-  void removeAtIndexFromContactcity(int index) {
-    _contactcity.removeAt(index);
+  void removeAtIndexFromContactcity(int _index) {
+    _contactcity.removeAt(_index);
   }
 
   void updateContactcityAtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _contactcity[index] = updateFn(_contactcity[index]);
+    _contactcity[_index] = updateFn(_contactcity[_index]);
   }
 
-  void insertAtIndexInContactcity(int index, String value) {
-    _contactcity.insert(index, value);
+  void insertAtIndexInContactcity(int _index, String _value) {
+    _contactcity.insert(_index, _value);
   }
 
   List<String> _contactCompany = [
@@ -495,31 +496,31 @@ class FFAppState extends ChangeNotifier {
     'Angre Port Pvt. Ltd.'
   ];
   List<String> get contactCompany => _contactCompany;
-  set contactCompany(List<String> value) {
-    _contactCompany = value;
+  set contactCompany(List<String> _value) {
+    _contactCompany = _value;
   }
 
-  void addToContactCompany(String value) {
-    _contactCompany.add(value);
+  void addToContactCompany(String _value) {
+    _contactCompany.add(_value);
   }
 
-  void removeFromContactCompany(String value) {
-    _contactCompany.remove(value);
+  void removeFromContactCompany(String _value) {
+    _contactCompany.remove(_value);
   }
 
-  void removeAtIndexFromContactCompany(int index) {
-    _contactCompany.removeAt(index);
+  void removeAtIndexFromContactCompany(int _index) {
+    _contactCompany.removeAt(_index);
   }
 
   void updateContactCompanyAtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _contactCompany[index] = updateFn(_contactCompany[index]);
+    _contactCompany[_index] = updateFn(_contactCompany[_index]);
   }
 
-  void insertAtIndexInContactCompany(int index, String value) {
-    _contactCompany.insert(index, value);
+  void insertAtIndexInContactCompany(int _index, String _value) {
+    _contactCompany.insert(_index, _value);
   }
 
   List<String> _status = [
@@ -530,31 +531,31 @@ class FFAppState extends ChangeNotifier {
     'Lead Close'
   ];
   List<String> get status => _status;
-  set status(List<String> value) {
-    _status = value;
+  set status(List<String> _value) {
+    _status = _value;
   }
 
-  void addToStatus(String value) {
-    _status.add(value);
+  void addToStatus(String _value) {
+    _status.add(_value);
   }
 
-  void removeFromStatus(String value) {
-    _status.remove(value);
+  void removeFromStatus(String _value) {
+    _status.remove(_value);
   }
 
-  void removeAtIndexFromStatus(int index) {
-    _status.removeAt(index);
+  void removeAtIndexFromStatus(int _index) {
+    _status.removeAt(_index);
   }
 
   void updateStatusAtIndex(
-    int index,
+    int _index,
     String Function(String) updateFn,
   ) {
-    _status[index] = updateFn(_status[index]);
+    _status[_index] = updateFn(_status[_index]);
   }
 
-  void insertAtIndexInStatus(int index, String value) {
-    _status.insert(index, value);
+  void insertAtIndexInStatus(int _index, String _value) {
+    _status.insert(_index, _value);
   }
 
   List<DateTime> _folliowup = [
@@ -565,60 +566,60 @@ class FFAppState extends ChangeNotifier {
     DateTime.fromMillisecondsSinceEpoch(1711802100000)
   ];
   List<DateTime> get folliowup => _folliowup;
-  set folliowup(List<DateTime> value) {
-    _folliowup = value;
+  set folliowup(List<DateTime> _value) {
+    _folliowup = _value;
   }
 
-  void addToFolliowup(DateTime value) {
-    _folliowup.add(value);
+  void addToFolliowup(DateTime _value) {
+    _folliowup.add(_value);
   }
 
-  void removeFromFolliowup(DateTime value) {
-    _folliowup.remove(value);
+  void removeFromFolliowup(DateTime _value) {
+    _folliowup.remove(_value);
   }
 
-  void removeAtIndexFromFolliowup(int index) {
-    _folliowup.removeAt(index);
+  void removeAtIndexFromFolliowup(int _index) {
+    _folliowup.removeAt(_index);
   }
 
   void updateFolliowupAtIndex(
-    int index,
+    int _index,
     DateTime Function(DateTime) updateFn,
   ) {
-    _folliowup[index] = updateFn(_folliowup[index]);
+    _folliowup[_index] = updateFn(_folliowup[_index]);
   }
 
-  void insertAtIndexInFolliowup(int index, DateTime value) {
-    _folliowup.insert(index, value);
+  void insertAtIndexInFolliowup(int _index, DateTime _value) {
+    _folliowup.insert(_index, _value);
   }
 
   List<dynamic> _tasks = [];
   List<dynamic> get tasks => _tasks;
-  set tasks(List<dynamic> value) {
-    _tasks = value;
+  set tasks(List<dynamic> _value) {
+    _tasks = _value;
   }
 
-  void addToTasks(dynamic value) {
-    _tasks.add(value);
+  void addToTasks(dynamic _value) {
+    _tasks.add(_value);
   }
 
-  void removeFromTasks(dynamic value) {
-    _tasks.remove(value);
+  void removeFromTasks(dynamic _value) {
+    _tasks.remove(_value);
   }
 
-  void removeAtIndexFromTasks(int index) {
-    _tasks.removeAt(index);
+  void removeAtIndexFromTasks(int _index) {
+    _tasks.removeAt(_index);
   }
 
   void updateTasksAtIndex(
-    int index,
+    int _index,
     dynamic Function(dynamic) updateFn,
   ) {
-    _tasks[index] = updateFn(_tasks[index]);
+    _tasks[_index] = updateFn(_tasks[_index]);
   }
 
-  void insertAtIndexInTasks(int index, dynamic value) {
-    _tasks.insert(index, value);
+  void insertAtIndexInTasks(int _index, dynamic _value) {
+    _tasks.insert(_index, _value);
   }
 
   final _companiesManager = FutureRequestManager<List<CompanyManagementRow>>();

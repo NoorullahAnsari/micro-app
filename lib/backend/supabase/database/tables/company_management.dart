@@ -10,7 +10,7 @@ class CompanyManagementTable extends SupabaseTable<CompanyManagementRow> {
 }
 
 class CompanyManagementRow extends SupabaseDataRow {
-  CompanyManagementRow(super.data);
+  CompanyManagementRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => CompanyManagementTable();
@@ -24,7 +24,7 @@ class CompanyManagementRow extends SupabaseDataRow {
   String get companyName => getField<String>('companyName')!;
   set companyName(String value) => setField<String>('companyName', value);
 
-  List<String> get modulesAssigned => getListField<String>('modulesAssigned');
+  List<String> get modulesAssigned => getListField<String>('modulesAssigned')!;
   set modulesAssigned(List<String> value) =>
       setListField<String>('modulesAssigned', value);
 

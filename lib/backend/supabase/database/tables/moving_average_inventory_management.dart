@@ -11,7 +11,7 @@ class MovingAverageInventoryManagementTable
 }
 
 class MovingAverageInventoryManagementRow extends SupabaseDataRow {
-  MovingAverageInventoryManagementRow(super.data);
+  MovingAverageInventoryManagementRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => MovingAverageInventoryManagementTable();

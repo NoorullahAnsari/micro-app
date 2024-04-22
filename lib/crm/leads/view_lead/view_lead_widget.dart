@@ -14,6 +14,7 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'view_lead_model.dart';
 export 'view_lead_model.dart';
@@ -114,7 +115,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                     ),
                   }.withoutNulls,
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: const TransitionInfo(
+                    kTransitionInfoKey: TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                       duration: Duration(milliseconds: 0),
@@ -137,7 +138,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
               desktop: false,
             ),
             child: Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   '0hlxs1ca' /* View Lead */,
@@ -153,7 +154,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -178,7 +179,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                       ),
                     }.withoutNulls,
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.fade,
                         duration: Duration(milliseconds: 0),
@@ -219,16 +220,16 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
               Flexible(
                 flex: 2,
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       minWidth: 350.0,
                     ),
-                    decoration: const BoxDecoration(),
-                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                    decoration: BoxDecoration(),
+                    alignment: AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: SingleChildScrollView(
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
@@ -242,11 +243,11 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                               Container(
                                 width: double.infinity,
                                 height: 24.0,
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                               ),
                             Container(
                               width: double.infinity,
-                              constraints: const BoxConstraints(
+                              constraints: BoxConstraints(
                                 maxWidth: 800.0,
                               ),
                               decoration: BoxDecoration(
@@ -254,7 +255,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                     .secondaryBackground,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -265,7 +266,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                       tablet: false,
                                     ))
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 12.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -303,7 +304,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                                   }.withoutNulls,
                                                   extra: <String, dynamic>{
                                                     kTransitionInfoKey:
-                                                        const TransitionInfo(
+                                                        TransitionInfo(
                                                       hasTransition: true,
                                                       transitionType:
                                                           PageTransitionType
@@ -335,11 +336,11 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
-                                          ].divide(const SizedBox(width: 30.0)),
+                                          ].divide(SizedBox(width: 30.0)),
                                         ),
                                       ),
                                     Padding(
-                                      padding: const EdgeInsets.all(20.0),
+                                      padding: EdgeInsets.all(20.0),
                                       child: SingleChildScrollView(
                                         primary: false,
                                         child: Column(
@@ -348,7 +349,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                               CrossAxisAlignment.start,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   1.0, 0.0),
                                               child: FFButtonWidget(
                                                 onPressed: () async {
@@ -377,7 +378,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                                     }.withoutNulls,
                                                     extra: <String, dynamic>{
                                                       kTransitionInfoKey:
-                                                          const TransitionInfo(
+                                                          TransitionInfo(
                                                         hasTransition: true,
                                                         transitionType:
                                                             PageTransitionType
@@ -395,11 +396,11 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                                 ),
                                                 options: FFButtonOptions(
                                                   height: 40.0,
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 0.0, 16.0, 0.0),
                                                   iconPadding:
-                                                      const EdgeInsetsDirectional
+                                                      EdgeInsetsDirectional
                                                           .fromSTEB(0.0, 0.0,
                                                               0.0, 0.0),
                                                   color: FlutterFlowTheme.of(
@@ -416,7 +417,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                                             letterSpacing: 0.0,
                                                           ),
                                                   elevation: 3.0,
-                                                  borderSide: const BorderSide(
+                                                  borderSide: BorderSide(
                                                     color: Colors.transparent,
                                                     width: 1.0,
                                                   ),
@@ -426,7 +427,7 @@ class _ViewLeadWidgetState extends State<ViewLeadWidget> {
                                                 ),
                                               ),
                                             ),
-                                            SizedBox(
+                                            Container(
                                               width: double.infinity,
                                               child: TextFormField(
                                                 controller: _model
@@ -595,7 +596,7 @@ Source: */
                                                                   .viewInsetsOf(
                                                                       context),
                                                               child:
-                                                                  const LeadSourceWidget(),
+                                                                  LeadSourceWidget(),
                                                             ),
                                                           );
                                                         },
@@ -616,7 +617,7 @@ Source: */
                                                         ),
                                                       ),
                                                       child: Padding(
-                                                        padding: const EdgeInsets.all(
+                                                        padding: EdgeInsets.all(
                                                             10.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -669,7 +670,7 @@ Source: */
                                                             backgroundColor:
                                                                 Colors
                                                                     .transparent,
-                                                            alignment: const AlignmentDirectional(
+                                                            alignment: AlignmentDirectional(
                                                                     0.0, 0.0)
                                                                 .resolve(
                                                                     Directionality.of(
@@ -704,13 +705,13 @@ Source: */
                                                     },
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 10.0)),
+                                              ].divide(SizedBox(width: 10.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Expanded(
-                                                  child: SizedBox(
+                                                  child: Container(
                                                     width: 120.0,
                                                     child: TextFormField(
                                                       controller: _model
@@ -939,7 +940,7 @@ Source: */
                                                         .asValidator(context),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 10.0)),
+                                              ].divide(SizedBox(width: 10.0)),
                                             ),
                                             TextFormField(
                                               controller: _model
@@ -1084,7 +1085,7 @@ Source: */
                                                         .primaryText,
                                                     size: 24.0,
                                                   ),
-                                              ].divide(const SizedBox(width: 15.0)),
+                                              ].divide(SizedBox(width: 15.0)),
                                             ),
                                             Container(
                                               width: double.infinity,
@@ -1095,11 +1096,11 @@ Source: */
                                                 borderRadius:
                                                     BorderRadius.circular(12.0),
                                                 border: Border.all(
-                                                  color: const Color(0xFFFBFBFB),
+                                                  color: Color(0xFFFBFBFB),
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsets.all(10.0),
+                                                padding: EdgeInsets.all(10.0),
                                                 child: Column(
                                                   mainAxisSize:
                                                       MainAxisSize.max,
@@ -1112,7 +1113,7 @@ Source: */
                                                     Container(
                                                       width: double.infinity,
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Wrap(
                                                         spacing: 10.0,
                                                         runSpacing: 10.0,
@@ -1147,7 +1148,7 @@ Source: */
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(height: 10.0)),
+                                                      SizedBox(height: 10.0)),
                                                 ),
                                               ),
                                             ),
@@ -1156,7 +1157,7 @@ Source: */
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
@@ -1189,11 +1190,11 @@ Source: */
                                                   options: FFButtonOptions(
                                                     height: 40.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(24.0, 0.0,
                                                                 24.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -1209,7 +1210,7 @@ Source: */
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 3.0,
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -1218,17 +1219,17 @@ Source: */
                                                             8.0),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 15.0)),
+                                              ].divide(SizedBox(width: 15.0)),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Container(
                                                 height: 200.0,
-                                                decoration: const BoxDecoration(),
+                                                decoration: BoxDecoration(),
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Builder(
                                                     builder: (context) {
@@ -1437,7 +1438,7 @@ Source: */
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Builder(
                                                                 builder:
@@ -1458,7 +1459,7 @@ Source: */
                                                                           backgroundColor:
                                                                               Colors.transparent,
                                                                           alignment:
-                                                                              const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                           child:
                                                                               GestureDetector(
                                                                             onTap: () => _model.unfocusNode.canRequestFocus
@@ -1487,14 +1488,14 @@ Source: */
                                                                         200.0,
                                                                     height:
                                                                         50.0,
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -1518,7 +1519,7 @@ Source: */
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -1574,7 +1575,7 @@ Source: */
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
@@ -1597,7 +1598,7 @@ Source: */
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Builder(
                                                     builder: (context) =>
@@ -1615,7 +1616,7 @@ Source: */
                                                               backgroundColor:
                                                                   Colors
                                                                       .transparent,
-                                                              alignment: const AlignmentDirectional(
+                                                              alignment: AlignmentDirectional(
                                                                       0.0, 0.0)
                                                                   .resolve(
                                                                       Directionality.of(
@@ -1655,14 +1656,14 @@ Source: */
                                                       options: FFButtonOptions(
                                                         height: 40.0,
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     24.0,
                                                                     0.0,
                                                                     24.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1685,7 +1686,7 @@ Source: */
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -1697,11 +1698,11 @@ Source: */
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 10.0)),
+                                              ].divide(SizedBox(width: 10.0)),
                                             ),
                                             Container(
                                               height: 200.0,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                               child: Builder(
                                                 builder: (context) {
                                                   final values = FFAppState()
@@ -2029,7 +2030,7 @@ Source: */
                                                 Expanded(
                                                   child: Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Column(
                                                       mainAxisSize:
@@ -2153,7 +2154,7 @@ Source: */
                                                           borderWidth: 2.0,
                                                           borderRadius: 8.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -2164,7 +2165,7 @@ Source: */
                                                           isSearchable: true,
                                                           isMultiSelect: false,
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           height: 10.0)),
                                                     ),
                                                   ),
@@ -2296,7 +2297,7 @@ Source: */
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -2308,10 +2309,10 @@ Source: */
                                                         isMultiSelect: false,
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 10.0)),
+                                              ].divide(SizedBox(width: 10.0)),
                                             ),
                                             Row(
                                               mainAxisSize: MainAxisSize.max,
@@ -2388,7 +2389,7 @@ Source: */
                                                                       backgroundColor:
                                                                           Colors
                                                                               .transparent,
-                                                                      alignment: const AlignmentDirectional(
+                                                                      alignment: AlignmentDirectional(
                                                                               0.0,
                                                                               0.0)
                                                                           .resolve(
@@ -2414,7 +2415,7 @@ Source: */
                                                               },
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 10.0)),
                                                       ),
                                                       FlutterFlowDropDown<
@@ -2507,7 +2508,7 @@ Source: */
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -2519,7 +2520,7 @@ Source: */
                                                         isMultiSelect: false,
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                                   ),
                                                 ),
                                                 Expanded(
@@ -2649,7 +2650,7 @@ Source: */
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -2661,10 +2662,10 @@ Source: */
                                                         isMultiSelect: false,
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 20.0)),
+                                                        SizedBox(height: 20.0)),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 10.0)),
+                                              ].divide(SizedBox(width: 10.0)),
                                             ),
                                             TextFormField(
                                               controller:
@@ -2771,7 +2772,7 @@ Source: */
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
@@ -2808,7 +2809,7 @@ Source: */
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(12.0),
+                                                          EdgeInsets.all(12.0),
                                                       child: Text(
                                                         FFLocalizations.of(
                                                                 context)
@@ -2829,19 +2830,19 @@ Source: */
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(width: 10.0)),
+                                              ].divide(SizedBox(width: 10.0)),
                                             ),
-                                          ].divide(const SizedBox(height: 12.0)),
+                                          ].divide(SizedBox(height: 12.0)),
                                         ),
                                       ),
                                     ),
                                   ]
-                                      .addToStart(const SizedBox(height: 10.0))
-                                      .addToEnd(const SizedBox(height: 10.0)),
+                                      .addToStart(SizedBox(height: 10.0))
+                                      .addToEnd(SizedBox(height: 10.0)),
                                 ),
                               ),
                             ),
-                          ].addToEnd(const SizedBox(height: 72.0)),
+                          ].addToEnd(SizedBox(height: 72.0)),
                         ),
                       ),
                     ),

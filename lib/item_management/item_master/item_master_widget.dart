@@ -14,6 +14,8 @@ import '/item_management/view_item/view_item_widget.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'item_master_model.dart';
 export 'item_master_model.dart';
 
@@ -59,7 +61,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
   Widget build(BuildContext context) {
     return FutureBuilder<List<ItemManagementRow>>(
       future: FFAppState().items(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => ItemManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -126,7 +128,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                       ),
                     }.withoutNulls,
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.fade,
                         duration: Duration(milliseconds: 0),
@@ -148,7 +150,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -173,7 +175,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                           ),
                         }.withoutNulls,
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.fade,
                             duration: Duration(milliseconds: 0),
@@ -215,13 +217,13 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                     ),
                   Expanded(
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: Container(
                         width: double.infinity,
-                        constraints: const BoxConstraints(
+                        constraints: BoxConstraints(
                           maxWidth: 1470.0,
                         ),
-                        decoration: const BoxDecoration(),
+                        decoration: BoxDecoration(),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -248,7 +250,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -281,10 +283,10 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             24.0, 0.0, 24.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
@@ -296,7 +298,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -316,10 +318,10 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                             ?.itemMasterModule ==
                                         'Support'))
                                   Align(
-                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    alignment: AlignmentDirectional(1.0, 0.0),
                                     child: Builder(
                                       builder: (context) => Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 20.0, 0.0),
                                         child: FFButtonWidget(
                                           onPressed: () async {
@@ -332,7 +334,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                   backgroundColor:
                                                       Colors.transparent,
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                               0.0, 0.0)
                                                           .resolve(
                                                               Directionality.of(
@@ -382,17 +384,17 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                               .getText(
                                             'p7g38k5u' /* New */,
                                           ),
-                                          icon: const Icon(
+                                          icon: Icon(
                                             Icons.add,
                                             size: 15.0,
                                           ),
                                           options: FFButtonOptions(
                                             height: 40.0,
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 0.0, 16.0, 0.0),
                                             iconPadding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 0.0),
                                             color: FlutterFlowTheme.of(context)
                                                 .secondary,
@@ -405,7 +407,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                       letterSpacing: 0.0,
                                                     ),
                                             elevation: 3.0,
-                                            borderSide: const BorderSide(
+                                            borderSide: BorderSide(
                                               color: Colors.transparent,
                                               width: 1.0,
                                             ),
@@ -416,7 +418,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                       ),
                                     ),
                                   ),
-                              ].divide(const SizedBox(width: 5.0)),
+                              ].divide(SizedBox(width: 5.0)),
                             ),
                             Row(
                               mainAxisSize: MainAxisSize.min,
@@ -436,7 +438,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                             itemMasterItemManagementRowList
                                                 .toList();
                                         if (standardParameter.isEmpty) {
-                                          return const EmptyWidget();
+                                          return EmptyWidget();
                                         }
                                         return FlutterFlowDataTable<
                                             ItemManagementRow>(
@@ -567,7 +569,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                 child: Container(
                                                   width: 100.0,
                                                   height: 100.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                 ),
                                               ),
                                             ),
@@ -686,7 +688,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -773,7 +775,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -857,7 +859,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -904,7 +906,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                               ),
                                             ].map((c) => DataCell(c)).toList(),
                                           ),
-                                          emptyBuilder: () => const EmptyWidget(),
+                                          emptyBuilder: () => EmptyWidget(),
                                           paginated: false,
                                           selectable: false,
                                           height: 200.0,
@@ -947,7 +949,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                             itemMasterItemManagementRowList
                                                 .toList();
                                         if (additionalParameter.isEmpty) {
-                                          return const EmptyWidget();
+                                          return EmptyWidget();
                                         }
                                         return FlutterFlowDataTable<
                                             ItemManagementRow>(
@@ -1023,7 +1025,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                               ),
                                             ),
                                           ),
-                                          emptyBuilder: () => const EmptyWidget(),
+                                          emptyBuilder: () => EmptyWidget(),
                                           paginated: false,
                                           selectable: false,
                                           height: 200.0,
@@ -1062,7 +1064,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                               desktop: false,
                             ))
                               Align(
-                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                alignment: AlignmentDirectional(-1.0, 0.0),
                                 child: SingleChildScrollView(
                                   scrollDirection: Axis.horizontal,
                                   child: Row(
@@ -1077,14 +1079,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(-1.0, 0.0),
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Container(
                                               height: 55.0,
                                               decoration: BoxDecoration(
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .accent1,
-                                                borderRadius: const BorderRadius.only(
+                                                borderRadius: BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(0.0),
                                                   bottomRight:
@@ -1100,11 +1102,11 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                 children: [
                                                   Container(
                                                     width: 100.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                   ),
                                                   Container(
                                                     width: 120.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1140,7 +1142,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                   ),
                                                   Container(
                                                     width: 120.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1150,7 +1152,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
@@ -1179,7 +1181,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                   ),
                                                   Container(
                                                     width: 120.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1215,7 +1217,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                   ),
                                                   Container(
                                                     width: 100.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1251,7 +1253,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                   ),
                                                   Container(
                                                     width: 120.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1287,14 +1289,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Builder(
                                                       builder: (context) {
                                                         final standardParameters =
                                                             widget.dropdown
                                                                     ?.dropdownValues
-                                                                    .toList() ??
+                                                                    ?.toList() ??
                                                                 [];
                                                         return Row(
                                                           mainAxisSize:
@@ -1314,12 +1316,12 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                     standardParametersIndex];
                                                             return Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Container(
                                                                 width: 150.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Column(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -1330,7 +1332,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                   children: [
                                                                     Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -1350,7 +1352,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                 ),
                                                               ),
                                                             );
-                                                          }).divide(const SizedBox(
+                                                          }).divide(SizedBox(
                                                               width: 10.0)),
                                                         );
                                                       },
@@ -1358,21 +1360,21 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                   ),
                                                 ]
                                                     .divide(
-                                                        const SizedBox(width: 10.0))
+                                                        SizedBox(width: 10.0))
                                                     .around(
-                                                        const SizedBox(width: 10.0)),
+                                                        SizedBox(width: 10.0)),
                                               ),
                                             ),
                                           ),
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(-1.0, 0.0),
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: Container(
                                               decoration: BoxDecoration(
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .accent4,
-                                                borderRadius: const BorderRadius.only(
+                                                borderRadius: BorderRadius.only(
                                                   bottomLeft:
                                                       Radius.circular(5.0),
                                                   bottomRight:
@@ -1389,7 +1391,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                 ),
                                               ),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 10.0, 0.0, 10.0),
                                                 child: Row(
@@ -1401,7 +1403,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     Container(
                                                       width: 100.0,
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Builder(
                                                         builder: (context) {
                                                           final standardParamete =
@@ -1461,7 +1463,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: GestureDetector(
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                   child: EditItemWidget(
@@ -1525,7 +1527,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: GestureDetector(
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                   child: ViewItemWidget(
@@ -1587,7 +1589,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: GestureDetector(
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                   child: DeleteOptionCopy3Widget(
@@ -1621,7 +1623,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     Container(
                                                       width: 120.0,
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Builder(
                                                         builder: (context) {
                                                           final itemname =
@@ -1661,7 +1663,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               .normal,
                                                                     ),
                                                               );
-                                                            }).divide(const SizedBox(
+                                                            }).divide(SizedBox(
                                                                 height: 7.0)),
                                                           );
                                                         },
@@ -1670,7 +1672,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     Container(
                                                       width: 120.0,
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Builder(
                                                         builder: (context) {
                                                           final itemname =
@@ -1710,7 +1712,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               .normal,
                                                                     ),
                                                               );
-                                                            }).divide(const SizedBox(
+                                                            }).divide(SizedBox(
                                                                 height: 7.0)),
                                                           );
                                                         },
@@ -1719,7 +1721,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     Container(
                                                       width: 120.0,
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Builder(
                                                         builder: (context) {
                                                           final itemCategory =
@@ -1760,7 +1762,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               .normal,
                                                                     ),
                                                               );
-                                                            }).divide(const SizedBox(
+                                                            }).divide(SizedBox(
                                                                 height: 7.0)),
                                                           );
                                                         },
@@ -1769,7 +1771,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     Container(
                                                       width: 100.0,
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Builder(
                                                         builder: (context) {
                                                           final uoM =
@@ -1809,7 +1811,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               .normal,
                                                                     ),
                                                               );
-                                                            }).divide(const SizedBox(
+                                                            }).divide(SizedBox(
                                                                     height:
                                                                         7.0)),
                                                           );
@@ -1819,7 +1821,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     Container(
                                                       width: 120.0,
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Builder(
                                                         builder: (context) {
                                                           final remarks =
@@ -1859,7 +1861,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               .normal,
                                                                     ),
                                                               );
-                                                            }).divide(const SizedBox(
+                                                            }).divide(SizedBox(
                                                                 height: 7.0)),
                                                           );
                                                         },
@@ -1870,7 +1872,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                         final parameters = widget
                                                                 .dropdown
                                                                 ?.dropdownValues
-                                                                .toList() ??
+                                                                ?.toList() ??
                                                             [];
                                                         return Row(
                                                           mainAxisSize:
@@ -1884,7 +1886,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                             return Container(
                                                               width: 150.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Builder(
                                                                 builder:
                                                                     (context) {
@@ -1919,22 +1921,22 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               fontWeight: FontWeight.normal,
                                                                             ),
                                                                       );
-                                                                    }).divide(const SizedBox(
+                                                                    }).divide(SizedBox(
                                                                         height:
                                                                             7.0)),
                                                                   );
                                                                 },
                                                               ),
                                                             );
-                                                          }).divide(const SizedBox(
+                                                          }).divide(SizedBox(
                                                               width: 10.0)),
                                                         );
                                                       },
                                                     ),
                                                   ]
                                                       .divide(
-                                                          const SizedBox(width: 10.0))
-                                                      .around(const SizedBox(
+                                                          SizedBox(width: 10.0))
+                                                      .around(SizedBox(
                                                           width: 10.0)),
                                                 ),
                                               ),
@@ -1943,13 +1945,13 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                         ],
                                       ),
                                     ]
-                                        .addToStart(const SizedBox(width: 10.0))
-                                        .addToEnd(const SizedBox(width: 10.0)),
+                                        .addToStart(SizedBox(width: 10.0))
+                                        .addToEnd(SizedBox(width: 10.0)),
                                   ),
                                 ),
                               ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
@@ -1964,14 +1966,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Container(
                                             height: 55.0,
                                             decoration: BoxDecoration(
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .accent1,
-                                              borderRadius: const BorderRadius.only(
+                                              borderRadius: BorderRadius.only(
                                                 bottomLeft:
                                                     Radius.circular(0.0),
                                                 bottomRight:
@@ -1985,11 +1987,11 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                               children: [
                                                 Container(
                                                   width: 120.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                 ),
                                                 Container(
                                                   width: 100.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2027,7 +2029,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                 ),
                                                 Container(
                                                   width: 130.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2037,7 +2039,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     children: [
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -2065,7 +2067,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                 ),
                                                 Container(
                                                   width: 120.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2103,7 +2105,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                 ),
                                                 Container(
                                                   width: 120.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2141,7 +2143,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                 ),
                                                 Container(
                                                   width: 130.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -2179,14 +2181,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Builder(
                                                     builder: (context) {
                                                       final standardParameters =
                                                           widget.dropdown
                                                                   ?.dropdownValues
-                                                                  .toList() ??
+                                                                  ?.toList() ??
                                                               [];
                                                       return Row(
                                                         mainAxisSize:
@@ -2206,12 +2208,12 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                   standardParametersIndex];
                                                           return Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Container(
                                                               width: 150.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2222,7 +2224,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child: Text(
@@ -2246,16 +2248,16 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                               ),
                                                             ),
                                                           );
-                                                        }).divide(const SizedBox(
+                                                        }).divide(SizedBox(
                                                             width: 10.0)),
                                                       );
                                                     },
                                                   ),
                                                 ),
                                               ]
-                                                  .divide(const SizedBox(width: 10.0))
+                                                  .divide(SizedBox(width: 10.0))
                                                   .around(
-                                                      const SizedBox(width: 10.0)),
+                                                      SizedBox(width: 10.0)),
                                             ),
                                           ),
                                         ),
@@ -2272,10 +2274,10 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     values[valuesIndex];
                                                 return Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Container(
-                                                    constraints: const BoxConstraints(
+                                                    constraints: BoxConstraints(
                                                       minHeight: 70.0,
                                                     ),
                                                     decoration: BoxDecoration(
@@ -2284,7 +2286,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                   context)
                                                               .accent4,
                                                       borderRadius:
-                                                          const BorderRadius.only(
+                                                          BorderRadius.only(
                                                         bottomLeft:
                                                             Radius.circular(
                                                                 5.0),
@@ -2308,7 +2310,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                     ),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   10.0,
@@ -2324,7 +2326,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                           Container(
                                                             width: 120.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -2369,7 +2371,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               elevation: 0,
                                                                               insetPadding: EdgeInsets.zero,
                                                                               backgroundColor: Colors.transparent,
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                               child: GestureDetector(
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                 child: EditItemWidget(
@@ -2437,7 +2439,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               elevation: 0,
                                                                               insetPadding: EdgeInsets.zero,
                                                                               backgroundColor: Colors.transparent,
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                               child: GestureDetector(
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                 child: ViewItemWidget(
@@ -2503,7 +2505,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               elevation: 0,
                                                                               insetPadding: EdgeInsets.zero,
                                                                               backgroundColor: Colors.transparent,
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                               child: GestureDetector(
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                 child: DeleteOptionCopy3Widget(
@@ -2533,7 +2535,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                           Container(
                                                             width: 100.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -2561,14 +2563,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   height: 7.0)),
                                                             ),
                                                           ),
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -2596,14 +2598,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   height: 7.0)),
                                                             ),
                                                           ),
                                                           Container(
                                                             width: 120.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -2631,14 +2633,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   height: 7.0)),
                                                             ),
                                                           ),
                                                           Container(
                                                             width: 120.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -2666,14 +2668,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   height: 7.0)),
                                                             ),
                                                           ),
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Column(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -2701,13 +2703,13 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                             FontWeight.normal,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   height: 7.0)),
                                                             ),
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Builder(
                                                               builder:
@@ -2715,7 +2717,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                 final parameter = widget
                                                                         .dropdown
                                                                         ?.dropdownValues
-                                                                        .toList() ??
+                                                                        ?.toList() ??
                                                                     [];
                                                                 return Row(
                                                                   mainAxisSize:
@@ -2736,7 +2738,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                             parameterIndex];
                                                                     return Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -2744,7 +2746,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                         width:
                                                                             150.0,
                                                                         decoration:
-                                                                            const BoxDecoration(),
+                                                                            BoxDecoration(),
                                                                         child:
                                                                             Column(
                                                                           mainAxisSize:
@@ -2753,7 +2755,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                               MainAxisAlignment.center,
                                                                           children: [
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                              alignment: AlignmentDirectional(0.0, 0.0),
                                                                               child: Text(
                                                                                 functions.fetchValueFromJson(valuesItem.parameters, parameterItem),
                                                                                 style: FlutterFlowTheme.of(context).labelLarge.override(
@@ -2769,7 +2771,7 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                                       ),
                                                                     );
                                                                   }).divide(
-                                                                      const SizedBox(
+                                                                      SizedBox(
                                                                           width:
                                                                               10.0)),
                                                                 );
@@ -2777,9 +2779,9 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                                             ),
                                                           ),
                                                         ]
-                                                            .divide(const SizedBox(
+                                                            .divide(SizedBox(
                                                                 width: 10.0))
-                                                            .around(const SizedBox(
+                                                            .around(SizedBox(
                                                                 width: 10.0)),
                                                       ),
                                                     ),
@@ -2792,14 +2794,14 @@ class _ItemMasterWidgetState extends State<ItemMasterWidget> {
                                       ],
                                     ),
                                   ]
-                                      .addToStart(const SizedBox(width: 10.0))
-                                      .addToEnd(const SizedBox(width: 10.0)),
+                                      .addToStart(SizedBox(width: 10.0))
+                                      .addToEnd(SizedBox(width: 10.0)),
                                 ),
                               ),
                             ),
                           ]
-                              .divide(const SizedBox(height: 20.0))
-                              .around(const SizedBox(height: 20.0)),
+                              .divide(SizedBox(height: 20.0))
+                              .around(SizedBox(height: 20.0)),
                         ),
                       ),
                     ),

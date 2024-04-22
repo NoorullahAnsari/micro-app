@@ -9,6 +9,8 @@ import '/flutter_flow/upload_data.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'approval_outward_model.dart';
 export 'approval_outward_model.dart';
 
@@ -96,7 +98,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
               desktop: false,
             ),
             child: Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: AutoSizeText(
                 FFLocalizations.of(context).getText(
                   'ar11vy1g' /* Approval Outward Material */,
@@ -113,7 +115,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -153,16 +155,16 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
               Flexible(
                 flex: 2,
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       minWidth: 350.0,
                     ),
-                    decoration: const BoxDecoration(),
-                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                    decoration: BoxDecoration(),
+                    alignment: AlignmentDirectional(-1.0, 0.0),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: SingleChildScrollView(
                         primary: false,
                         child: Column(
@@ -177,7 +179,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                               Container(
                                 width: double.infinity,
                                 height: 24.0,
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                               ),
                             if (responsiveVisibility(
                               context: context,
@@ -185,7 +187,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                               tablet: false,
                             ))
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 12.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -205,7 +207,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           '7y1vk5tt' /* Approval Outward Material */,
@@ -218,13 +220,13 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                             ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 30.0)),
+                                  ].divide(SizedBox(width: 30.0)),
                                 ),
                               ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Container(
-                                constraints: const BoxConstraints(
+                                constraints: BoxConstraints(
                                   maxWidth: 800.0,
                                 ),
                                 decoration: BoxDecoration(
@@ -232,7 +234,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                       .secondaryBackground,
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(20.0),
+                                  padding: EdgeInsets.all(20.0),
                                   child: SingleChildScrollView(
                                     primary: false,
                                     child: Column(
@@ -242,10 +244,10 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 20.0, 0.0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
@@ -273,7 +275,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                   }.withoutNulls,
                                                   extra: <String, dynamic>{
                                                     kTransitionInfoKey:
-                                                        const TransitionInfo(
+                                                        TransitionInfo(
                                                       hasTransition: true,
                                                       transitionType:
                                                           PageTransitionType
@@ -290,11 +292,11 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                               ),
                                               options: FFButtonOptions(
                                                 height: 40.0,
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         16.0, 0.0, 16.0, 0.0),
                                                 iconPadding:
-                                                    const EdgeInsetsDirectional
+                                                    EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
                                                 color:
@@ -310,7 +312,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                           letterSpacing: 0.0,
                                                         ),
                                                 elevation: 3.0,
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Colors.transparent,
                                                   width: 1.0,
                                                 ),
@@ -322,7 +324,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Wrap(
                                             spacing: 20.0,
                                             runSpacing: 10.0,
@@ -393,7 +395,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                               ),
                                                         ),
                                                       ].divide(
-                                                          const SizedBox(width: 5.0)),
+                                                          SizedBox(width: 5.0)),
                                                     ),
                                                   Row(
                                                     mainAxisSize:
@@ -444,7 +446,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -495,7 +497,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -546,7 +548,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -597,7 +599,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -648,7 +650,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -699,9 +701,9 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
-                                                ].divide(const SizedBox(height: 5.0)),
+                                                ].divide(SizedBox(height: 5.0)),
                                               ),
                                               Column(
                                                 mainAxisSize: MainAxisSize.min,
@@ -757,7 +759,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -808,7 +810,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -859,7 +861,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -910,7 +912,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
                                                   Row(
                                                     mainAxisSize:
@@ -961,9 +963,9 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 5.0)),
+                                                        SizedBox(width: 5.0)),
                                                   ),
-                                                ].divide(const SizedBox(height: 5.0)),
+                                                ].divide(SizedBox(height: 5.0)),
                                               ),
                                             ],
                                           ),
@@ -978,7 +980,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Text(
                                                   FFLocalizations.of(context)
@@ -1040,7 +1042,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                     size: 32.0,
                                                   ),
                                                 ),
-                                            ].divide(const SizedBox(width: 10.0)),
+                                            ].divide(SizedBox(width: 10.0)),
                                           ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -1050,7 +1052,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
@@ -1085,7 +1087,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                         .error,
                                                     size: 30.0,
                                                   ),
-                                              ].divide(const SizedBox(width: 10.0)),
+                                              ].divide(SizedBox(width: 10.0)),
                                             ),
                                             SingleChildScrollView(
                                               scrollDirection: Axis.horizontal,
@@ -1103,7 +1105,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                     children: [
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Container(
                                                           height: 70.0,
@@ -1113,7 +1115,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     .of(context)
                                                                 .accent1,
                                                             borderRadius:
-                                                                const BorderRadius
+                                                                BorderRadius
                                                                     .only(
                                                               bottomLeft: Radius
                                                                   .circular(
@@ -1132,7 +1134,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                           ),
                                                           child: Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Row(
                                                               mainAxisSize:
@@ -1142,7 +1144,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1174,7 +1176,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1206,7 +1208,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1216,7 +1218,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                             .center,
                                                                     children: [
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
@@ -1241,7 +1243,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1251,7 +1253,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                             .center,
                                                                     children: [
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
@@ -1276,7 +1278,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1286,7 +1288,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                             .center,
                                                                     children: [
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
@@ -1311,7 +1313,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 100.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1343,7 +1345,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 100.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1375,7 +1377,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1407,7 +1409,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1439,7 +1441,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1471,7 +1473,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1503,7 +1505,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1535,7 +1537,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                 Container(
                                                                   width: 120.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1565,10 +1567,10 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                   ),
                                                                 ),
                                                               ]
-                                                                  .divide(const SizedBox(
+                                                                  .divide(SizedBox(
                                                                       width:
                                                                           10.0))
-                                                                  .around(const SizedBox(
+                                                                  .around(SizedBox(
                                                                       width:
                                                                           10.0)),
                                                             ),
@@ -1582,11 +1584,11 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                           children: [
                                                             Container(
                                                               constraints:
-                                                                  const BoxConstraints(
+                                                                  BoxConstraints(
                                                                 minHeight: 50.0,
                                                               ),
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Row(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -1599,7 +1601,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1642,7 +1644,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1672,7 +1674,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1701,7 +1703,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1730,7 +1732,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1759,7 +1761,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1788,7 +1790,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1817,7 +1819,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1846,7 +1848,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1875,7 +1877,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1904,7 +1906,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1933,7 +1935,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1962,7 +1964,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -1988,21 +1990,21 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     ),
                                                                   ),
                                                                 ]
-                                                                    .divide(const SizedBox(
+                                                                    .divide(SizedBox(
                                                                         width:
                                                                             10.0))
-                                                                    .around(const SizedBox(
+                                                                    .around(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                               ),
                                                             ),
                                                             Container(
                                                               constraints:
-                                                                  const BoxConstraints(
+                                                                  BoxConstraints(
                                                                 minHeight: 50.0,
                                                               ),
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Row(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2015,7 +2017,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2058,7 +2060,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2088,7 +2090,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2117,7 +2119,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2146,7 +2148,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2175,7 +2177,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2204,7 +2206,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2233,7 +2235,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2262,7 +2264,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2291,7 +2293,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2320,7 +2322,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2349,7 +2351,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2378,7 +2380,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2404,21 +2406,21 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     ),
                                                                   ),
                                                                 ]
-                                                                    .divide(const SizedBox(
+                                                                    .divide(SizedBox(
                                                                         width:
                                                                             10.0))
-                                                                    .around(const SizedBox(
+                                                                    .around(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                               ),
                                                             ),
                                                             Container(
                                                               constraints:
-                                                                  const BoxConstraints(
+                                                                  BoxConstraints(
                                                                 minHeight: 50.0,
                                                               ),
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Row(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2431,7 +2433,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2474,7 +2476,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2504,7 +2506,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2533,7 +2535,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2562,7 +2564,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2591,7 +2593,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2620,7 +2622,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2649,7 +2651,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2678,7 +2680,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2707,7 +2709,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2736,7 +2738,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2765,7 +2767,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2794,7 +2796,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2820,21 +2822,21 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     ),
                                                                   ),
                                                                 ]
-                                                                    .divide(const SizedBox(
+                                                                    .divide(SizedBox(
                                                                         width:
                                                                             10.0))
-                                                                    .around(const SizedBox(
+                                                                    .around(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                               ),
                                                             ),
                                                             Container(
                                                               constraints:
-                                                                  const BoxConstraints(
+                                                                  BoxConstraints(
                                                                 minHeight: 50.0,
                                                               ),
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Row(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -2847,7 +2849,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2890,7 +2892,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2920,7 +2922,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2949,7 +2951,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2978,7 +2980,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3007,7 +3009,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3036,7 +3038,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3065,7 +3067,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3094,7 +3096,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3123,7 +3125,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3152,7 +3154,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3181,7 +3183,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3210,7 +3212,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3236,21 +3238,21 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     ),
                                                                   ),
                                                                 ]
-                                                                    .divide(const SizedBox(
+                                                                    .divide(SizedBox(
                                                                         width:
                                                                             10.0))
-                                                                    .around(const SizedBox(
+                                                                    .around(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                               ),
                                                             ),
                                                             Container(
                                                               constraints:
-                                                                  const BoxConstraints(
+                                                                  BoxConstraints(
                                                                 minHeight: 50.0,
                                                               ),
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Row(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3263,7 +3265,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3306,7 +3308,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3336,7 +3338,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3365,7 +3367,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3394,7 +3396,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3423,7 +3425,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3452,7 +3454,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3481,7 +3483,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3510,7 +3512,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3539,7 +3541,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3568,7 +3570,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3597,7 +3599,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3626,7 +3628,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3652,21 +3654,21 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     ),
                                                                   ),
                                                                 ]
-                                                                    .divide(const SizedBox(
+                                                                    .divide(SizedBox(
                                                                         width:
                                                                             10.0))
-                                                                    .around(const SizedBox(
+                                                                    .around(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                               ),
                                                             ),
                                                             Container(
                                                               constraints:
-                                                                  const BoxConstraints(
+                                                                  BoxConstraints(
                                                                 minHeight: 50.0,
                                                               ),
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Row(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -3679,7 +3681,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3722,7 +3724,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3752,7 +3754,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3781,7 +3783,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3810,7 +3812,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3839,7 +3841,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3868,7 +3870,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3897,7 +3899,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3926,7 +3928,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3955,7 +3957,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3984,7 +3986,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -4013,7 +4015,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -4042,7 +4044,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -4068,10 +4070,10 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                     ),
                                                                   ),
                                                                 ]
-                                                                    .divide(const SizedBox(
+                                                                    .divide(SizedBox(
                                                                         width:
                                                                             10.0))
-                                                                    .around(const SizedBox(
+                                                                    .around(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                               ),
@@ -4084,7 +4086,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                 ],
                                               ),
                                             ),
-                                          ].divide(const SizedBox(height: 15.0)),
+                                          ].divide(SizedBox(height: 15.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -4189,11 +4191,11 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                   .textController1Validator
                                                   .asValidator(context),
                                             ),
-                                          ].divide(const SizedBox(height: 7.0)),
+                                          ].divide(SizedBox(height: 7.0)),
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 20.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
@@ -4297,11 +4299,11 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                       size: 28.0,
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 15.0)),
+                                                ].divide(SizedBox(width: 15.0)),
                                               ),
                                               Container(
                                                 width: double.infinity,
-                                                constraints: const BoxConstraints(
+                                                constraints: BoxConstraints(
                                                   minHeight: 100.0,
                                                 ),
                                                 decoration: BoxDecoration(
@@ -4312,11 +4314,11 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                       BorderRadius.circular(
                                                           12.0),
                                                   border: Border.all(
-                                                    color: const Color(0xFFFBFBFB),
+                                                    color: Color(0xFFFBFBFB),
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(10.0),
+                                                  padding: EdgeInsets.all(10.0),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4330,7 +4332,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                       Container(
                                                         width: double.infinity,
                                                         decoration:
-                                                            const BoxDecoration(),
+                                                            BoxDecoration(),
                                                         child: Wrap(
                                                           spacing: 10.0,
                                                           runSpacing: 10.0,
@@ -4369,7 +4371,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                                   ),
                                                 ),
                                               ),
@@ -4378,7 +4380,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Text(
                                                       FFLocalizations.of(
@@ -4501,7 +4503,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                       borderWidth: 2.0,
                                                       borderRadius: 8.0,
                                                       margin:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   4.0,
@@ -4513,7 +4515,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                       isMultiSelect: false,
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 10.0)),
+                                                ].divide(SizedBox(width: 10.0)),
                                               ),
                                               TextFormField(
                                                 controller:
@@ -4629,7 +4631,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                   Expanded(
                                                     child: Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, 0.05),
                                                       child: FFButtonWidget(
                                                         onPressed: () async {
@@ -4686,14 +4688,14 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                           width: 270.0,
                                                           height: 50.0,
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
                                                                       0.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -4717,7 +4719,7 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                                   ),
                                                           elevation: 2.0,
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 1.0,
@@ -4732,20 +4734,20 @@ class _ApprovalOutwardWidgetState extends State<ApprovalOutwardWidget> {
                                                   ),
                                                 ]
                                                     .divide(
-                                                        const SizedBox(width: 10.0))
+                                                        SizedBox(width: 10.0))
                                                     .around(
-                                                        const SizedBox(width: 10.0)),
+                                                        SizedBox(width: 10.0)),
                                               ),
-                                            ].divide(const SizedBox(height: 7.0)),
+                                            ].divide(SizedBox(height: 7.0)),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                   ),
                                 ),
                               ),
                             ),
-                          ].addToEnd(const SizedBox(height: 72.0)),
+                          ].addToEnd(SizedBox(height: 72.0)),
                         ),
                       ),
                     ),

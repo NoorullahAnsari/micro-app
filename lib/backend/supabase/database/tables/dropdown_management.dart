@@ -10,7 +10,7 @@ class DropdownManagementTable extends SupabaseTable<DropdownManagementRow> {
 }
 
 class DropdownManagementRow extends SupabaseDataRow {
-  DropdownManagementRow(super.data);
+  DropdownManagementRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => DropdownManagementTable();
@@ -30,7 +30,7 @@ class DropdownManagementRow extends SupabaseDataRow {
   String get dropdownName => getField<String>('dropdownName')!;
   set dropdownName(String value) => setField<String>('dropdownName', value);
 
-  List<String> get dropdownValues => getListField<String>('dropdownValues');
+  List<String> get dropdownValues => getListField<String>('dropdownValues')!;
   set dropdownValues(List<String> value) =>
       setListField<String>('dropdownValues', value);
 }

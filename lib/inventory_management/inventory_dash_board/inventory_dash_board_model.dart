@@ -1,10 +1,22 @@
+import '/backend/schema/structs/index.dart';
 import '/backend/supabase/supabase.dart';
+import '/components/remarks_widget.dart';
 import '/components/side_nav_widget.dart';
+import '/flutter_flow/flutter_flow_choice_chips.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/inventory_management/assign_user/assign_user_widget.dart';
+import '/inventory_management/assign_user_copy/assign_user_copy_widget.dart';
+import '/inventory_management/define_parameter_inventory_copy/define_parameter_inventory_copy_widget.dart';
 import '/item_management/itemparameter/itemparameter_widget.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'inventory_dash_board_widget.dart' show InventoryDashBoardWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class InventoryDashBoardModel
     extends FlutterFlowModel<InventoryDashBoardWidget> {

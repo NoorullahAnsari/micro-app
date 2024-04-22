@@ -8,6 +8,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'view_inward_model.dart';
 export 'view_inward_model.dart';
 
@@ -89,7 +91,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
   Widget build(BuildContext context) {
     return FutureBuilder<List<ItemManagementRow>>(
       future: FFAppState().items(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => ItemManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -162,7 +164,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                   (e.module == 'Item Master') &&
                                   (e.dropdownName == 'Item Master Parameter'))
                               .toList()
-                              .first,
+                              ?.first,
                           ParamType.SupabaseRow,
                         ),
                         'inventoryParameters': serializeParam(
@@ -171,7 +173,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                   (e.module == 'Inventory') &&
                                   (e.dropdownName == 'Inventory Parameter'))
                               .toList()
-                              .first,
+                              ?.first,
                           ParamType.SupabaseRow,
                         ),
                       }.withoutNulls,
@@ -192,7 +194,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                   desktop: false,
                 ),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     FFLocalizations.of(context).getText(
                       'stib9xg9' /* View Inward Material */,
@@ -208,7 +210,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -269,11 +271,11 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                   Flexible(
                     flex: 2,
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: FutureBuilder<List<UserManagementRow>>(
                         future: FFAppState().companyUsers(
                           uniqueQueryKey:
-                              widget.authenticatedCompany?.id.toString(),
+                              widget.authenticatedCompany?.id?.toString(),
                           requestFn: () => UserManagementTable().queryRows(
                             queryFn: (q) => q.eq(
                               'company',
@@ -299,7 +301,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                           List<UserManagementRow>
                               containerUserManagementRowList = snapshot.data!;
                           return Container(
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: FutureBuilder<
                                 List<InwardInventoryTableManagementRow>>(
                               future: FFAppState().inward(
@@ -334,13 +336,13 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                     snapshot.data!;
                                 return Container(
                                   width: double.infinity,
-                                  constraints: const BoxConstraints(
+                                  constraints: BoxConstraints(
                                     minWidth: 350.0,
                                   ),
-                                  decoration: const BoxDecoration(),
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  decoration: BoxDecoration(),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: SingleChildScrollView(
                                       primary: false,
                                       child: Column(
@@ -356,11 +358,11 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                             Container(
                                               width: double.infinity,
                                               height: 24.0,
-                                              decoration: const BoxDecoration(),
+                                              decoration: BoxDecoration(),
                                             ),
                                           Container(
                                             width: double.infinity,
-                                            constraints: const BoxConstraints(
+                                            constraints: BoxConstraints(
                                               maxWidth: 800.0,
                                             ),
                                             decoration: BoxDecoration(
@@ -369,7 +371,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                       .secondaryBackground,
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
@@ -383,7 +385,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                   ))
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   16.0,
                                                                   0.0,
@@ -449,7 +451,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                             (e.dropdownName ==
                                                                                 'Item Master Parameter'))
                                                                         .toList()
-                                                                        .first,
+                                                                        ?.first,
                                                                     ParamType
                                                                         .SupabaseRow,
                                                                   ),
@@ -463,7 +465,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                             (e.dropdownName ==
                                                                                 'Inventory Parameter'))
                                                                         .toList()
-                                                                        .first,
+                                                                        ?.first,
                                                                     ParamType
                                                                         .SupabaseRow,
                                                                   ),
@@ -495,7 +497,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                       0.0,
                                                                 ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 30.0)),
                                                       ),
                                                     ),
@@ -506,7 +508,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                             .disabled,
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsets.all(20.0),
+                                                          EdgeInsets.all(20.0),
                                                       child:
                                                           SingleChildScrollView(
                                                         primary: false,
@@ -519,11 +521,11 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                           children: [
                                                             Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       1.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -571,7 +573,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                       extra: <String,
                                                                           dynamic>{
                                                                         kTransitionInfoKey:
-                                                                            const TransitionInfo(
+                                                                            TransitionInfo(
                                                                           hasTransition:
                                                                               true,
                                                                           transitionType:
@@ -591,14 +593,14 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                       FFButtonOptions(
                                                                     height:
                                                                         40.0,
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             0.0,
                                                                             16.0,
                                                                             0.0),
                                                                     iconPadding:
-                                                                        const EdgeInsetsDirectional.fromSTEB(
+                                                                        EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
@@ -620,7 +622,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                     elevation:
                                                                         3.0,
                                                                     borderSide:
-                                                                        const BorderSide(
+                                                                        BorderSide(
                                                                       color: Colors
                                                                           .transparent,
                                                                       width:
@@ -700,7 +702,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 5.0)),
+                                                                        ].divide(SizedBox(width: 5.0)),
                                                                       ),
                                                                     Row(
                                                                       mainAxisSize:
@@ -734,7 +736,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
                                                                     Row(
@@ -773,7 +775,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
                                                                     Row(
@@ -811,7 +813,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
                                                                     Row(
@@ -846,7 +848,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
                                                                     Row(
@@ -881,10 +883,10 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       height:
                                                                           5.0)),
                                                                 ),
@@ -928,7 +930,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
                                                                     if (widget.materialSubContractNo !=
@@ -962,7 +964,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 5.0)),
+                                                                        ].divide(SizedBox(width: 5.0)),
                                                                       ),
                                                                     Row(
                                                                       mainAxisSize:
@@ -996,7 +998,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
                                                                     Row(
@@ -1031,7 +1033,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
                                                                     Row(
@@ -1066,7 +1068,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
                                                                     if (!((widget.conclusion ==
@@ -1098,7 +1100,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 5.0)),
+                                                                        ].divide(SizedBox(width: 5.0)),
                                                                       ),
                                                                     if ((widget.conclusion ==
                                                                             'Approved') ||
@@ -1129,7 +1131,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(width: 5.0)),
+                                                                        ].divide(SizedBox(width: 5.0)),
                                                                       ),
                                                                     Row(
                                                                       mainAxisSize:
@@ -1164,10 +1166,10 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 5.0)),
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       height:
                                                                           3.0)),
                                                                 ),
@@ -1180,7 +1182,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           -1.0,
                                                                           0.0),
                                                                   child: Text(
@@ -1204,16 +1206,16 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                         ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                             Container(
                                                               constraints:
-                                                                  const BoxConstraints(
+                                                                  BoxConstraints(
                                                                 minHeight: 50.0,
                                                               ),
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child:
                                                                   SingleChildScrollView(
                                                                 scrollDirection:
@@ -1235,7 +1237,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                               .start,
                                                                       children: [
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -1245,7 +1247,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                             decoration:
                                                                                 BoxDecoration(
                                                                               color: FlutterFlowTheme.of(context).accent1,
-                                                                              borderRadius: const BorderRadius.only(
+                                                                              borderRadius: BorderRadius.only(
                                                                                 bottomLeft: Radius.circular(0.0),
                                                                                 bottomRight: Radius.circular(0.0),
                                                                                 topLeft: Radius.circular(16.0),
@@ -1254,13 +1256,13 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                             ),
                                                                             child:
                                                                                 Align(
-                                                                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                              alignment: AlignmentDirectional(-1.0, 0.0),
                                                                               child: Row(
                                                                                 mainAxisSize: MainAxisSize.max,
                                                                                 children: [
                                                                                   Container(
                                                                                     width: 150.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1281,7 +1283,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   ),
                                                                                   Container(
                                                                                     width: 150.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1301,13 +1303,13 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   ),
                                                                                   Container(
                                                                                     width: 120.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
                                                                                       children: [
                                                                                         Align(
-                                                                                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                          alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                           child: Text(
                                                                                             FFLocalizations.of(context).getText(
                                                                                               'lqaf1hvp' /* UoM */,
@@ -1323,7 +1325,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   ),
                                                                                   Container(
                                                                                     width: 120.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1345,7 +1347,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   ),
                                                                                   Container(
                                                                                     width: 100.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1365,7 +1367,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   ),
                                                                                   Container(
                                                                                     width: 100.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1385,7 +1387,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   ),
                                                                                   Container(
                                                                                     width: 100.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1405,14 +1407,14 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   ),
                                                                                   Builder(
                                                                                     builder: (context) {
-                                                                                      final itemParameters = widget.itemParameters?.dropdownValues.toList() ?? [];
+                                                                                      final itemParameters = widget.itemParameters?.dropdownValues?.toList() ?? [];
                                                                                       return Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: List.generate(itemParameters.length, (itemParametersIndex) {
                                                                                           final itemParametersItem = itemParameters[itemParametersIndex];
                                                                                           return Container(
                                                                                             width: 120.0,
-                                                                                            decoration: const BoxDecoration(),
+                                                                                            decoration: BoxDecoration(),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -1428,20 +1430,20 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                               ],
                                                                                             ),
                                                                                           );
-                                                                                        }).divide(const SizedBox(width: 10.0)),
+                                                                                        }).divide(SizedBox(width: 10.0)),
                                                                                       );
                                                                                     },
                                                                                   ),
                                                                                   Builder(
                                                                                     builder: (context) {
-                                                                                      final inventoryParameters = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                      final inventoryParameters = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                       return Row(
                                                                                         mainAxisSize: MainAxisSize.max,
                                                                                         children: List.generate(inventoryParameters.length, (inventoryParametersIndex) {
                                                                                           final inventoryParametersItem = inventoryParameters[inventoryParametersIndex];
                                                                                           return Container(
                                                                                             width: 120.0,
-                                                                                            decoration: const BoxDecoration(),
+                                                                                            decoration: BoxDecoration(),
                                                                                             child: Column(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               mainAxisAlignment: MainAxisAlignment.center,
@@ -1457,13 +1459,13 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                               ],
                                                                                             ),
                                                                                           );
-                                                                                        }).divide(const SizedBox(width: 10.0)),
+                                                                                        }).divide(SizedBox(width: 10.0)),
                                                                                       );
                                                                                     },
                                                                                   ),
                                                                                   Container(
                                                                                     width: 120.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1483,7 +1485,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                   ),
                                                                                   Container(
                                                                                     width: 120.0,
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Column(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       mainAxisAlignment: MainAxisAlignment.center,
@@ -1501,7 +1503,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                       ],
                                                                                     ),
                                                                                   ),
-                                                                                ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                               ),
                                                                             ),
                                                                           ),
@@ -1517,17 +1519,17 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 children: List.generate(item.length, (itemIndex) {
                                                                                   final itemItem = item[itemIndex];
                                                                                   return Container(
-                                                                                    constraints: const BoxConstraints(
+                                                                                    constraints: BoxConstraints(
                                                                                       minHeight: 55.0,
                                                                                     ),
-                                                                                    decoration: const BoxDecoration(),
+                                                                                    decoration: BoxDecoration(),
                                                                                     child: Row(
                                                                                       mainAxisSize: MainAxisSize.max,
                                                                                       crossAxisAlignment: CrossAxisAlignment.center,
                                                                                       children: [
                                                                                         Container(
                                                                                           width: 150.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1553,7 +1555,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                         ),
                                                                                         Container(
                                                                                           width: 150.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1571,7 +1573,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                         ),
                                                                                         Container(
                                                                                           width: 120.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1588,7 +1590,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                         ),
                                                                                         Container(
                                                                                           width: 120.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1605,7 +1607,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                         ),
                                                                                         Container(
                                                                                           width: 100.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1622,7 +1624,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                         ),
                                                                                         Container(
                                                                                           width: 100.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1639,7 +1641,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                         ),
                                                                                         Container(
                                                                                           width: 100.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1656,14 +1658,14 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                         ),
                                                                                         Builder(
                                                                                           builder: (context) {
-                                                                                            final itemParameter = widget.itemParameters?.dropdownValues.toList() ?? [];
+                                                                                            final itemParameter = widget.itemParameters?.dropdownValues?.toList() ?? [];
                                                                                             return Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               children: List.generate(itemParameter.length, (itemParameterIndex) {
                                                                                                 final itemParameterItem = itemParameter[itemParameterIndex];
                                                                                                 return Container(
                                                                                                   width: 120.0,
-                                                                                                  decoration: const BoxDecoration(),
+                                                                                                  decoration: BoxDecoration(),
                                                                                                   child: Column(
                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -1679,20 +1681,20 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                                     ],
                                                                                                   ),
                                                                                                 );
-                                                                                              }).divide(const SizedBox(width: 10.0)),
+                                                                                              }).divide(SizedBox(width: 10.0)),
                                                                                             );
                                                                                           },
                                                                                         ),
                                                                                         Builder(
                                                                                           builder: (context) {
-                                                                                            final inventoryParameter = widget.inventoryParameters?.dropdownValues.toList() ?? [];
+                                                                                            final inventoryParameter = widget.inventoryParameters?.dropdownValues?.toList() ?? [];
                                                                                             return Row(
                                                                                               mainAxisSize: MainAxisSize.max,
                                                                                               children: List.generate(inventoryParameter.length, (inventoryParameterIndex) {
                                                                                                 final inventoryParameterItem = inventoryParameter[inventoryParameterIndex];
                                                                                                 return Container(
                                                                                                   width: 120.0,
-                                                                                                  decoration: const BoxDecoration(),
+                                                                                                  decoration: BoxDecoration(),
                                                                                                   child: Column(
                                                                                                     mainAxisSize: MainAxisSize.max,
                                                                                                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -1708,13 +1710,13 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                                     ],
                                                                                                   ),
                                                                                                 );
-                                                                                              }).divide(const SizedBox(width: 10.0)),
+                                                                                              }).divide(SizedBox(width: 10.0)),
                                                                                             );
                                                                                           },
                                                                                         ),
                                                                                         Container(
                                                                                           width: 120.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1732,7 +1734,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                         ),
                                                                                         Container(
                                                                                           width: 120.0,
-                                                                                          decoration: const BoxDecoration(),
+                                                                                          decoration: BoxDecoration(),
                                                                                           child: Column(
                                                                                             mainAxisSize: MainAxisSize.max,
                                                                                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1748,7 +1750,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                             ],
                                                                                           ),
                                                                                         ),
-                                                                                      ].divide(const SizedBox(width: 10.0)).around(const SizedBox(width: 10.0)),
+                                                                                      ].divide(SizedBox(width: 10.0)).around(SizedBox(width: 10.0)),
                                                                                     ),
                                                                                   );
                                                                                 }),
@@ -1792,7 +1794,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                                 0.0,
                                                                           ),
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       width:
                                                                           15.0)),
                                                                 ),
@@ -1800,7 +1802,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                   width: double
                                                                       .infinity,
                                                                   constraints:
-                                                                      const BoxConstraints(
+                                                                      BoxConstraints(
                                                                     minHeight:
                                                                         100.0,
                                                                   ),
@@ -1815,14 +1817,14 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: const Color(
+                                                                      color: Color(
                                                                           0xFFFBFBFB),
                                                                     ),
                                                                   ),
                                                                   child:
                                                                       Padding(
                                                                     padding:
-                                                                        const EdgeInsets.all(
+                                                                        EdgeInsets.all(
                                                                             10.0),
                                                                     child:
                                                                         Column(
@@ -1841,7 +1843,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                           width:
                                                                               double.infinity,
                                                                           decoration:
-                                                                              const BoxDecoration(),
+                                                                              BoxDecoration(),
                                                                           child:
                                                                               Visibility(
                                                                             visible:
@@ -1851,7 +1853,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                               builder: (context) {
                                                                                 final uploadedFiles = functions.stringListToImagePathList(widget.attachment!.toList()).toList();
                                                                                 if (uploadedFiles.isEmpty) {
-                                                                                  return const EmptyWidget();
+                                                                                  return EmptyWidget();
                                                                                 }
                                                                                 return Wrap(
                                                                                   spacing: 10.0,
@@ -1879,13 +1881,13 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                             ),
                                                                           ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               height: 10.0)),
                                                                     ),
                                                                   ),
                                                                 ),
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           7.0,
@@ -1897,7 +1899,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
@@ -1985,7 +1987,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                               2.0,
                                                                           borderRadius:
                                                                               8.0,
-                                                                          margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                          margin: EdgeInsetsDirectional.fromSTEB(
                                                                               16.0,
                                                                               4.0,
                                                                               16.0,
@@ -2002,7 +2004,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                               false,
                                                                         ),
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             10.0)),
                                                                   ),
@@ -2064,7 +2066,7 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                     focusedBorder:
                                                                         OutlineInputBorder(
                                                                       borderSide:
-                                                                          const BorderSide(
+                                                                          BorderSide(
                                                                         color: Color(
                                                                             0x00000000),
                                                                         width:
@@ -2123,10 +2125,10 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                                       .asValidator(
                                                                           context),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   height: 7.0)),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               height: 12.0)),
                                                         ),
                                                       ),
@@ -2134,13 +2136,13 @@ class _ViewInwardWidgetState extends State<ViewInwardWidget> {
                                                   ),
                                                 ]
                                                     .addToStart(
-                                                        const SizedBox(height: 10.0))
+                                                        SizedBox(height: 10.0))
                                                     .addToEnd(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                               ),
                                             ),
                                           ),
-                                        ].addToEnd(const SizedBox(height: 72.0)),
+                                        ].addToEnd(SizedBox(height: 72.0)),
                                       ),
                                     ),
                                   ),

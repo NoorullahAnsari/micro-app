@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'user_option_dropdown_model.dart';
 export 'user_option_dropdown_model.dart';
 
@@ -51,7 +53,7 @@ class _UserOptionDropdownWidgetState extends State<UserOptionDropdownWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: FlutterFlowDropDown<String>(
         controller: _model.dropDownValueController ??=
             FormFieldController<String>(
@@ -83,7 +85,7 @@ class _UserOptionDropdownWidgetState extends State<UserOptionDropdownWidget> {
         borderColor: FlutterFlowTheme.of(context).alternate,
         borderWidth: 2.0,
         borderRadius: 8.0,
-        margin: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+        margin: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
         hidesUnderline: true,
         isOverButton: true,
         isSearchable: false,

@@ -4,6 +4,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'view_company_model.dart';
 export 'view_company_model.dart';
 
@@ -68,9 +70,9 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Align(
-        alignment: const AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: SingleChildScrollView(
           primary: false,
           child: Column(
@@ -78,14 +80,14 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                 child: Container(
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 500.0,
                   ),
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x33000000),
@@ -98,16 +100,16 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: SingleChildScrollView(
                       primary: false,
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                            alignment: AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 0.0, 0.0),
                               child: AutoSizeText(
                                 FFLocalizations.of(context).getText(
@@ -127,9 +129,9 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                             ),
                           ),
                           Container(
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 0.0, 20.0, 0.0),
                               child: SingleChildScrollView(
                                 child: Column(
@@ -254,7 +256,7 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                                       .asValidator(context),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 10.0)),
+                                            ].divide(SizedBox(width: 10.0)),
                                           ),
                                           Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -475,16 +477,16 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                                       .asValidator(context),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(width: 7.0)),
+                                            ].divide(SizedBox(width: 7.0)),
                                           ),
                                         ]
-                                            .divide(const SizedBox(height: 10.0))
-                                            .around(const SizedBox(height: 10.0)),
+                                            .divide(SizedBox(height: 10.0))
+                                            .around(SizedBox(height: 10.0)),
                                       ),
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
                                           'qv3vlto4' /* Module Name : */,
@@ -534,20 +536,20 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                         );
                                       },
                                     ),
-                                  ].divide(const SizedBox(height: 10.0)),
+                                  ].divide(SizedBox(height: 10.0)),
                                 ),
                               ),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 10.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.05),
+                                    alignment: AlignmentDirectional(0.0, 0.05),
                                     child: FFButtonWidget(
                                       onPressed: () async {
                                         Navigator.pop(context);
@@ -558,10 +560,10 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                       options: FFButtonOptions(
                                         width: 240.0,
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .alternate,
@@ -574,7 +576,7 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                                       .primaryText,
                                               letterSpacing: 0.0,
                                             ),
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -586,7 +588,7 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                 ),
                                 Expanded(
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.05),
+                                    alignment: AlignmentDirectional(0.0, 0.05),
                                     child: Builder(
                                       builder: (context) => FFButtonWidget(
                                         onPressed: () async {
@@ -605,7 +607,7 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                                 insetPadding: EdgeInsets.zero,
                                                 backgroundColor:
                                                     Colors.transparent,
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                         0.0, 0.0)
                                                     .resolve(Directionality.of(
                                                         context)),
@@ -630,10 +632,10 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                           width: 240.0,
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .secondary,
@@ -648,7 +650,7 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                           elevation: 2.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -660,13 +662,13 @@ class _ViewCompanyWidgetState extends State<ViewCompanyWidget> {
                                   ),
                                 ),
                               ]
-                                  .divide(const SizedBox(width: 10.0))
-                                  .around(const SizedBox(width: 10.0)),
+                                  .divide(SizedBox(width: 10.0))
+                                  .around(SizedBox(width: 10.0)),
                             ),
                           ),
                         ]
-                            .addToStart(const SizedBox(height: 15.0))
-                            .addToEnd(const SizedBox(height: 15.0)),
+                            .addToStart(SizedBox(height: 15.0))
+                            .addToEnd(SizedBox(height: 15.0)),
                       ),
                     ),
                   ),

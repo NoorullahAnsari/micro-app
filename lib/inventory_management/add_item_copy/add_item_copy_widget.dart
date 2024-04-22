@@ -8,6 +8,8 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'add_item_copy_model.dart';
 export 'add_item_copy_model.dart';
 
@@ -96,7 +98,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
   Widget build(BuildContext context) {
     return FutureBuilder<List<ItemManagementRow>>(
       future: FFAppState().items(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => ItemManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -123,9 +125,9 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
         return Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(),
+          decoration: BoxDecoration(),
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: SingleChildScrollView(
               primary: false,
               child: Column(
@@ -134,14 +136,14 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                     child: Container(
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 670.0,
                       ),
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -154,7 +156,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Form(
                           key: _model.formKey,
                           autovalidateMode: AutovalidateMode.always,
@@ -164,9 +166,9 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 0.0, 15.0),
                                     child: AutoSizeText(
                                       FFLocalizations.of(context).getText(
@@ -186,9 +188,9 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                   ),
                                 ),
                                 Container(
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 0.0),
                                     child: SingleChildScrollView(
                                       primary: false,
@@ -197,7 +199,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                         children: [
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(-1.0, 0.0),
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: SingleChildScrollView(
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
@@ -226,7 +228,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
@@ -251,11 +253,11 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -287,7 +289,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       Row(
@@ -297,7 +299,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
@@ -323,7 +325,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -350,7 +352,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       Row(
@@ -360,7 +362,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
@@ -386,7 +388,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -422,7 +424,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       if (widget
@@ -436,7 +438,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                             Container(
                                                               width: 130.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Text(
                                                                 FFLocalizations.of(
                                                                         context)
@@ -545,7 +547,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                         ),
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Row(
                                                           mainAxisSize:
@@ -554,7 +556,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                             Container(
                                                               width: 130.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Text(
                                                                 FFLocalizations.of(
                                                                         context)
@@ -579,7 +581,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -611,7 +613,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                     ),
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
@@ -622,7 +624,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
@@ -648,7 +650,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -680,7 +682,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       Builder(
@@ -688,7 +690,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                           final parameters = widget
                                                                   .itemMasterParameters
                                                                   ?.dropdownValues
-                                                                  .toList() ??
+                                                                  ?.toList() ??
                                                               [];
                                                           return SingleChildScrollView(
                                                             primary: false,
@@ -712,7 +714,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                       width:
                                                                           130.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Text(
                                                                         parametersItem,
@@ -750,12 +752,12 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                                 0.0,
                                                                           ),
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       width:
                                                                           11.0)),
                                                                 );
                                                               }).divide(
-                                                                  const SizedBox(
+                                                                  SizedBox(
                                                                       height:
                                                                           7.0)),
                                                             ),
@@ -784,7 +786,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                               final values = widget
                                                                       .inventoryParameters
                                                                       ?.dropdownValues
-                                                                      .toList() ??
+                                                                      ?.toList() ??
                                                                   [];
                                                               return SingleChildScrollView(
                                                                 primary: false,
@@ -809,7 +811,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                           width:
                                                                               130.0,
                                                                           decoration:
-                                                                              const BoxDecoration(),
+                                                                              BoxDecoration(),
                                                                           child:
                                                                               Text(
                                                                             valuesItem,
@@ -836,7 +838,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                             child:
                                                                                 ItemparameterWidget(
                                                                               key: Key(
-                                                                                'Key4ua_$valuesItem',
+                                                                                'Key4ua_${valuesItem}',
                                                                               ),
                                                                               value: () {
                                                                                 if (valuesItem == 'HR Coil No') {
@@ -859,7 +861,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                         ),
                                                                       ],
                                                                     );
-                                                                  }).divide(const SizedBox(
+                                                                  }).divide(SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),
@@ -893,7 +895,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                 children: [
                                                                   Expanded(
                                                                     child:
-                                                                        SizedBox(
+                                                                        Container(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -999,7 +1001,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                   ),
                                                                   Expanded(
                                                                     child:
-                                                                        SizedBox(
+                                                                        Container(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -1103,7 +1105,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
@@ -1231,7 +1233,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                   ),
                                                                   Expanded(
                                                                     child:
-                                                                        SizedBox(
+                                                                        Container(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -1327,7 +1329,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
@@ -1456,25 +1458,25 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                       ),
                                                       Container(
                                                         decoration:
-                                                            const BoxDecoration(),
+                                                            BoxDecoration(),
                                                       ),
                                                     ],
                                                   ),
                                                   Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                   ),
                                                 ].divide(
-                                                    const SizedBox(height: 10.0)),
+                                                    SizedBox(height: 10.0)),
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(height: 10.0)),
+                                        ].divide(SizedBox(height: 10.0)),
                                       ),
                                     ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1482,7 +1484,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.05),
+                                              AlignmentDirectional(0.0, 0.05),
                                           child: FFButtonWidget(
                                             onPressed: () async {
                                               Navigator.pop(context);
@@ -1494,9 +1496,9 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                             options: FFButtonOptions(
                                               width: 240.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -1511,7 +1513,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                         .primaryText,
                                                     letterSpacing: 0.0,
                                                   ),
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -1524,7 +1526,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.05),
+                                              AlignmentDirectional(0.0, 0.05),
                                           child: FFButtonWidget(
                                             onPressed: () async {
                                               setState(() {
@@ -1578,9 +1580,9 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                             options: FFButtonOptions(
                                               width: 240.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -1596,7 +1598,7 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                               elevation: 2.0,
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -1607,13 +1609,13 @@ class _AddItemCopyWidgetState extends State<AddItemCopyWidget> {
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                               ]
-                                  .addToStart(const SizedBox(height: 15.0))
-                                  .addToEnd(const SizedBox(height: 15.0)),
+                                  .addToStart(SizedBox(height: 15.0))
+                                  .addToEnd(SizedBox(height: 15.0)),
                             ),
                           ),
                         ),

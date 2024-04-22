@@ -1,7 +1,12 @@
 import '/backend/supabase/supabase.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'edit_user_copy2_widget.dart' show EditUserCopy2Widget;
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class EditUserCopy2Model extends FlutterFlowModel<EditUserCopy2Widget> {
   ///  State fields for stateful widgets in this component.

@@ -11,7 +11,7 @@ class InwardInventoryHistoryManagementTable
 }
 
 class InwardInventoryHistoryManagementRow extends SupabaseDataRow {
-  InwardInventoryHistoryManagementRow(super.data);
+  InwardInventoryHistoryManagementRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => InwardInventoryHistoryManagementTable();

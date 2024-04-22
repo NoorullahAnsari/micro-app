@@ -7,6 +7,7 @@ import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'add_item_in_outward_lot_wise_model.dart';
 export 'add_item_in_outward_lot_wise_model.dart';
@@ -71,7 +72,7 @@ class _AddItemInOutwardLotWiseWidgetState
 
     return FutureBuilder<List<ItemManagementRow>>(
       future: FFAppState().items(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => ItemManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -98,12 +99,12 @@ class _AddItemInOutwardLotWiseWidgetState
         return Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(),
+          decoration: BoxDecoration(),
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: FutureBuilder<List<LotWiseInventoryManagementRow>>(
               future: FFAppState().lotWiseInventory(
-                uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+                uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
                 requestFn: () => LotWiseInventoryManagementTable().queryRows(
                   queryFn: (q) => q.eq(
                     'company',
@@ -129,7 +130,7 @@ class _AddItemInOutwardLotWiseWidgetState
                 List<LotWiseInventoryManagementRow>
                     containerLotWiseInventoryManagementRowList = snapshot.data!;
                 return Container(
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: SingleChildScrollView(
                     primary: false,
                     child: Column(
@@ -137,16 +138,16 @@ class _AddItemInOutwardLotWiseWidgetState
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 10.0, 0.0),
                           child: Container(
-                            constraints: const BoxConstraints(
+                            constraints: BoxConstraints(
                               maxWidth: 670.0,
                             ),
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .secondaryBackground,
-                              boxShadow: const [
+                              boxShadow: [
                                 BoxShadow(
                                   blurRadius: 4.0,
                                   color: Color(0x33000000),
@@ -159,7 +160,7 @@ class _AddItemInOutwardLotWiseWidgetState
                               borderRadius: BorderRadius.circular(20.0),
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Form(
                                 key: _model.formKey,
                                 autovalidateMode: AutovalidateMode.always,
@@ -170,10 +171,10 @@ class _AddItemInOutwardLotWiseWidgetState
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 0.0, 15.0),
                                           child: AutoSizeText(
                                             FFLocalizations.of(context).getText(
@@ -194,10 +195,10 @@ class _AddItemInOutwardLotWiseWidgetState
                                         ),
                                       ),
                                       Container(
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   20.0, 0.0, 20.0, 0.0),
                                           child: SingleChildScrollView(
                                             primary: false,
@@ -206,7 +207,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: SingleChildScrollView(
                                                     child: Column(
@@ -244,7 +245,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Text(
                                                                     FFLocalizations.of(
                                                                             context)
@@ -352,7 +353,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsetsDirectional
+                                                                    margin: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -368,7 +369,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                         false,
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 5.0)),
                                                             ),
                                                             Row(
@@ -379,7 +380,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Text(
                                                                     FFLocalizations.of(
                                                                             context)
@@ -430,7 +431,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                         ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 5.0)),
                                                             ),
                                                             Row(
@@ -441,7 +442,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Text(
                                                                     FFLocalizations.of(
                                                                             context)
@@ -490,7 +491,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 5.0)),
                                                             ),
                                                             Row(
@@ -501,7 +502,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Text(
                                                                     FFLocalizations.of(
                                                                             context)
@@ -552,7 +553,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                         ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 5.0)),
                                                             ),
                                                             Row(
@@ -566,7 +567,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Text(
                                                                     FFLocalizations.of(
                                                                             context)
@@ -618,7 +619,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                         ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 5.0)),
                                                             ),
                                                             if (widget
@@ -636,7 +637,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -684,7 +685,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                           ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
@@ -696,7 +697,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Text(
                                                                     FFLocalizations.of(
                                                                             context)
@@ -747,7 +748,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                         ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 5.0)),
                                                             ),
                                                             Row(
@@ -758,7 +759,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                 Container(
                                                                   width: 150.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Text(
                                                                     FFLocalizations.of(
                                                                             context)
@@ -843,7 +844,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsetsDirectional
+                                                                    margin: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -868,7 +869,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                               children: [
                                                                 Expanded(
                                                                   child:
-                                                                      SizedBox(
+                                                                      Container(
                                                                     width:
                                                                         150.0,
                                                                     child:
@@ -980,7 +981,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                 ),
                                                                 Expanded(
                                                                   child:
-                                                                      SizedBox(
+                                                                      Container(
                                                                     width:
                                                                         150.0,
                                                                     child:
@@ -1090,19 +1091,19 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 5.0)),
                                                             ),
                                                             Container(
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Builder(
                                                                 builder:
                                                                     (context) {
                                                                   final parameters = widget
                                                                           .itemMasterParameters
                                                                           ?.dropdownValues
-                                                                          .toList() ??
+                                                                          ?.toList() ??
                                                                       [];
                                                                   return SingleChildScrollView(
                                                                     primary:
@@ -1125,7 +1126,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                               [
                                                                             Container(
                                                                               width: 150.0,
-                                                                              decoration: const BoxDecoration(),
+                                                                              decoration: BoxDecoration(),
                                                                               child: Text(
                                                                                 parametersItem,
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -1145,9 +1146,9 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                                     letterSpacing: 0.0,
                                                                                   ),
                                                                             ),
-                                                                          ].divide(const SizedBox(width: 10.0)),
+                                                                          ].divide(SizedBox(width: 10.0)),
                                                                         );
-                                                                      }).divide(const SizedBox(
+                                                                      }).divide(SizedBox(
                                                                           height:
                                                                               10.0)),
                                                                     ),
@@ -1159,13 +1160,13 @@ class _AddItemInOutwardLotWiseWidgetState
                                                         ),
                                                         Container(
                                                           decoration:
-                                                              const BoxDecoration(),
+                                                              BoxDecoration(),
                                                           child: Builder(
                                                             builder: (context) {
                                                               final values = widget
                                                                       .inventoryParameters
                                                                       ?.dropdownValues
-                                                                      .toList() ??
+                                                                      ?.toList() ??
                                                                   [];
                                                               return SingleChildScrollView(
                                                                 primary: false,
@@ -1191,7 +1192,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                           width:
                                                                               150.0,
                                                                           decoration:
-                                                                              const BoxDecoration(),
+                                                                              BoxDecoration(),
                                                                           child:
                                                                               Text(
                                                                             valuesItem,
@@ -1216,10 +1217,10 @@ class _AddItemInOutwardLotWiseWidgetState
                                                                                 letterSpacing: 0.0,
                                                                               ),
                                                                         ),
-                                                                      ].divide(const SizedBox(
+                                                                      ].divide(SizedBox(
                                                                               width: 10.0)),
                                                                     );
-                                                                  }).divide(const SizedBox(
+                                                                  }).divide(SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),
@@ -1227,25 +1228,25 @@ class _AddItemInOutwardLotWiseWidgetState
                                                             },
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           height: 10.0)),
                                                     ),
                                                   ),
                                                 ),
-                                              ].divide(const SizedBox(height: 10.0)),
+                                              ].divide(SizedBox(height: 10.0)),
                                             ),
                                           ),
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           children: [
                                             Expanded(
                                               child: Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.05),
                                                 child: FFButtonWidget(
                                                   onPressed: () async {
@@ -1260,11 +1261,11 @@ class _AddItemInOutwardLotWiseWidgetState
                                                     width: 240.0,
                                                     height: 40.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -1281,7 +1282,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                               .primaryText,
                                                           letterSpacing: 0.0,
                                                         ),
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -1294,7 +1295,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                             ),
                                             Expanded(
                                               child: Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.05),
                                                 child: FFButtonWidget(
                                                   onPressed: () async {
@@ -1309,11 +1310,11 @@ class _AddItemInOutwardLotWiseWidgetState
                                                     width: 240.0,
                                                     height: 40.0,
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     iconPadding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 0.0),
                                                     color: FlutterFlowTheme.of(
@@ -1331,7 +1332,7 @@ class _AddItemInOutwardLotWiseWidgetState
                                                           letterSpacing: 0.0,
                                                         ),
                                                     elevation: 2.0,
-                                                    borderSide: const BorderSide(
+                                                    borderSide: BorderSide(
                                                       color: Colors.transparent,
                                                       width: 1.0,
                                                     ),
@@ -1343,13 +1344,13 @@ class _AddItemInOutwardLotWiseWidgetState
                                               ),
                                             ),
                                           ]
-                                              .divide(const SizedBox(width: 10.0))
-                                              .around(const SizedBox(width: 10.0)),
+                                              .divide(SizedBox(width: 10.0))
+                                              .around(SizedBox(width: 10.0)),
                                         ),
                                       ),
                                     ]
-                                        .addToStart(const SizedBox(height: 15.0))
-                                        .addToEnd(const SizedBox(height: 15.0)),
+                                        .addToStart(SizedBox(height: 15.0))
+                                        .addToEnd(SizedBox(height: 15.0)),
                                   ),
                                 ),
                               ),

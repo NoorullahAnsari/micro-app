@@ -9,6 +9,8 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'create_contact_component_model.dart';
 export 'create_contact_component_model.dart';
 
@@ -90,21 +92,21 @@ class _CreateContactComponentWidgetState
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
             child: Container(
-              constraints: const BoxConstraints(
+              constraints: BoxConstraints(
                 maxWidth: 670.0,
                 maxHeight: 530.0,
               ),
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
                     blurRadius: 4.0,
                     color: Color(0x33000000),
@@ -117,15 +119,15 @@ class _CreateContactComponentWidgetState
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                         child: AutoSizeText(
                           FFLocalizations.of(context).getText(
                             'eddeaoxf' /* Create Contact : */,
@@ -143,18 +145,18 @@ class _CreateContactComponentWidgetState
                       ),
                     ),
                     Container(
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxHeight: 380.0,
                       ),
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, -1.0),
+                        alignment: AlignmentDirectional(0.0, -1.0),
                         child: SingleChildScrollView(
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 20.0, 0.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
@@ -166,7 +168,7 @@ class _CreateContactComponentWidgetState
                                           CrossAxisAlignment.end,
                                       children: [
                                         Expanded(
-                                          child: SizedBox(
+                                          child: Container(
                                             width: 120.0,
                                             child: TextFormField(
                                               controller: _model
@@ -270,7 +272,7 @@ class _CreateContactComponentWidgetState
                                           ),
                                         ),
                                         Expanded(
-                                          child: SizedBox(
+                                          child: Container(
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.3,
@@ -376,7 +378,7 @@ class _CreateContactComponentWidgetState
                                             ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 10.0)),
+                                      ].divide(SizedBox(width: 10.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -479,7 +481,7 @@ class _CreateContactComponentWidgetState
                                           ),
                                         ),
                                         Flexible(
-                                          child: SizedBox(
+                                          child: Container(
                                             width: MediaQuery.sizeOf(context)
                                                     .width *
                                                 0.53,
@@ -586,7 +588,7 @@ class _CreateContactComponentWidgetState
                                             ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 10.0)),
+                                      ].divide(SizedBox(width: 10.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -688,7 +690,7 @@ class _CreateContactComponentWidgetState
                                           ),
                                         ),
                                         Expanded(
-                                          child: SizedBox(
+                                          child: Container(
                                             width: 120.0,
                                             child: TextFormField(
                                               controller:
@@ -792,7 +794,7 @@ class _CreateContactComponentWidgetState
                                             ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 10.0)),
+                                      ].divide(SizedBox(width: 10.0)),
                                     ),
                                     Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -894,7 +896,7 @@ class _CreateContactComponentWidgetState
                                           ),
                                         ),
                                         Expanded(
-                                          child: SizedBox(
+                                          child: Container(
                                             width: 120.0,
                                             child: TextFormField(
                                               controller: _model
@@ -998,7 +1000,7 @@ class _CreateContactComponentWidgetState
                                             ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 10.0)),
+                                      ].divide(SizedBox(width: 10.0)),
                                     ),
                                     Column(
                                       mainAxisSize: MainAxisSize.max,
@@ -1115,7 +1117,7 @@ class _CreateContactComponentWidgetState
                                           ),
                                           wrapped: true,
                                         ),
-                                      ].divide(const SizedBox(height: 10.0)),
+                                      ].divide(SizedBox(height: 10.0)),
                                     ),
                                     Wrap(
                                       spacing: 10.0,
@@ -1238,7 +1240,7 @@ class _CreateContactComponentWidgetState
                                                       .alternate,
                                               borderWidth: 2.0,
                                               borderRadius: 8.0,
-                                              margin: const EdgeInsetsDirectional
+                                              margin: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 4.0),
                                               hidesUnderline: true,
@@ -1246,7 +1248,7 @@ class _CreateContactComponentWidgetState
                                               isSearchable: true,
                                               isMultiSelect: false,
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -1349,7 +1351,7 @@ class _CreateContactComponentWidgetState
                                                       .alternate,
                                               borderWidth: 2.0,
                                               borderRadius: 8.0,
-                                              margin: const EdgeInsetsDirectional
+                                              margin: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 4.0),
                                               hidesUnderline: true,
@@ -1357,7 +1359,7 @@ class _CreateContactComponentWidgetState
                                               isSearchable: true,
                                               isMultiSelect: false,
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
                                       ],
                                     ),
@@ -1473,7 +1475,7 @@ class _CreateContactComponentWidgetState
                                                       .alternate,
                                               borderWidth: 2.0,
                                               borderRadius: 8.0,
-                                              margin: const EdgeInsetsDirectional
+                                              margin: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 4.0),
                                               hidesUnderline: true,
@@ -1481,7 +1483,7 @@ class _CreateContactComponentWidgetState
                                               isSearchable: true,
                                               isMultiSelect: false,
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
                                         Column(
                                           mainAxisSize: MainAxisSize.max,
@@ -1580,7 +1582,7 @@ class _CreateContactComponentWidgetState
                                                       .alternate,
                                               borderWidth: 2.0,
                                               borderRadius: 8.0,
-                                              margin: const EdgeInsetsDirectional
+                                              margin: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 4.0),
                                               hidesUnderline: true,
@@ -1588,7 +1590,7 @@ class _CreateContactComponentWidgetState
                                               isSearchable: true,
                                               isMultiSelect: false,
                                             ),
-                                          ].divide(const SizedBox(height: 10.0)),
+                                          ].divide(SizedBox(height: 10.0)),
                                         ),
                                       ],
                                     ),
@@ -1861,11 +1863,11 @@ class _CreateContactComponentWidgetState
                                                 .asValidator(context),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 7.0)),
+                                      ].divide(SizedBox(width: 7.0)),
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         mainAxisAlignment:
@@ -1908,7 +1910,7 @@ From: */
                                                           .viewInsetsOf(
                                                               context),
                                                       child:
-                                                          const ContactReferenceFromWidget(),
+                                                          ContactReferenceFromWidget(),
                                                     );
                                                   },
                                                 ).then((value) =>
@@ -1927,7 +1929,7 @@ From: */
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(10.0),
+                                                  padding: EdgeInsets.all(10.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -1946,7 +1948,7 @@ From: */
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                     ),
                                     Row(
@@ -2031,7 +2033,7 @@ From: */
                                             borderWidth: 2.0,
                                             borderRadius: 8.0,
                                             margin:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     16.0, 4.0, 16.0, 4.0),
                                             hidesUnderline: true,
                                             isOverButton: true,
@@ -2066,7 +2068,7 @@ From: */
                                                     backgroundColor:
                                                         Colors.transparent,
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                                 0.0, 0.0)
                                                             .resolve(
                                                                 Directionality.of(
@@ -2085,14 +2087,14 @@ From: */
                                             },
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 7.0)),
+                                      ].divide(SizedBox(width: 7.0)),
                                     ),
-                                  ].divide(const SizedBox(height: 10.0)),
+                                  ].divide(SizedBox(height: 10.0)),
                                 ),
                               ),
                             ]
-                                .addToStart(const SizedBox(height: 10.0))
-                                .addToEnd(const SizedBox(height: 10.0)),
+                                .addToStart(SizedBox(height: 10.0))
+                                .addToEnd(SizedBox(height: 10.0)),
                           ),
                         ),
                       ),
@@ -2102,7 +2104,7 @@ From: */
                       children: [
                         Expanded(
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.05),
+                            alignment: AlignmentDirectional(0.0, 0.05),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 Navigator.pop(context);
@@ -2113,9 +2115,9 @@ From: */
                               options: FFButtonOptions(
                                 width: 240.0,
                                 height: 40.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).alternate,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -2126,7 +2128,7 @@ From: */
                                           .primaryText,
                                       letterSpacing: 0.0,
                                     ),
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -2137,7 +2139,7 @@ From: */
                         ),
                         Expanded(
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.05),
+                            alignment: AlignmentDirectional(0.0, 0.05),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 context.safePop();
@@ -2148,9 +2150,9 @@ From: */
                               options: FFButtonOptions(
                                 width: 240.0,
                                 height: 40.0,
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).secondary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -2162,7 +2164,7 @@ From: */
                                       letterSpacing: 0.0,
                                     ),
                                 elevation: 2.0,
-                                borderSide: const BorderSide(
+                                borderSide: BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -2172,12 +2174,12 @@ From: */
                           ),
                         ),
                       ]
-                          .divide(const SizedBox(width: 10.0))
-                          .around(const SizedBox(width: 10.0)),
+                          .divide(SizedBox(width: 10.0))
+                          .around(SizedBox(width: 10.0)),
                     ),
                   ]
-                      .divide(const SizedBox(height: 10.0))
-                      .addToStart(const SizedBox(height: 15.0)),
+                      .divide(SizedBox(height: 10.0))
+                      .addToStart(SizedBox(height: 15.0)),
                 ),
               ),
             ),

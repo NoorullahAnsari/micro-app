@@ -10,7 +10,7 @@ class ItemManagementTable extends SupabaseTable<ItemManagementRow> {
 }
 
 class ItemManagementRow extends SupabaseDataRow {
-  ItemManagementRow(super.data);
+  ItemManagementRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => ItemManagementTable();

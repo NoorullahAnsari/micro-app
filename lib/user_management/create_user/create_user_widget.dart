@@ -8,6 +8,7 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_user_model.dart';
 export 'create_user_model.dart';
@@ -85,9 +86,9 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
         return Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(),
+          decoration: BoxDecoration(),
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: SingleChildScrollView(
               primary: false,
               child: Column(
@@ -96,14 +97,14 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                     child: Container(
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 500.0,
                       ),
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -116,7 +117,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Form(
                           key: _model.formKey,
                           autovalidateMode: AutovalidateMode.disabled,
@@ -126,9 +127,9 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 0.0, 15.0),
                                     child: AutoSizeText(
                                       FFLocalizations.of(context).getText(
@@ -148,9 +149,9 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                   ),
                                 ),
                                 Container(
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 0.0),
                                     child: SingleChildScrollView(
                                       child: Column(
@@ -165,7 +166,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Expanded(
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
@@ -291,7 +292,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 10.0)),
+                                                ].divide(SizedBox(width: 10.0)),
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -426,7 +427,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                     ),
                                                   ),
                                                   Expanded(
-                                                    child: SizedBox(
+                                                    child: Container(
                                                       width: MediaQuery.sizeOf(
                                                                   context)
                                                               .width *
@@ -555,14 +556,14 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                       ),
                                                     ),
                                                   ),
-                                                ].divide(const SizedBox(width: 7.0)),
+                                                ].divide(SizedBox(width: 7.0)),
                                               ),
                                               Column(
                                                 mainAxisSize: MainAxisSize.max,
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Text(
                                                       FFLocalizations.of(
@@ -662,7 +663,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                     borderWidth: 2.0,
                                                     borderRadius: 8.0,
                                                     margin:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(16.0, 4.0,
                                                                 16.0, 4.0),
                                                     hidesUnderline: true,
@@ -670,17 +671,17 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                     isSearchable: true,
                                                     isMultiSelect: false,
                                                   ),
-                                                ].divide(const SizedBox(height: 5.0)),
+                                                ].divide(SizedBox(height: 5.0)),
                                               ),
-                                            ].divide(const SizedBox(height: 10.0)),
+                                            ].divide(SizedBox(height: 10.0)),
                                           ),
-                                        ].divide(const SizedBox(height: 10.0)),
+                                        ].divide(SizedBox(height: 10.0)),
                                       ),
                                     ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -688,7 +689,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.05),
+                                              AlignmentDirectional(0.0, 0.05),
                                           child: FFButtonWidget(
                                             onPressed: () async {
                                               Navigator.pop(context);
@@ -700,9 +701,9 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                             options: FFButtonOptions(
                                               width: 240.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -717,7 +718,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                         .primaryText,
                                                     letterSpacing: 0.0,
                                                   ),
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -730,7 +731,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.05),
+                                              AlignmentDirectional(0.0, 0.05),
                                           child: FFButtonWidget(
                                             onPressed: () async {
                                               if (_model.formKey.currentState ==
@@ -753,7 +754,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                                 .primaryText,
                                                       ),
                                                     ),
-                                                    duration: const Duration(
+                                                    duration: Duration(
                                                         milliseconds: 4000),
                                                     backgroundColor:
                                                         FlutterFlowTheme.of(
@@ -780,6 +781,9 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                     .fullnameTextController
                                                     .text,
                                                 phone: _model.primarymobilenoTextController
+                                                                .text !=
+                                                            null &&
+                                                        _model.primarymobilenoTextController
                                                                 .text !=
                                                             ''
                                                     ? _model
@@ -876,7 +880,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                               FFAppState()
                                                                   .loopIndex],
                                                       'user': _model
-                                                          .users?.first.id,
+                                                          .users?.first?.id,
                                                     });
                                                     setState(() {
                                                       FFAppState().loopIndex =
@@ -916,7 +920,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                             onPressed: () =>
                                                                 Navigator.pop(
                                                                     alertDialogContext),
-                                                            child: const Text('Ok'),
+                                                            child: Text('Ok'),
                                                           ),
                                                         ],
                                                       );
@@ -940,7 +944,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                           onPressed: () =>
                                                               Navigator.pop(
                                                                   alertDialogContext),
-                                                          child: const Text('Ok'),
+                                                          child: Text('Ok'),
                                                         ),
                                                       ],
                                                     );
@@ -957,9 +961,9 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                             options: FFButtonOptions(
                                               width: 240.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -975,7 +979,7 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                               elevation: 2.0,
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -986,13 +990,13 @@ class _CreateUserWidgetState extends State<CreateUserWidget> {
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                               ]
-                                  .addToStart(const SizedBox(height: 15.0))
-                                  .addToEnd(const SizedBox(height: 15.0)),
+                                  .addToStart(SizedBox(height: 15.0))
+                                  .addToEnd(SizedBox(height: 15.0)),
                             ),
                           ),
                         ),

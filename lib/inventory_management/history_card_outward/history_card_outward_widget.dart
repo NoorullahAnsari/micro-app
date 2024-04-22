@@ -3,7 +3,10 @@ import '/components/side_nav_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'history_card_outward_model.dart';
 export 'history_card_outward_model.dart';
 
@@ -51,7 +54,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
   Widget build(BuildContext context) {
     return FutureBuilder<List<UserManagementRow>>(
       future: FFAppState().companyUsers(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => UserManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -131,7 +134,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
               ),
               actions: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
                   child: InkWell(
                     splashColor: Colors.transparent,
                     focusColor: Colors.transparent,
@@ -169,7 +172,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
               elevation: 0.0,
             ),
             body: Container(
-              decoration: const BoxDecoration(),
+              decoration: BoxDecoration(),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,18 +194,18 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                     ),
                   Expanded(
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: Container(
                         width: double.infinity,
-                        constraints: const BoxConstraints(
+                        constraints: BoxConstraints(
                           maxWidth: 1170.0,
                         ),
-                        decoration: const BoxDecoration(),
+                        decoration: BoxDecoration(),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   7.0, 10.0, 7.0, 0.0),
                               child: SingleChildScrollView(
                                 primary: false,
@@ -218,14 +221,14 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                       Container(
                                         width: double.infinity,
                                         height: 24.0,
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                       ),
                                     if (responsiveVisibility(
                                       context: context,
                                       phone: false,
                                     ))
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 20.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -243,10 +246,10 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                             ))
                                               Expanded(
                                                 child: Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 0.0, 10.0, 0.0),
-                                                  child: SizedBox(
+                                                  child: Container(
                                                     width: 300.0,
                                                     child: TextFormField(
                                                       controller:
@@ -340,7 +343,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                       12.0),
                                                         ),
                                                         contentPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     20.0,
                                                                     0.0,
@@ -389,10 +392,10 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                               },
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 10.0, 0.0),
                                                 child: Column(
@@ -407,7 +410,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                     ))
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     12.0,
                                                                     0.0,
@@ -438,9 +441,9 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                         ),
                                       ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Container(
-                                        decoration: const BoxDecoration(),
+                                        decoration: BoxDecoration(),
                                         child: SingleChildScrollView(
                                           scrollDirection: Axis.horizontal,
                                           child: Row(
@@ -455,7 +458,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Container(
                                                       height: 70.0,
@@ -465,7 +468,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                     context)
                                                                 .accent1,
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   0.0),
@@ -482,7 +485,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Row(
                                                           mainAxisSize:
@@ -491,7 +494,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                             Container(
                                                               width: 200.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -505,7 +508,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
@@ -533,7 +536,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                             Container(
                                                               width: 200.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -547,7 +550,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
@@ -575,7 +578,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                             Container(
                                                               width: 200.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -589,7 +592,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
@@ -617,7 +620,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                             Container(
                                                               width: 200.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
@@ -631,7 +634,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 children: [
                                                                   Align(
                                                                     alignment:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                     child: Text(
@@ -657,9 +660,9 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                               ),
                                                             ),
                                                           ]
-                                                              .divide(const SizedBox(
+                                                              .divide(SizedBox(
                                                                   width: 12.0))
-                                                              .around(const SizedBox(
+                                                              .around(SizedBox(
                                                                   width: 12.0)),
                                                         ),
                                                       ),
@@ -682,7 +685,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                           Container(
                                                             height: 60.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -691,7 +694,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -715,7 +718,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -745,7 +748,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -775,7 +778,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -803,10 +806,10 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                   ),
                                                                 ),
                                                               ]
-                                                                  .divide(const SizedBox(
+                                                                  .divide(SizedBox(
                                                                       width:
                                                                           12.0))
-                                                                  .around(const SizedBox(
+                                                                  .around(SizedBox(
                                                                       width:
                                                                           12.0)),
                                                             ),
@@ -814,7 +817,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                           Container(
                                                             height: 60.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -823,7 +826,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -847,7 +850,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -877,7 +880,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -907,7 +910,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -935,10 +938,10 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                   ),
                                                                 ),
                                                               ]
-                                                                  .divide(const SizedBox(
+                                                                  .divide(SizedBox(
                                                                       width:
                                                                           12.0))
-                                                                  .around(const SizedBox(
+                                                                  .around(SizedBox(
                                                                       width:
                                                                           12.0)),
                                                             ),
@@ -946,7 +949,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                           Container(
                                                             height: 60.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
@@ -955,7 +958,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Row(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -979,7 +982,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1009,7 +1012,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1039,7 +1042,7 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                 Container(
                                                                   width: 200.0,
                                                                   decoration:
-                                                                      const BoxDecoration(),
+                                                                      BoxDecoration(),
                                                                   child: Column(
                                                                     mainAxisSize:
                                                                         MainAxisSize
@@ -1067,10 +1070,10 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                                                   ),
                                                                 ),
                                                               ]
-                                                                  .divide(const SizedBox(
+                                                                  .divide(SizedBox(
                                                                       width:
                                                                           12.0))
-                                                                  .around(const SizedBox(
+                                                                  .around(SizedBox(
                                                                       width:
                                                                           12.0)),
                                                             ),
@@ -1087,9 +1090,9 @@ class _HistoryCardOutwardWidgetState extends State<HistoryCardOutwardWidget> {
                                       ),
                                     ),
                                   ]
-                                      .divide(const SizedBox(height: 10.0))
-                                      .addToStart(const SizedBox(height: 20.0))
-                                      .addToEnd(const SizedBox(height: 20.0)),
+                                      .divide(SizedBox(height: 10.0))
+                                      .addToStart(SizedBox(height: 20.0))
+                                      .addToEnd(SizedBox(height: 20.0)),
                                 ),
                               ),
                             ),

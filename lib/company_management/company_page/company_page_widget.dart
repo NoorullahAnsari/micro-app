@@ -11,6 +11,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'company_page_model.dart';
 export 'company_page_model.dart';
 
@@ -80,7 +82,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                   ),
                 }.withoutNulls,
                 extra: <String, dynamic>{
-                  kTransitionInfoKey: const TransitionInfo(
+                  kTransitionInfoKey: TransitionInfo(
                     hasTransition: true,
                     transitionType: PageTransitionType.fade,
                     duration: Duration(milliseconds: 0),
@@ -102,7 +104,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -150,13 +152,13 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                 ),
               Expanded(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 970.0,
                     ),
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -173,13 +175,13 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                 Container(
                                   width: double.infinity,
                                   height: 24.0,
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                 ),
                               Align(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
+                                alignment: AlignmentDirectional(1.0, 0.0),
                                 child: Builder(
                                   builder: (context) => Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 20.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -195,7 +197,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -221,16 +223,16 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                       text: FFLocalizations.of(context).getText(
                                         '5ulw59j5' /* New */,
                                       ),
-                                      icon: const Icon(
+                                      icon: Icon(
                                         Icons.add,
                                         size: 15.0,
                                       ),
                                       options: FFButtonOptions(
                                         height: 40.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             16.0, 0.0, 16.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .secondary,
@@ -242,7 +244,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                               letterSpacing: 0.0,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -283,9 +285,9 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                       snapshot.data!;
                                   return Container(
                                     height: 800.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 10.0, 0.0),
                                       child: Builder(
                                         builder: (context) {
@@ -491,7 +493,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -563,7 +565,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -647,7 +649,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                                                       backgroundColor:
                                                                           Colors
                                                                               .transparent,
-                                                                      alignment: const AlignmentDirectional(
+                                                                      alignment: AlignmentDirectional(
                                                                               0.0,
                                                                               0.0)
                                                                           .resolve(
@@ -707,7 +709,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                                                       backgroundColor:
                                                                           Colors
                                                                               .transparent,
-                                                                      alignment: const AlignmentDirectional(
+                                                                      alignment: AlignmentDirectional(
                                                                               0.0,
                                                                               0.0)
                                                                           .resolve(
@@ -743,7 +745,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                                       },
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 3.0)),
+                                                      SizedBox(width: 3.0)),
                                                 ),
                                               ]
                                                   .map((c) => DataCell(c))
@@ -774,11 +776,11 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                             checkboxSelectedFillColor:
                                                 Colors.transparent,
                                             checkboxCheckColor:
-                                                const Color(0x8A000000),
+                                                Color(0x8A000000),
                                             checkboxUnselectedBorderColor:
-                                                const Color(0x8A000000),
+                                                Color(0x8A000000),
                                             checkboxSelectedBorderColor:
-                                                const Color(0x8A000000),
+                                                Color(0x8A000000),
                                           );
                                         },
                                       ),
@@ -786,7 +788,7 @@ class _CompanyPageWidgetState extends State<CompanyPageWidget> {
                                   );
                                 },
                               ),
-                            ].divide(const SizedBox(height: 10.0)),
+                            ].divide(SizedBox(height: 10.0)),
                           ),
                         ),
                       ],

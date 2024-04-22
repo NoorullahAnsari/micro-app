@@ -6,8 +6,10 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutterflow_colorpicker/flutterflow_colorpicker.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'add_tag_component_leads_model.dart';
 export 'add_tag_component_leads_model.dart';
@@ -53,8 +55,8 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
             curve: Curves.bounceOut,
             delay: 300.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 100.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -98,15 +100,15 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 2.0, 16.0, 16.0),
+            padding: EdgeInsetsDirectional.fromSTEB(16.0, 2.0, 16.0, 16.0),
             child: Container(
               width: double.infinity,
-              constraints: const BoxConstraints(
+              constraints: BoxConstraints(
                 maxWidth: 450.0,
               ),
               decoration: BoxDecoration(
                 color: FlutterFlowTheme.of(context).secondaryBackground,
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
                     blurRadius: 12.0,
                     color: Color(0x1E000000),
@@ -119,7 +121,7 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                 borderRadius: BorderRadius.circular(16.0),
               ),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -129,7 +131,7 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               24.0, 16.0, 0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
@@ -144,9 +146,9 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(1.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 20.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderWidth: 1.0,
@@ -166,7 +168,7 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(
+                      padding: EdgeInsetsDirectional.fromSTEB(
                           20.0, 16.0, 20.0, 32.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -201,7 +203,7 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                                           hoverColor: Colors.transparent,
                                           highlightColor: Colors.transparent,
                                           onTap: () async {
-                                            final colorPickedColor =
+                                            final _colorPickedColor =
                                                 await showFFColorPicker(
                                               context,
                                               currentColor: _model
@@ -230,10 +232,10 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                                                   isMobileWidth(context),
                                             );
 
-                                            if (colorPickedColor != null) {
+                                            if (_colorPickedColor != null) {
                                               safeSetState(() =>
                                                   _model.colorPicked =
-                                                      colorPickedColor);
+                                                      _colorPickedColor);
                                             }
                                           },
                                           child: Container(
@@ -246,22 +248,22 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                                             ),
                                           ),
                                         ),
-                                      ].divide(const SizedBox(width: 10.0)),
+                                      ].divide(SizedBox(width: 10.0)),
                                     );
-                                  }).divide(const SizedBox(height: 10.0)),
+                                  }).divide(SizedBox(height: 10.0)),
                                 ),
                               );
                             },
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.05),
+                                  alignment: AlignmentDirectional(0.0, 0.05),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       Navigator.pop(context);
@@ -271,10 +273,10 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                                     ),
                                     options: FFButtonOptions(
                                       height: 44.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryBackground,
@@ -306,7 +308,7 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.05),
+                                  alignment: AlignmentDirectional(0.0, 0.05),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.safePop();
@@ -316,10 +318,10 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                                     ),
                                     options: FFButtonOptions(
                                       height: 44.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           24.0, 0.0, 24.0, 0.0),
                                       iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
+                                          EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
                                       color: FlutterFlowTheme.of(context)
                                           .secondary,
@@ -330,7 +332,7 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                                             letterSpacing: 0.0,
                                           ),
                                       elevation: 3.0,
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Colors.transparent,
                                         width: 1.0,
                                       ),
@@ -352,10 +354,10 @@ class _AddTagComponentLeadsWidgetState extends State<AddTagComponentLeadsWidget>
                               ],
                             ),
                           ),
-                        ].divide(const SizedBox(height: 10.0)),
+                        ].divide(SizedBox(height: 10.0)),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 10.0)),
+                  ].divide(SizedBox(height: 10.0)),
                 ),
               ),
             ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation']!),

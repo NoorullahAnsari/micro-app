@@ -11,6 +11,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'create_contact_model.dart';
 export 'create_contact_model.dart';
 
@@ -149,7 +151,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
             child: InkWell(
               splashColor: Colors.transparent,
               focusColor: Colors.transparent,
@@ -174,7 +176,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                     ),
                   }.withoutNulls,
                   extra: <String, dynamic>{
-                    kTransitionInfoKey: const TransitionInfo(
+                    kTransitionInfoKey: TransitionInfo(
                       hasTransition: true,
                       transitionType: PageTransitionType.fade,
                       duration: Duration(milliseconds: 0),
@@ -213,10 +215,10 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
               ),
             Expanded(
               child: Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Container(
                   width: double.infinity,
-                  decoration: const BoxDecoration(),
+                  decoration: BoxDecoration(),
                   child: SingleChildScrollView(
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
@@ -229,7 +231,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                           Container(
                             width: double.infinity,
                             height: 24.0,
-                            decoration: const BoxDecoration(),
+                            decoration: BoxDecoration(),
                           ),
                         Container(
                           width: double.infinity,
@@ -238,7 +240,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                 .secondaryBackground,
                           ),
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, -1.0),
+                            alignment: AlignmentDirectional(0.0, -1.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
                               children: [
@@ -248,7 +250,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                   tablet: false,
                                 ))
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         16.0, 0.0, 16.0, 12.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
@@ -283,7 +285,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                               }.withoutNulls,
                                               extra: <String, dynamic>{
                                                 kTransitionInfoKey:
-                                                    const TransitionInfo(
+                                                    TransitionInfo(
                                                   hasTransition: true,
                                                   transitionType:
                                                       PageTransitionType.fade,
@@ -311,11 +313,11 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(width: 30.0)),
+                                      ].divide(SizedBox(width: 30.0)),
                                     ),
                                   ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 20.0, 20.0, 0.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -431,7 +433,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                             ),
                                           ),
                                           Flexible(
-                                            child: SizedBox(
+                                            child: Container(
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.53,
@@ -545,7 +547,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -656,7 +658,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                             ),
                                           ),
                                           Flexible(
-                                            child: SizedBox(
+                                            child: Container(
                                               width: MediaQuery.sizeOf(context)
                                                       .width *
                                                   0.53,
@@ -771,7 +773,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -779,7 +781,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                             CrossAxisAlignment.end,
                                         children: [
                                           Expanded(
-                                            child: SizedBox(
+                                            child: Container(
                                               width: 120.0,
                                               child: TextFormField(
                                                 controller: _model
@@ -892,7 +894,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                             ),
                                           ),
                                           Expanded(
-                                            child: SizedBox(
+                                            child: Container(
                                               width: 120.0,
                                               child: TextFormField(
                                                 controller: _model
@@ -1004,7 +1006,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -1114,7 +1116,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                             ),
                                           ),
                                           Expanded(
-                                            child: SizedBox(
+                                            child: Container(
                                               width: 120.0,
                                               child: TextFormField(
                                                 controller: _model
@@ -1226,7 +1228,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       Wrap(
                                         spacing: 10.0,
@@ -1373,7 +1375,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                 ),
                                                 wrapped: true,
                                               ),
-                                            ].divide(const SizedBox(height: 10.0)),
+                                            ].divide(SizedBox(height: 10.0)),
                                           ),
                                         ],
                                       ),
@@ -1504,7 +1506,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                           .alternate,
                                                   borderWidth: 2.0,
                                                   borderRadius: 8.0,
-                                                  margin: const EdgeInsetsDirectional
+                                                  margin: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 4.0, 16.0, 4.0),
                                                   hidesUnderline: true,
@@ -1512,7 +1514,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                   isSearchable: true,
                                                   isMultiSelect: false,
                                                 ),
-                                              ].divide(const SizedBox(height: 10.0)),
+                                              ].divide(SizedBox(height: 10.0)),
                                             ),
                                           ),
                                           Expanded(
@@ -1628,7 +1630,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                           .alternate,
                                                   borderWidth: 2.0,
                                                   borderRadius: 8.0,
-                                                  margin: const EdgeInsetsDirectional
+                                                  margin: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 4.0, 16.0, 4.0),
                                                   hidesUnderline: true,
@@ -1636,10 +1638,10 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                   isSearchable: true,
                                                   isMultiSelect: false,
                                                 ),
-                                              ].divide(const SizedBox(height: 10.0)),
+                                              ].divide(SizedBox(height: 10.0)),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -1757,7 +1759,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                           .alternate,
                                                   borderWidth: 2.0,
                                                   borderRadius: 8.0,
-                                                  margin: const EdgeInsetsDirectional
+                                                  margin: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 4.0, 16.0, 4.0),
                                                   hidesUnderline: true,
@@ -1765,7 +1767,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                   isSearchable: true,
                                                   isMultiSelect: false,
                                                 ),
-                                              ].divide(const SizedBox(height: 10.0)),
+                                              ].divide(SizedBox(height: 10.0)),
                                             ),
                                           ),
                                           Expanded(
@@ -1776,7 +1778,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
@@ -1881,7 +1883,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                           .alternate,
                                                   borderWidth: 2.0,
                                                   borderRadius: 8.0,
-                                                  margin: const EdgeInsetsDirectional
+                                                  margin: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           16.0, 4.0, 16.0, 4.0),
                                                   hidesUnderline: true,
@@ -1889,10 +1891,10 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                   isSearchable: true,
                                                   isMultiSelect: false,
                                                 ),
-                                              ].divide(const SizedBox(height: 10.0)),
+                                              ].divide(SizedBox(height: 10.0)),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       TextFormField(
                                         controller:
@@ -2190,7 +2192,7 @@ class _CreateContactWidgetState extends State<CreateContactWidget> {
                                                   .asValidator(context),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 7.0)),
+                                        ].divide(SizedBox(width: 7.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -2232,7 +2234,7 @@ from: */
                                                           .viewInsetsOf(
                                                               context),
                                                       child:
-                                                          const ContactReferenceFromWidget(),
+                                                          ContactReferenceFromWidget(),
                                                     );
                                                   },
                                                 ).then((value) =>
@@ -2251,7 +2253,7 @@ from: */
                                                   ),
                                                 ),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.all(10.0),
+                                                  padding: EdgeInsets.all(10.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -2297,7 +2299,7 @@ from: */
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -2316,7 +2318,7 @@ from: */
                                               },
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -2411,7 +2413,7 @@ from: */
                                                       .alternate,
                                               borderWidth: 2.0,
                                               borderRadius: 8.0,
-                                              margin: const EdgeInsetsDirectional
+                                              margin: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       16.0, 4.0, 16.0, 4.0),
                                               hidesUnderline: true,
@@ -2447,7 +2449,7 @@ from: */
                                                       backgroundColor:
                                                           Colors.transparent,
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -2466,9 +2468,9 @@ from: */
                                               },
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
-                                    ].divide(const SizedBox(height: 10.0)),
+                                    ].divide(SizedBox(height: 10.0)),
                                   ),
                                 ),
                                 Row(
@@ -2478,10 +2480,10 @@ from: */
                                       flex: 1,
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.05),
+                                            AlignmentDirectional(0.0, 0.05),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 24.0, 0.0, 0.0),
                                           child: FFButtonWidget(
                                             onPressed: () async {
@@ -2508,7 +2510,7 @@ from: */
                                                 }.withoutNulls,
                                                 extra: <String, dynamic>{
                                                   kTransitionInfoKey:
-                                                      const TransitionInfo(
+                                                      TransitionInfo(
                                                     hasTransition: true,
                                                     transitionType:
                                                         PageTransitionType.fade,
@@ -2525,9 +2527,9 @@ from: */
                                             options: FFButtonOptions(
                                               width: 250.0,
                                               height: 50.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -2544,7 +2546,7 @@ from: */
                                                     letterSpacing: 0.0,
                                                   ),
                                               elevation: 2.0,
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -2559,10 +2561,10 @@ from: */
                                       flex: 1,
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.05),
+                                            AlignmentDirectional(0.0, 0.05),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 24.0, 0.0, 0.0),
                                           child: FFButtonWidget(
                                             onPressed: () async {
@@ -2589,7 +2591,7 @@ from: */
                                                 }.withoutNulls,
                                                 extra: <String, dynamic>{
                                                   kTransitionInfoKey:
-                                                      const TransitionInfo(
+                                                      TransitionInfo(
                                                     hasTransition: true,
                                                     transitionType:
                                                         PageTransitionType.fade,
@@ -2606,9 +2608,9 @@ from: */
                                             options: FFButtonOptions(
                                               width: 270.0,
                                               height: 50.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -2625,7 +2627,7 @@ from: */
                                                     letterSpacing: 0.0,
                                                   ),
                                               elevation: 2.0,
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -2637,16 +2639,16 @@ from: */
                                       ),
                                     ),
                                   ]
-                                      .divide(const SizedBox(width: 10.0))
-                                      .around(const SizedBox(width: 10.0)),
+                                      .divide(SizedBox(width: 10.0))
+                                      .around(SizedBox(width: 10.0)),
                                 ),
                               ]
-                                  .addToStart(const SizedBox(height: 10.0))
-                                  .addToEnd(const SizedBox(height: 10.0)),
+                                  .addToStart(SizedBox(height: 10.0))
+                                  .addToEnd(SizedBox(height: 10.0)),
                             ),
                           ),
                         ),
-                      ].addToEnd(const SizedBox(height: 72.0)),
+                      ].addToEnd(SizedBox(height: 72.0)),
                     ),
                   ),
                 ),

@@ -11,7 +11,7 @@ class LotWiseInventoryManagementTable
 }
 
 class LotWiseInventoryManagementRow extends SupabaseDataRow {
-  LotWiseInventoryManagementRow(super.data);
+  LotWiseInventoryManagementRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => LotWiseInventoryManagementTable();

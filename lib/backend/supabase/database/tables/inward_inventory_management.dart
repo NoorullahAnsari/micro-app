@@ -11,7 +11,7 @@ class InwardInventoryManagementTable
 }
 
 class InwardInventoryManagementRow extends SupabaseDataRow {
-  InwardInventoryManagementRow(super.data);
+  InwardInventoryManagementRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => InwardInventoryManagementTable();
@@ -60,7 +60,7 @@ class InwardInventoryManagementRow extends SupabaseDataRow {
   String get inwardRemarks => getField<String>('inwardRemarks')!;
   set inwardRemarks(String value) => setField<String>('inwardRemarks', value);
 
-  List<String> get attachment => getListField<String>('attachment');
+  List<String> get attachment => getListField<String>('attachment')!;
   set attachment(List<String> value) =>
       setListField<String>('attachment', value);
 

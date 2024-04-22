@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'dropdown_values_copy_model.dart';
 export 'dropdown_values_copy_model.dart';
 
@@ -53,7 +55,7 @@ class _DropdownValuesCopyWidgetState extends State<DropdownValuesCopyWidget> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: EdgeInsets.all(15.0),
         child: Text(
           widget.value!,
           style: FlutterFlowTheme.of(context).bodyMedium.override(

@@ -9,7 +9,7 @@ class ApprovalUserTable extends SupabaseTable<ApprovalUserRow> {
 }
 
 class ApprovalUserRow extends SupabaseDataRow {
-  ApprovalUserRow(super.data);
+  ApprovalUserRow(Map<String, dynamic> data) : super(data);
 
   @override
   SupabaseTable get table => ApprovalUserTable();

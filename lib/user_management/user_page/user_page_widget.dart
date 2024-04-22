@@ -14,6 +14,8 @@ import '/user_management/edit_user_copy/edit_user_copy_widget.dart';
 import '/user_management/view_user/view_user_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'user_page_model.dart';
 export 'user_page_model.dart';
 
@@ -94,7 +96,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                   ),
                 }.withoutNulls,
                 extra: <String, dynamic>{
-                  kTransitionInfoKey: const TransitionInfo(
+                  kTransitionInfoKey: TransitionInfo(
                     hasTransition: true,
                     transitionType: PageTransitionType.fade,
                     duration: Duration(milliseconds: 0),
@@ -125,7 +127,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -185,13 +187,13 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                 ),
               Expanded(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 970.0,
                     ),
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -208,7 +210,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                 Container(
                                   width: double.infinity,
                                   height: 24.0,
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                 ),
                               if (widget.authenticatedUser!.isOwner ||
                                   widget.authenticatedUser!.isSuperAdmin ||
@@ -217,10 +219,10 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                   (widget.authenticatedUser?.userModule ==
                                       'Support'))
                                 Align(
-                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  alignment: AlignmentDirectional(1.0, 0.0),
                                   child: Builder(
                                     builder: (context) => Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 20.0, 0.0),
                                       child: FFButtonWidget(
                                         onPressed: () async {
@@ -235,7 +237,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                   backgroundColor:
                                                       Colors.transparent,
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                               0.0, 0.0)
                                                           .resolve(
                                                               Directionality.of(
@@ -249,7 +251,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                                 .unfocusNode)
                                                         : FocusScope.of(context)
                                                             .unfocus(),
-                                                    child: const CreateUserWidget(),
+                                                    child: CreateUserWidget(),
                                                   ),
                                                 );
                                               },
@@ -264,7 +266,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                   backgroundColor:
                                                       Colors.transparent,
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                               0.0, 0.0)
                                                           .resolve(
                                                               Directionality.of(
@@ -297,17 +299,17 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                             FFLocalizations.of(context).getText(
                                           'dape6egp' /* New */,
                                         ),
-                                        icon: const Icon(
+                                        icon: Icon(
                                           Icons.add,
                                           size: 15.0,
                                         ),
                                         options: FFButtonOptions(
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .secondary,
@@ -320,7 +322,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                     letterSpacing: 0.0,
                                                   ),
                                           elevation: 3.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -367,9 +369,9 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                       snapshot.data!;
                                   return Container(
                                     height: 800.0,
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 10.0, 0.0),
                                       child: Builder(
                                         builder: (context) {
@@ -496,7 +498,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                   child: Container(
                                                     width: 100.0,
                                                     height: 100.0,
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                   ),
                                                 ),
                                               ),
@@ -520,7 +522,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                               cells: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Column(
                                                     mainAxisSize:
@@ -575,7 +577,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                         minFontSize: 12.0,
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 5.0)),
+                                                        SizedBox(height: 5.0)),
                                                   ),
                                                 ),
                                                 Text(
@@ -653,7 +655,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                                     backgroundColor:
                                                                         Colors
                                                                             .transparent,
-                                                                    alignment: const AlignmentDirectional(
+                                                                    alignment: AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -704,7 +706,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                                       backgroundColor:
                                                                           Colors
                                                                               .transparent,
-                                                                      alignment: const AlignmentDirectional(
+                                                                      alignment: AlignmentDirectional(
                                                                               0.0,
                                                                               0.0)
                                                                           .resolve(
@@ -746,7 +748,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                                       backgroundColor:
                                                                           Colors
                                                                               .transparent,
-                                                                      alignment: const AlignmentDirectional(
+                                                                      alignment: AlignmentDirectional(
                                                                               0.0,
                                                                               0.0)
                                                                           .resolve(
@@ -809,7 +811,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -901,7 +903,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                                         backgroundColor:
                                                                             Colors.transparent,
                                                                         alignment:
-                                                                            const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                            AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                         child:
                                                                             GestureDetector(
                                                                           onTap: () => _model.unfocusNode.canRequestFocus
@@ -971,7 +973,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                                         backgroundColor:
                                                                             Colors.transparent,
                                                                         alignment:
-                                                                            const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                            AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                         child:
                                                                             GestureDetector(
                                                                           onTap: () => _model.unfocusNode.canRequestFocus
@@ -1004,7 +1006,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                                       },
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 3.0)),
+                                                      SizedBox(width: 3.0)),
                                                 ),
                                               ]
                                                   .map((c) => DataCell(c))
@@ -1034,11 +1036,11 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                             checkboxSelectedFillColor:
                                                 Colors.transparent,
                                             checkboxCheckColor:
-                                                const Color(0x8A000000),
+                                                Color(0x8A000000),
                                             checkboxUnselectedBorderColor:
-                                                const Color(0x8A000000),
+                                                Color(0x8A000000),
                                             checkboxSelectedBorderColor:
-                                                const Color(0x8A000000),
+                                                Color(0x8A000000),
                                           );
                                         },
                                       ),
@@ -1046,7 +1048,7 @@ class _UserPageWidgetState extends State<UserPageWidget> {
                                   );
                                 },
                               ),
-                            ].divide(const SizedBox(height: 10.0)),
+                            ].divide(SizedBox(height: 10.0)),
                           ),
                         ),
                       ],

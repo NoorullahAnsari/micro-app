@@ -22,8 +22,10 @@ import 'package:aligned_tooltip/aligned_tooltip.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'c_r_m_dashboard_model.dart';
@@ -81,8 +83,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -100,8 +102,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(40.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(40.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -119,15 +121,15 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-50.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-50.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.7, 0.7),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.7, 0.7),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -145,8 +147,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -164,8 +166,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -183,8 +185,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(40.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(40.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -202,15 +204,15 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-50.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-50.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.7, 0.7),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.7, 0.7),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -228,8 +230,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -247,8 +249,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -266,8 +268,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(40.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(40.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -285,15 +287,15 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-50.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-50.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.7, 0.7),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.7, 0.7),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -311,8 +313,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -330,8 +332,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -349,8 +351,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -368,8 +370,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -387,8 +389,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -406,8 +408,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -425,8 +427,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -444,8 +446,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -463,8 +465,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -482,8 +484,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(40.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(40.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -501,15 +503,15 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-50.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-50.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.7, 0.7),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.7, 0.7),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -527,8 +529,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -546,8 +548,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -565,8 +567,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(40.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(40.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -584,15 +586,15 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-50.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-50.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.7, 0.7),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.7, 0.7),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -610,8 +612,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -629,8 +631,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 50.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 50.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -648,8 +650,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(40.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(40.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -667,15 +669,15 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-50.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-50.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           ScaleEffect(
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.7, 0.7),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.7, 0.7),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -693,8 +695,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -712,8 +714,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -731,8 +733,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -750,8 +752,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -769,8 +771,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -788,8 +790,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -807,8 +809,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 30.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 30.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -873,7 +875,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                   ),
                 }.withoutNulls,
                 extra: <String, dynamic>{
-                  kTransitionInfoKey: const TransitionInfo(
+                  kTransitionInfoKey: TransitionInfo(
                     hasTransition: true,
                     transitionType: PageTransitionType.fade,
                     duration: Duration(milliseconds: 0),
@@ -895,7 +897,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -920,7 +922,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                       ),
                     }.withoutNulls,
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.fade,
                         duration: Duration(milliseconds: 0),
@@ -963,20 +965,20 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                 ),
               Expanded(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 1470.0,
                     ),
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
                       child: Column(
                         children: [
                           Align(
-                            alignment: const Alignment(0.0, 0),
+                            alignment: Alignment(0.0, 0),
                             child: TabBar(
                               labelColor:
                                   FlutterFlowTheme.of(context).primaryText,
@@ -989,10 +991,10 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                     fontSize: 15.0,
                                     letterSpacing: 0.0,
                                   ),
-                              unselectedLabelStyle: const TextStyle(),
+                              unselectedLabelStyle: TextStyle(),
                               indicatorColor:
                                   FlutterFlowTheme.of(context).primary,
-                              padding: const EdgeInsets.all(4.0),
+                              padding: EdgeInsets.all(4.0),
                               tabs: [
                                 Tab(
                                   text: FFLocalizations.of(context).getText(
@@ -1051,7 +1053,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             1.0, 0.0),
                                                     child: Row(
                                                       mainAxisSize:
@@ -1078,7 +1080,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     backgroundColor:
                                                                         Colors
                                                                             .transparent,
-                                                                    alignment: const AlignmentDirectional(
+                                                                    alignment: AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -1115,14 +1117,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           24.0,
                                                                           0.0,
                                                                           24.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1145,7 +1147,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ),
                                                               elevation: 3.0,
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,
@@ -1159,7 +1161,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1198,7 +1200,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 extra: <String,
                                                                     dynamic>{
                                                                   kTransitionInfoKey:
-                                                                      const TransitionInfo(
+                                                                      TransitionInfo(
                                                                     hasTransition:
                                                                         true,
                                                                     transitionType:
@@ -1216,7 +1218,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .getText(
                                                               'viif5tzz' /* New */,
                                                             ),
-                                                            icon: const Icon(
+                                                            icon: Icon(
                                                               Icons.add,
                                                               size: 15.0,
                                                             ),
@@ -1224,14 +1226,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -1254,7 +1256,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ),
                                                               elevation: 3.0,
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,
@@ -1268,7 +1270,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Builder(
                                                             builder: (context) =>
@@ -1294,13 +1296,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       false,
                                                                   avoidOverflow:
                                                                       false,
-                                                                  targetAnchor: const AlignmentDirectional(
+                                                                  targetAnchor: AlignmentDirectional(
                                                                           -2.5,
                                                                           4.0)
                                                                       .resolve(
                                                                           Directionality.of(
                                                                               context)),
-                                                                  followerAnchor: const AlignmentDirectional(
+                                                                  followerAnchor: AlignmentDirectional(
                                                                           0.0,
                                                                           0.0)
                                                                       .resolve(
@@ -1335,13 +1337,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                             ),
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           width: 10.0)),
                                                     ),
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child:
                                                         FlutterFlowChoiceChips(
@@ -1394,7 +1396,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .primaryText,
                                                         iconSize: 18.0,
                                                         labelPadding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         elevation: 0.0,
                                                         borderRadius:
                                                             BorderRadius
@@ -1427,7 +1429,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .secondaryText,
                                                         iconSize: 18.0,
                                                         labelPadding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         elevation: 0.0,
                                                         borderRadius:
                                                             BorderRadius
@@ -1459,7 +1461,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                 ],
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 10.0, 0.0),
                                                 child: Row(
@@ -1492,7 +1494,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -1636,7 +1638,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -1649,7 +1651,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 10.0)),
+                                                      SizedBox(width: 10.0)),
                                                 ),
                                               ),
                                               if (_model
@@ -1657,7 +1659,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                   'List')
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Wrap(
                                                     spacing: 10.0,
@@ -1676,7 +1678,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1713,13 +1715,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1756,13 +1758,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1799,13 +1801,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1842,13 +1844,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -1861,7 +1863,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                               CrossAxisAlignment
                                                                   .center,
                                                           children: [
-                                                            const Icon(
+                                                            Icon(
                                                               Icons
                                                                   .circle_sharp,
                                                               color: Color(
@@ -1884,7 +1886,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         0.0,
                                                                   ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       ),
@@ -1896,7 +1898,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                   'List')
                                                 Container(
                                                   height: 500.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -1904,7 +1906,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       Container(
                                                         height: 700.0,
                                                         decoration:
-                                                            const BoxDecoration(),
+                                                            BoxDecoration(),
                                                         child: Builder(
                                                           builder: (context) {
                                                             final values =
@@ -1976,7 +1978,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -2038,7 +2040,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         12.0,
                                                                   )),
                                                                   Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             7.0,
@@ -2122,7 +2124,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                   Align(
                                                                     alignment:
-                                                                        const AlignmentDirectional(
+                                                                        AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
@@ -2156,7 +2158,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                                alignment: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
                                                                                 child: GestureDetector(
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                   child: ContactsActionWidget(
@@ -2221,20 +2223,20 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   Colors
                                                                       .transparent,
                                                               checkboxCheckColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxUnselectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                               checkboxSelectedBorderColor:
-                                                                  const Color(
+                                                                  Color(
                                                                       0x8A000000),
                                                             );
                                                           },
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                                   ),
                                                 ),
                                               if ((_model.contactMobileChoiceChipsValue ==
@@ -2244,11 +2246,11 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                     phone: false,
                                                   ))
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 25.0),
                                                   child: Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Container(
                                                       width: double.infinity,
                                                       decoration: BoxDecoration(
@@ -2268,7 +2270,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -2277,9 +2279,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                             child: Container(
                                                               height: 600.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         0.0,
@@ -2301,7 +2303,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           170.0,
                                                                       decoration:
                                                                           BoxDecoration(
-                                                                        color: const Color(
+                                                                        color: Color(
                                                                             0xB3A8FFB1),
                                                                         borderRadius:
                                                                             BorderRadius.circular(8.0),
@@ -2314,7 +2316,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            const EdgeInsets.all(16.0),
+                                                                            EdgeInsets.all(16.0),
                                                                         child:
                                                                             Row(
                                                                           mainAxisSize:
@@ -2337,7 +2339,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                     child: Text(
                                                                                       FFLocalizations.of(context).getText(
                                                                                         'mnuyy07d' /*  Time to close business! */,
@@ -2350,7 +2352,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                                     child: AutoSizeText(
                                                                                       FFLocalizations.of(context).getText(
                                                                                         '18zjc81a' /* INR 12,931 */,
@@ -2421,8 +2423,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       decoration:
                                                                           BoxDecoration(
                                                                         color: FFAppState().lightdark
-                                                                            ? const Color(0xB3F9FF7D)
-                                                                            : const Color(0xFFFBF698),
+                                                                            ? Color(0xB3F9FF7D)
+                                                                            : Color(0xFFFBF698),
                                                                         borderRadius:
                                                                             BorderRadius.circular(8.0),
                                                                         border:
@@ -2434,7 +2436,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            const EdgeInsets.all(16.0),
+                                                                            EdgeInsets.all(16.0),
                                                                         child:
                                                                             Row(
                                                                           mainAxisSize:
@@ -2456,7 +2458,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                     child: Text(
                                                                                       FFLocalizations.of(context).getText(
                                                                                         'yxlav4k3' /* Warm them up! */,
@@ -2468,7 +2470,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                                     child: AutoSizeText(
                                                                                       FFLocalizations.of(context).getText(
                                                                                         '3uk97ebw' /* INR 45,200 */,
@@ -2549,7 +2551,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            const EdgeInsets.all(16.0),
+                                                                            EdgeInsets.all(16.0),
                                                                         child:
                                                                             Row(
                                                                           mainAxisSize:
@@ -2571,7 +2573,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                     child: Text(
                                                                                       FFLocalizations.of(context).getText(
                                                                                         'nzm58v0k' /* Wake them up! */,
@@ -2583,7 +2585,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                     ),
                                                                                   ),
                                                                                   Padding(
-                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                                     child: AutoSizeText(
                                                                                       FFLocalizations.of(context).getText(
                                                                                         '55p82i7m' /* INR 4800 */,
@@ -2644,14 +2646,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     ).animateOnPageLoad(
                                                                         animationsMap[
                                                                             'containerOnPageLoadAnimation3']!),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       height:
                                                                           15.0)),
                                                                 ),
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             height: 10.0)),
                                                       ),
                                                     ),
@@ -2675,7 +2677,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Container(
                                                             height: 70.0,
@@ -2685,7 +2687,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       .of(context)
                                                                   .accent1,
                                                               borderRadius:
-                                                                  const BorderRadius
+                                                                  BorderRadius
                                                                       .only(
                                                                 bottomLeft: Radius
                                                                     .circular(
@@ -2703,7 +2705,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                             ),
                                                             child: Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       -1.0,
                                                                       0.0),
                                                               child: Row(
@@ -2715,13 +2717,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                   ),
                                                                   Container(
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2755,7 +2757,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2789,7 +2791,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2800,7 +2802,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               .center,
                                                                       children: [
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -2823,7 +2825,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2834,7 +2836,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               .center,
                                                                       children: [
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -2857,7 +2859,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         125.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2868,7 +2870,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               .center,
                                                                       children: [
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -2891,7 +2893,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2925,7 +2927,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         160.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2959,7 +2961,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         150.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -2993,7 +2995,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3027,7 +3029,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     width:
                                                                         120.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                     child:
                                                                         Column(
                                                                       mainAxisSize:
@@ -3058,15 +3060,15 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     ),
                                                                   ),
                                                                 ]
-                                                                    .divide(const SizedBox(
+                                                                    .divide(SizedBox(
                                                                         width:
                                                                             12.0))
                                                                     .addToStart(
-                                                                        const SizedBox(
+                                                                        SizedBox(
                                                                             width:
                                                                                 10.0))
                                                                     .addToEnd(
-                                                                        const SizedBox(
+                                                                        SizedBox(
                                                                             width:
                                                                                 10.0)),
                                                               ),
@@ -3085,12 +3087,12 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                             children: [
                                                               Container(
                                                                 constraints:
-                                                                    const BoxConstraints(
+                                                                    BoxConstraints(
                                                                   minHeight:
                                                                       50.0,
                                                                 ),
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Row(
                                                                   mainAxisSize:
                                                                       MainAxisSize
@@ -3103,7 +3105,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           100.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3115,7 +3117,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             width:
                                                                                 100.0,
                                                                             decoration:
-                                                                                const BoxDecoration(),
+                                                                                BoxDecoration(),
                                                                             child:
                                                                                 Column(
                                                                               mainAxisSize: MainAxisSize.max,
@@ -3130,7 +3132,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                       tabletLandscape: false,
                                                                                     ))
                                                                                       Align(
-                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
                                                                                         child: Builder(
                                                                                           builder: (context) => FlutterFlowIconButton(
                                                                                             borderRadius: 20.0,
@@ -3149,7 +3151,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                     elevation: 0,
                                                                                                     insetPadding: EdgeInsets.zero,
                                                                                                     backgroundColor: Colors.transparent,
-                                                                                                    alignment: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                                                    alignment: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
                                                                                                     child: GestureDetector(
                                                                                                       onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                       child: ContactsActionWidget(
@@ -3177,7 +3179,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           100.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3202,7 +3204,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           150.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3227,7 +3229,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3254,14 +3256,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                   letterSpacing: 0.0,
                                                                                 ),
                                                                           ),
-                                                                        ].divide(const SizedBox(height: 7.0)),
+                                                                        ].divide(SizedBox(height: 7.0)),
                                                                       ),
                                                                     ),
                                                                     Container(
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3285,7 +3287,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           125.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3309,7 +3311,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           100.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3333,7 +3335,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           160.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3357,7 +3359,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           150.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3399,7 +3401,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3423,7 +3425,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       width:
                                                                           120.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Column(
                                                                         mainAxisSize:
@@ -3432,7 +3434,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             CrossAxisAlignment.start,
                                                                         children: [
                                                                           Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 7.0,
                                                                                 0.0,
@@ -3488,13 +3490,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ),
                                                                     ),
                                                                   ]
-                                                                      .divide(const SizedBox(
+                                                                      .divide(SizedBox(
                                                                           width:
                                                                               12.0))
-                                                                      .addToStart(const SizedBox(
+                                                                      .addToStart(SizedBox(
                                                                           width:
                                                                               10.0))
-                                                                      .addToEnd(const SizedBox(
+                                                                      .addToEnd(SizedBox(
                                                                           width:
                                                                               10.0)),
                                                                 ),
@@ -3508,8 +3510,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                 ),
                                               ),
                                             ]
-                                                .divide(const SizedBox(height: 20.0))
-                                                .around(const SizedBox(height: 20.0)),
+                                                .divide(SizedBox(height: 20.0))
+                                                .around(SizedBox(height: 20.0)),
                                           ),
                                         ),
                                       if (responsiveVisibility(
@@ -3531,7 +3533,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child:
                                                         FlutterFlowChoiceChips(
@@ -3584,7 +3586,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .primaryText,
                                                         iconSize: 18.0,
                                                         labelPadding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         elevation: 0.0,
                                                         borderRadius:
                                                             BorderRadius
@@ -3617,7 +3619,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .secondaryText,
                                                         iconSize: 18.0,
                                                         labelPadding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         elevation: 0.0,
                                                         borderRadius:
                                                             BorderRadius
@@ -3666,7 +3668,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   backgroundColor:
                                                                       Colors
                                                                           .transparent,
-                                                                  alignment: const AlignmentDirectional(
+                                                                  alignment: AlignmentDirectional(
                                                                           0.0,
                                                                           0.0)
                                                                       .resolve(
@@ -3706,14 +3708,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                               FFButtonOptions(
                                                             height: 40.0,
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         24.0,
                                                                         0.0,
                                                                         24.0,
                                                                         0.0),
                                                             iconPadding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -3736,7 +3738,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     ),
                                                             elevation: 3.0,
                                                             borderSide:
-                                                                const BorderSide(
+                                                                BorderSide(
                                                               color: Colors
                                                                   .transparent,
                                                               width: 1.0,
@@ -3750,11 +3752,11 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 1.0, 0.0),
                                                         child: Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -3797,7 +3799,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .getText(
                                                               '1q0r90jy' /* New */,
                                                             ),
-                                                            icon: const Icon(
+                                                            icon: Icon(
                                                               Icons.add,
                                                               size: 20.0,
                                                             ),
@@ -3805,14 +3807,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 FFButtonOptions(
                                                               height: 40.0,
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           16.0,
                                                                           0.0,
                                                                           16.0,
                                                                           0.0),
                                                               iconPadding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -3835,7 +3837,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ),
                                                               elevation: 3.0,
                                                               borderSide:
-                                                                  const BorderSide(
+                                                                  BorderSide(
                                                                 color: Colors
                                                                     .transparent,
                                                                 width: 1.0,
@@ -3850,7 +3852,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Builder(
                                                           builder: (context) =>
@@ -3875,13 +3877,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 avoidOverflow:
                                                                     false,
                                                                 targetAnchor:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                             -2.5,
                                                                             4.5)
                                                                         .resolve(
                                                                             Directionality.of(context)),
                                                                 followerAnchor:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                             0.0,
                                                                             0.0)
                                                                         .resolve(
@@ -3920,7 +3922,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(width: 10.0)),
+                                                        SizedBox(width: 10.0)),
                                                   ),
                                                 ],
                                               ),
@@ -3928,18 +3930,18 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       .contactDesktopChoiceChipsValue ==
                                                   'List')
                                                 Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Visibility(
                                                     visible: _model
                                                             .contactDesktopChoiceChipsValue ==
                                                         'List',
                                                     child: Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     15.0,
@@ -3967,7 +3969,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -4005,14 +4007,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -4050,14 +4052,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -4095,14 +4097,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -4140,14 +4142,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -4161,7 +4163,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     CrossAxisAlignment
                                                                         .center,
                                                                 children: [
-                                                                  const Icon(
+                                                                  Icon(
                                                                     Icons
                                                                         .circle_sharp,
                                                                     color: Color(
@@ -4184,7 +4186,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -4200,7 +4202,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                   'List')
                                                 Container(
                                                   height: 600.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -4359,7 +4361,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsetsDirectional
+                                                                    margin: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             16.0,
                                                                             4.0,
@@ -4378,13 +4380,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     flex: 2,
                                                                     child:
                                                                         Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           10.0,
                                                                           0.0),
                                                                       child:
-                                                                          SizedBox(
+                                                                          Container(
                                                                         width: MediaQuery.sizeOf(context).width *
                                                                             0.3,
                                                                         child:
@@ -4465,7 +4467,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
@@ -4505,12 +4507,12 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           false,
                                                                       avoidOverflow:
                                                                           false,
-                                                                      targetAnchor: const AlignmentDirectional(
+                                                                      targetAnchor: AlignmentDirectional(
                                                                               -2.0,
                                                                               4.5)
                                                                           .resolve(
                                                                               Directionality.of(context)),
-                                                                      followerAnchor: const AlignmentDirectional(
+                                                                      followerAnchor: AlignmentDirectional(
                                                                               0.0,
                                                                               0.0)
                                                                           .resolve(
@@ -4670,7 +4672,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     2.0,
                                                                 borderRadius:
                                                                     8.0,
-                                                                margin: const EdgeInsetsDirectional
+                                                                margin: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         16.0,
                                                                         4.0,
@@ -4690,7 +4692,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             val),
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       Builder(
@@ -4855,7 +4857,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsets
+                                                                    margin: EdgeInsets
                                                                         .all(
                                                                             4.0),
                                                                     hidesUnderline:
@@ -5017,7 +5019,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsets
+                                                                    margin: EdgeInsets
                                                                         .all(
                                                                             4.0),
                                                                     hidesUnderline:
@@ -5174,7 +5176,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsets
+                                                                    margin: EdgeInsets
                                                                         .all(
                                                                             4.0),
                                                                     hidesUnderline:
@@ -5331,7 +5333,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         2.0,
                                                                     borderRadius:
                                                                         8.0,
-                                                                    margin: const EdgeInsets
+                                                                    margin: EdgeInsets
                                                                         .all(
                                                                             4.0),
                                                                     hidesUnderline:
@@ -5358,7 +5360,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     height:
                                                                         100.0,
                                                                     decoration:
-                                                                        const BoxDecoration(),
+                                                                        BoxDecoration(),
                                                                   ),
                                                                 ),
                                                               ),
@@ -5439,7 +5441,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   children: [
                                                                     AlignedTooltip(
                                                                       content: Padding(
-                                                                          padding: const EdgeInsets.all(4.0),
+                                                                          padding: EdgeInsets.all(4.0),
                                                                           child: Text(
                                                                             FFLocalizations.of(context).getText(
                                                                               'iuic82kp' /* Architect */,
@@ -5467,10 +5469,10 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       tailLength:
                                                                           12.0,
                                                                       waitDuration:
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 100),
                                                                       showDuration:
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 1500),
                                                                       triggerMode:
                                                                           TooltipTriggerMode
@@ -5497,7 +5499,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     ),
                                                                     AlignedTooltip(
                                                                       content: Padding(
-                                                                          padding: const EdgeInsets.all(4.0),
+                                                                          padding: EdgeInsets.all(4.0),
                                                                           child: Text(
                                                                             FFLocalizations.of(context).getText(
                                                                               '62enml2k' /* Consultant */,
@@ -5525,10 +5527,10 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       tailLength:
                                                                           12.0,
                                                                       waitDuration:
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 100),
                                                                       showDuration:
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 1500),
                                                                       triggerMode:
                                                                           TooltipTriggerMode
@@ -5555,7 +5557,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     ),
                                                                     AlignedTooltip(
                                                                       content: Padding(
-                                                                          padding: const EdgeInsets.all(4.0),
+                                                                          padding: EdgeInsets.all(4.0),
                                                                           child: Text(
                                                                             FFLocalizations.of(context).getText(
                                                                               'orjib5iw' /* West Region */,
@@ -5583,10 +5585,10 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       tailLength:
                                                                           12.0,
                                                                       waitDuration:
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 100),
                                                                       showDuration:
-                                                                          const Duration(
+                                                                          Duration(
                                                                               milliseconds: 1500),
                                                                       triggerMode:
                                                                           TooltipTriggerMode
@@ -5629,7 +5631,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           1.0,
                                                                           0.0),
                                                                   child: Row(
@@ -5642,7 +5644,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     children: [
                                                                       AlignedTooltip(
                                                                         content: Padding(
-                                                                            padding: const EdgeInsets.all(4.0),
+                                                                            padding: EdgeInsets.all(4.0),
                                                                             child: Text(
                                                                               FFLocalizations.of(context).getText(
                                                                                 '3e7hebz2' /* Tree */,
@@ -5667,9 +5669,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         tailLength:
                                                                             12.0,
                                                                         waitDuration:
-                                                                            const Duration(milliseconds: 100),
+                                                                            Duration(milliseconds: 100),
                                                                         showDuration:
-                                                                            const Duration(milliseconds: 600),
+                                                                            Duration(milliseconds: 600),
                                                                         triggerMode:
                                                                             TooltipTriggerMode.tap,
                                                                         child:
@@ -5693,7 +5695,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                     elevation: 0,
                                                                                     insetPadding: EdgeInsets.zero,
                                                                                     backgroundColor: Colors.transparent,
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     child: GestureDetector(
                                                                                       onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                       child: TreeStructureWidget(
@@ -5716,7 +5718,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ),
                                                                       AlignedTooltip(
                                                                         content: Padding(
-                                                                            padding: const EdgeInsets.all(4.0),
+                                                                            padding: EdgeInsets.all(4.0),
                                                                             child: Text(
                                                                               FFLocalizations.of(context).getText(
                                                                                 's5m0ohp5' /* Edit */,
@@ -5741,9 +5743,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         tailLength:
                                                                             12.0,
                                                                         waitDuration:
-                                                                            const Duration(milliseconds: 100),
+                                                                            Duration(milliseconds: 100),
                                                                         showDuration:
-                                                                            const Duration(milliseconds: 600),
+                                                                            Duration(milliseconds: 600),
                                                                         triggerMode:
                                                                             TooltipTriggerMode.tap,
                                                                         child:
@@ -5767,7 +5769,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                     elevation: 0,
                                                                                     insetPadding: EdgeInsets.zero,
                                                                                     backgroundColor: Colors.transparent,
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     child: GestureDetector(
                                                                                       onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                       child: EditContactWidget(
@@ -5790,7 +5792,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ),
                                                                       AlignedTooltip(
                                                                         content: Padding(
-                                                                            padding: const EdgeInsets.all(4.0),
+                                                                            padding: EdgeInsets.all(4.0),
                                                                             child: Text(
                                                                               FFLocalizations.of(context).getText(
                                                                                 'hqzz289s' /* View */,
@@ -5815,9 +5817,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         tailLength:
                                                                             12.0,
                                                                         waitDuration:
-                                                                            const Duration(milliseconds: 100),
+                                                                            Duration(milliseconds: 100),
                                                                         showDuration:
-                                                                            const Duration(milliseconds: 1500),
+                                                                            Duration(milliseconds: 1500),
                                                                         triggerMode:
                                                                             TooltipTriggerMode.tap,
                                                                         child:
@@ -5841,7 +5843,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                     elevation: 0,
                                                                                     insetPadding: EdgeInsets.zero,
                                                                                     backgroundColor: Colors.transparent,
-                                                                                    alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                    alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                     child: GestureDetector(
                                                                                       onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                       child: ViewContactWidget(
@@ -5864,7 +5866,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ),
                                                                       AlignedTooltip(
                                                                         content: Padding(
-                                                                            padding: const EdgeInsets.all(4.0),
+                                                                            padding: EdgeInsets.all(4.0),
                                                                             child: Text(
                                                                               FFLocalizations.of(context).getText(
                                                                                 'zstk149o' /* Create Lead */,
@@ -5889,9 +5891,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         tailLength:
                                                                             12.0,
                                                                         waitDuration:
-                                                                            const Duration(milliseconds: 100),
+                                                                            Duration(milliseconds: 100),
                                                                         showDuration:
-                                                                            const Duration(milliseconds: 1500),
+                                                                            Duration(milliseconds: 1500),
                                                                         triggerMode:
                                                                             TooltipTriggerMode.tap,
                                                                         child:
@@ -5924,7 +5926,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 ),
                                                                               }.withoutNulls,
                                                                               extra: <String, dynamic>{
-                                                                                kTransitionInfoKey: const TransitionInfo(
+                                                                                kTransitionInfoKey: TransitionInfo(
                                                                                   hasTransition: true,
                                                                                   transitionType: PageTransitionType.fade,
                                                                                   duration: Duration(milliseconds: 0),
@@ -5942,7 +5944,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           ),
                                                                         ),
                                                                       ),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         width:
                                                                             2.0)),
                                                                   ),
@@ -5994,30 +5996,30 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 Colors
                                                                     .transparent,
                                                             checkboxCheckColor:
-                                                                const Color(
+                                                                Color(
                                                                     0x8A000000),
                                                             checkboxUnselectedBorderColor:
-                                                                const Color(
+                                                                Color(
                                                                     0x8A000000),
                                                             checkboxSelectedBorderColor:
-                                                                const Color(
+                                                                Color(
                                                                     0x8A000000),
                                                           );
                                                         },
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                                   ),
                                                 ),
                                               if (_model
                                                       .contactDesktopChoiceChipsValue ==
                                                   'Kanban')
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 25.0),
                                                   child: Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -6040,7 +6042,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     .start,
                                                             children: [
                                                               Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         8.0,
@@ -6058,7 +6060,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryBackground,
-                                                                    boxShadow: const [
+                                                                    boxShadow: [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -6077,7 +6079,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             12.0,
@@ -6119,7 +6121,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 ),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                 child: AutoSizeText(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '04rp4800' /* 2 */,
@@ -6138,7 +6140,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 12.0,
                                                                                 0.0,
@@ -6149,7 +6151,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               scrollDirection: Axis.vertical,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -6170,7 +6172,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -6182,9 +6184,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Align(
-                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                     child: Padding(
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: AutoSizeText(
                                                                                                         FFLocalizations.of(context).getText(
@@ -6201,7 +6203,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                   ),
                                                                                                 ),
                                                                                                 Align(
-                                                                                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                                  alignment: AlignmentDirectional(1.0, 0.0),
                                                                                                   child: Builder(
                                                                                                     builder: (context) => FFButtonWidget(
                                                                                                       onPressed: () async {
@@ -6212,7 +6214,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                               elevation: 0,
                                                                                                               insetPadding: EdgeInsets.zero,
                                                                                                               backgroundColor: Colors.transparent,
-                                                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                              alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                               child: GestureDetector(
                                                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                                 child: ViewContactWidget(
@@ -6229,8 +6231,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                       ),
                                                                                                       options: FFButtonOptions(
                                                                                                         height: 30.0,
-                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                         color: FlutterFlowTheme.of(context).secondary,
                                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                               fontFamily: 'Readex Pro',
@@ -6239,7 +6241,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                               letterSpacing: 0.0,
                                                                                                             ),
                                                                                                         elevation: 2.0,
-                                                                                                        borderSide: const BorderSide(
+                                                                                                        borderSide: BorderSide(
                                                                                                           color: Colors.transparent,
                                                                                                           width: 1.0,
                                                                                                         ),
@@ -6251,7 +6253,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'uohfzykz' /* yogesh@food.in */,
@@ -6284,7 +6286,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                       ),
                                                                                                   minFontSize: 12.0,
                                                                                                 ),
-                                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                                              ].divide(SizedBox(width: 10.0)),
                                                                                             ),
                                                                                           ],
                                                                                         ),
@@ -6293,7 +6295,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                   ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation4']!),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -6314,7 +6316,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -6326,9 +6328,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Align(
-                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                     child: Padding(
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: AutoSizeText(
                                                                                                         FFLocalizations.of(context).getText(
@@ -6345,7 +6347,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                   ),
                                                                                                 ),
                                                                                                 Align(
-                                                                                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                                  alignment: AlignmentDirectional(1.0, 0.0),
                                                                                                   child: Builder(
                                                                                                     builder: (context) => FFButtonWidget(
                                                                                                       onPressed: () async {
@@ -6356,7 +6358,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                               elevation: 0,
                                                                                                               insetPadding: EdgeInsets.zero,
                                                                                                               backgroundColor: Colors.transparent,
-                                                                                                              alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                              alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                               child: GestureDetector(
                                                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                                 child: ViewContactWidget(
@@ -6373,8 +6375,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                       ),
                                                                                                       options: FFButtonOptions(
                                                                                                         height: 30.0,
-                                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                        iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                        iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                         color: FlutterFlowTheme.of(context).secondary,
                                                                                                         textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                               fontFamily: 'Readex Pro',
@@ -6383,7 +6385,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                               letterSpacing: 0.0,
                                                                                                             ),
                                                                                                         elevation: 2.0,
-                                                                                                        borderSide: const BorderSide(
+                                                                                                        borderSide: BorderSide(
                                                                                                           color: Colors.transparent,
                                                                                                           width: 1.0,
                                                                                                         ),
@@ -6395,7 +6397,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'kzielfu7' /* suresh@shenlac.in */,
@@ -6428,7 +6430,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                       ),
                                                                                                   minFontSize: 12.0,
                                                                                                 ),
-                                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                                              ].divide(SizedBox(width: 10.0)),
                                                                                             ),
                                                                                           ],
                                                                                         ),
@@ -6446,7 +6448,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 ),
                                                               ),
                                                               Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         8.0,
@@ -6464,7 +6466,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryBackground,
-                                                                    boxShadow: const [
+                                                                    boxShadow: [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -6483,7 +6485,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             12.0,
@@ -6525,7 +6527,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 ),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                 child: AutoSizeText(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '0c97hwuf' /* 3 */,
@@ -6544,7 +6546,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 12.0,
                                                                                 0.0,
@@ -6556,7 +6558,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               scrollDirection: Axis.vertical,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -6577,7 +6579,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -6589,7 +6591,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: AutoSizeText(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         'xc0vj7id' /* Sumeet Pomani */,
@@ -6613,7 +6615,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             elevation: 0,
                                                                                                             insetPadding: EdgeInsets.zero,
                                                                                                             backgroundColor: Colors.transparent,
-                                                                                                            alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                            alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                             child: GestureDetector(
                                                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                               child: ViewContactWidget(
@@ -6630,8 +6632,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                     ),
                                                                                                     options: FFButtonOptions(
                                                                                                       height: 30.0,
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                             fontFamily: 'Readex Pro',
@@ -6640,7 +6642,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                       elevation: 2.0,
-                                                                                                      borderSide: const BorderSide(
+                                                                                                      borderSide: BorderSide(
                                                                                                         color: Colors.transparent,
                                                                                                         width: 1.0,
                                                                                                       ),
@@ -6651,7 +6653,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'qmds61vx' /* bhavikametal@gmail.com */,
@@ -6691,7 +6693,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                   ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation6']!),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -6712,7 +6714,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -6724,7 +6726,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: AutoSizeText(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         '7f90ps5r' /* Saurabh Jhaveri */,
@@ -6748,7 +6750,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             elevation: 0,
                                                                                                             insetPadding: EdgeInsets.zero,
                                                                                                             backgroundColor: Colors.transparent,
-                                                                                                            alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                            alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                             child: GestureDetector(
                                                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                               child: ViewContactWidget(
@@ -6765,8 +6767,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                     ),
                                                                                                     options: FFButtonOptions(
                                                                                                       height: 30.0,
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                             fontFamily: 'Readex Pro',
@@ -6775,7 +6777,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                       elevation: 2.0,
-                                                                                                      borderSide: const BorderSide(
+                                                                                                      borderSide: BorderSide(
                                                                                                         color: Colors.transparent,
                                                                                                         width: 1.0,
                                                                                                       ),
@@ -6786,7 +6788,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   't3d08y42' /* saurabh@unione.in */,
@@ -6826,7 +6828,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                   ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation7']!),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -6847,7 +6849,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -6859,7 +6861,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: AutoSizeText(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         'rlk2ye80' /* Rohit Rawal */,
@@ -6883,7 +6885,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             elevation: 0,
                                                                                                             insetPadding: EdgeInsets.zero,
                                                                                                             backgroundColor: Colors.transparent,
-                                                                                                            alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                            alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                             child: GestureDetector(
                                                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                               child: ViewContactWidget(
@@ -6900,8 +6902,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                     ),
                                                                                                     options: FFButtonOptions(
                                                                                                       height: 30.0,
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                             fontFamily: 'Readex Pro',
@@ -6910,7 +6912,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                       elevation: 2.0,
-                                                                                                      borderSide: const BorderSide(
+                                                                                                      borderSide: BorderSide(
                                                                                                         color: Colors.transparent,
                                                                                                         width: 1.0,
                                                                                                       ),
@@ -6921,7 +6923,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'pd7gid0c' /* rohit1977@gmail.com */,
@@ -6970,7 +6972,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 ),
                                                               ),
                                                               Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         8.0,
@@ -6988,7 +6990,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryBackground,
-                                                                    boxShadow: const [
+                                                                    boxShadow: [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -7007,7 +7009,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             12.0,
@@ -7049,7 +7051,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 ),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                 child: AutoSizeText(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'o75138rt' /* 2 */,
@@ -7068,7 +7070,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 12.0,
                                                                                 0.0,
@@ -7080,7 +7082,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               scrollDirection: Axis.vertical,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -7101,7 +7103,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -7113,7 +7115,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: Text(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         '1l5xnivo' /* Rohit Chaudhury */,
@@ -7136,7 +7138,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             elevation: 0,
                                                                                                             insetPadding: EdgeInsets.zero,
                                                                                                             backgroundColor: Colors.transparent,
-                                                                                                            alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                            alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                             child: GestureDetector(
                                                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                               child: ViewContactWidget(
@@ -7153,8 +7155,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                     ),
                                                                                                     options: FFButtonOptions(
                                                                                                       height: 30.0,
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                             fontFamily: 'Readex Pro',
@@ -7163,7 +7165,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                       elevation: 2.0,
-                                                                                                      borderSide: const BorderSide(
+                                                                                                      borderSide: BorderSide(
                                                                                                         color: Colors.transparent,
                                                                                                         width: 1.0,
                                                                                                       ),
@@ -7174,7 +7176,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'bygpznox' /* rohit.c@goodhope.co */,
@@ -7208,7 +7210,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                   ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation9']!),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -7229,7 +7231,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -7241,7 +7243,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: Text(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         'h2qsagjv' /* Rajiv Shah */,
@@ -7264,7 +7266,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             elevation: 0,
                                                                                                             insetPadding: EdgeInsets.zero,
                                                                                                             backgroundColor: Colors.transparent,
-                                                                                                            alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                                            alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                                             child: GestureDetector(
                                                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                                               child: ViewContactWidget(
@@ -7281,8 +7283,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                     ),
                                                                                                     options: FFButtonOptions(
                                                                                                       height: 30.0,
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                             fontFamily: 'Readex Pro',
@@ -7291,7 +7293,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                       elevation: 2.0,
-                                                                                                      borderSide: const BorderSide(
+                                                                                                      borderSide: BorderSide(
                                                                                                         color: Colors.transparent,
                                                                                                         width: 1.0,
                                                                                                       ),
@@ -7302,7 +7304,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'r9yffw76' /* rajiv@everest.com */,
@@ -7344,19 +7346,19 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ].divide(const SizedBox(
+                                                            ].divide(SizedBox(
                                                                 width: 15.0)),
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           height: 10.0)),
                                                     ),
                                                   ),
                                                 ),
                                             ]
-                                                .divide(const SizedBox(height: 10.0))
+                                                .divide(SizedBox(height: 10.0))
                                                 .addToStart(
-                                                    const SizedBox(height: 10.0)),
+                                                    SizedBox(height: 10.0)),
                                           ),
                                         ),
                                     ],
@@ -7436,7 +7438,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .primaryText,
                                                         iconSize: 18.0,
                                                         labelPadding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         elevation: 0.0,
                                                         borderRadius:
                                                             BorderRadius
@@ -7469,7 +7471,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .secondaryText,
                                                         iconSize: 18.0,
                                                         labelPadding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         elevation: 0.0,
                                                         borderRadius:
                                                             BorderRadius
@@ -7500,7 +7502,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 10.0, 0.0),
                                                     child: FFButtonWidget(
@@ -7534,7 +7536,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                           extra: <String,
                                                               dynamic>{
                                                             kTransitionInfoKey:
-                                                                const TransitionInfo(
+                                                                TransitionInfo(
                                                               hasTransition:
                                                                   true,
                                                               transitionType:
@@ -7552,21 +7554,21 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                           .getText(
                                                         'jfe4u9fu' /* New */,
                                                       ),
-                                                      icon: const Icon(
+                                                      icon: Icon(
                                                         Icons.add,
                                                         size: 20.0,
                                                       ),
                                                       options: FFButtonOptions(
                                                         height: 40.0,
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     0.0,
                                                                     16.0,
                                                                     0.0),
                                                         iconPadding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -7591,7 +7593,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       0.0,
                                                                 ),
                                                         elevation: 3.0,
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color: Colors
                                                               .transparent,
                                                           width: 1.0,
@@ -7605,7 +7607,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                 ],
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 10.0, 0.0),
                                                 child: Row(
@@ -7638,7 +7640,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: const AlignmentDirectional(
+                                                                alignment: AlignmentDirectional(
                                                                         0.0,
                                                                         0.0)
                                                                     .resolve(
@@ -7782,7 +7784,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         borderWidth: 2.0,
                                                         borderRadius: 8.0,
                                                         margin:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     16.0,
                                                                     4.0,
@@ -7795,21 +7797,21 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(width: 10.0)),
+                                                      SizedBox(width: 10.0)),
                                                 ),
                                               ),
                                               if (_model
                                                       .leadsMobileChoiceChipsValue ==
                                                   'List')
                                                 Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Visibility(
                                                     visible: _model
                                                             .leadsMobileChoiceChipsValue ==
                                                         'List',
                                                     child: Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Wrap(
                                                         spacing: 10.0,
@@ -7830,7 +7832,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         children: [
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -7868,13 +7870,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 5.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -7912,13 +7914,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -7956,13 +7958,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -8000,13 +8002,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
                                                           Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -8020,7 +8022,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   CrossAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                const Icon(
+                                                                Icon(
                                                                   Icons
                                                                       .circle_sharp,
                                                                   color: Color(
@@ -8043,7 +8045,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             0.0,
                                                                       ),
                                                                 ),
-                                                              ].divide(const SizedBox(
+                                                              ].divide(SizedBox(
                                                                   width: 10.0)),
                                                             ),
                                                           ),
@@ -8057,7 +8059,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                   'List')
                                                 Container(
                                                   height: 500.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: SingleChildScrollView(
                                                     child: Column(
                                                       mainAxisSize:
@@ -8066,7 +8068,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         Container(
                                                           height: 500.0,
                                                           decoration:
-                                                              const BoxDecoration(),
+                                                              BoxDecoration(),
                                                           child: Builder(
                                                             builder: (context) {
                                                               final values =
@@ -8128,7 +8130,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           true,
                                                                       child:
                                                                           Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -8172,7 +8174,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                   cells: [
                                                                     Padding(
-                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           7.0,
                                                                           0.0,
@@ -8255,7 +8257,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     ),
                                                                     Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -8283,8 +8285,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               context: context,
                                                                               isGlobal: false,
                                                                               avoidOverflow: false,
-                                                                              targetAnchor: const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
-                                                                              followerAnchor: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                              targetAnchor: AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                              followerAnchor: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                               builder: (dialogContext) {
                                                                                 return Material(
                                                                                   color: Colors.transparent,
@@ -8352,19 +8354,19 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     Colors
                                                                         .transparent,
                                                                 checkboxCheckColor:
-                                                                    const Color(
+                                                                    Color(
                                                                         0x8A000000),
                                                                 checkboxUnselectedBorderColor:
-                                                                    const Color(
+                                                                    Color(
                                                                         0x8A000000),
                                                                 checkboxSelectedBorderColor:
-                                                                    const Color(
+                                                                    Color(
                                                                         0x8A000000),
                                                               );
                                                             },
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           height: 10.0)),
                                                     ),
                                                   ),
@@ -8373,11 +8375,11 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       .leadsMobileChoiceChipsValue ==
                                                   'Kanban')
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 25.0),
                                                   child: Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Container(
                                                       width: double.infinity,
                                                       decoration: BoxDecoration(
@@ -8400,7 +8402,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -8409,9 +8411,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                               child: Container(
                                                                 height: 600.0,
                                                                 decoration:
-                                                                    const BoxDecoration(),
+                                                                    BoxDecoration(),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           12.0,
                                                                           0.0,
@@ -8435,7 +8437,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              const Color(0xB3A8FFB1),
+                                                                              Color(0xB3A8FFB1),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                           border:
@@ -8447,7 +8449,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         child:
                                                                             Padding(
                                                                           padding:
-                                                                              const EdgeInsets.all(16.0),
+                                                                              EdgeInsets.all(16.0),
                                                                           child:
                                                                               Row(
                                                                             mainAxisSize:
@@ -8469,7 +8471,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         FFLocalizations.of(context).getText(
                                                                                           'lp840w87' /* Time to close business! */,
@@ -8481,7 +8483,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                                       child: AutoSizeText(
                                                                                         FFLocalizations.of(context).getText(
                                                                                           '0isqq168' /* INR 12,931 */,
@@ -8550,7 +8552,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              const Color(0xB3F9FF7D),
+                                                                              Color(0xB3F9FF7D),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                           border:
@@ -8562,7 +8564,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         child:
                                                                             Padding(
                                                                           padding:
-                                                                              const EdgeInsets.all(16.0),
+                                                                              EdgeInsets.all(16.0),
                                                                           child:
                                                                               Row(
                                                                             mainAxisSize:
@@ -8584,7 +8586,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         FFLocalizations.of(context).getText(
                                                                                           'is1ql618' /* Warm them up! */,
@@ -8596,7 +8598,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                                       child: AutoSizeText(
                                                                                         FFLocalizations.of(context).getText(
                                                                                           '8wxey6ex' /* INR 45,200 */,
@@ -8665,7 +8667,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         decoration:
                                                                             BoxDecoration(
                                                                           color:
-                                                                              const Color(0x4DF9C1CB),
+                                                                              Color(0x4DF9C1CB),
                                                                           borderRadius:
                                                                               BorderRadius.circular(8.0),
                                                                           border:
@@ -8677,7 +8679,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         child:
                                                                             Padding(
                                                                           padding:
-                                                                              const EdgeInsets.all(16.0),
+                                                                              EdgeInsets.all(16.0),
                                                                           child:
                                                                               Row(
                                                                             mainAxisSize:
@@ -8699,7 +8701,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                           ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                       child: Text(
                                                                                         FFLocalizations.of(context).getText(
                                                                                           'fb5wbyn5' /*  Wake them up! */,
@@ -8711,7 +8713,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                       ),
                                                                                     ),
                                                                                     Padding(
-                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                                                                                       child: AutoSizeText(
                                                                                         FFLocalizations.of(context).getText(
                                                                                           'erap0cgn' /* INR 4800 */,
@@ -8772,14 +8774,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       ).animateOnPageLoad(
                                                                           animationsMap[
                                                                               'containerOnPageLoadAnimation13']!),
-                                                                    ].divide(const SizedBox(
+                                                                    ].divide(SizedBox(
                                                                         height:
                                                                             15.0)),
                                                                   ),
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               height: 10.0)),
                                                         ),
                                                       ),
@@ -8787,8 +8789,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                   ),
                                                 ),
                                             ]
-                                                .divide(const SizedBox(height: 20.0))
-                                                .around(const SizedBox(height: 20.0)),
+                                                .divide(SizedBox(height: 20.0))
+                                                .around(SizedBox(height: 20.0)),
                                           ),
                                         ),
                                       if (responsiveVisibility(
@@ -8810,7 +8812,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child:
                                                         FlutterFlowChoiceChips(
@@ -8863,7 +8865,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .primaryText,
                                                         iconSize: 18.0,
                                                         labelPadding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         elevation: 0.0,
                                                         borderRadius:
                                                             BorderRadius
@@ -8896,7 +8898,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .secondaryText,
                                                         iconSize: 18.0,
                                                         labelPadding:
-                                                            const EdgeInsets.all(5.0),
+                                                            EdgeInsets.all(5.0),
                                                         elevation: 0.0,
                                                         borderRadius:
                                                             BorderRadius
@@ -8927,11 +8929,11 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             1.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -8968,7 +8970,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                             extra: <String,
                                                                 dynamic>{
                                                               kTransitionInfoKey:
-                                                                  const TransitionInfo(
+                                                                  TransitionInfo(
                                                                 hasTransition:
                                                                     true,
                                                                 transitionType:
@@ -8987,7 +8989,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 .getText(
                                                           '64ys9t6c' /* New */,
                                                         ),
-                                                        icon: const Icon(
+                                                        icon: Icon(
                                                           Icons.add,
                                                           size: 20.0,
                                                         ),
@@ -8995,14 +8997,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                             FFButtonOptions(
                                                           height: 40.0,
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       0.0,
                                                                       16.0,
                                                                       0.0),
                                                           iconPadding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -9025,7 +9027,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                           elevation: 3.0,
                                                           borderSide:
-                                                              const BorderSide(
+                                                              BorderSide(
                                                             color: Colors
                                                                 .transparent,
                                                             width: 1.0,
@@ -9044,14 +9046,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                       .contactDesktopChoiceChipsValue ==
                                                   'List')
                                                 Container(
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             -1.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   15.0,
@@ -9097,7 +9099,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -9135,14 +9137,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -9180,14 +9182,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -9225,14 +9227,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -9270,14 +9272,14 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -9291,7 +9293,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     CrossAxisAlignment
                                                                         .center,
                                                                 children: [
-                                                                  const Icon(
+                                                                  Icon(
                                                                     Icons
                                                                         .circle_sharp,
                                                                     color: Color(
@@ -9314,7 +9316,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               0.0,
                                                                         ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         10.0)),
                                                               ),
@@ -9330,7 +9332,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                   'List')
                                                 Container(
                                                   height: 600.0,
-                                                  decoration: const BoxDecoration(),
+                                                  decoration: BoxDecoration(),
                                                   child: Column(
                                                     mainAxisSize:
                                                         MainAxisSize.max,
@@ -9346,7 +9348,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                             Flexible(
                                                               flex: 2,
                                                               child: Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         10.0,
                                                                         0.0,
@@ -9383,7 +9385,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 elevation: 0,
                                                                                 insetPadding: EdgeInsets.zero,
                                                                                 backgroundColor: Colors.transparent,
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                                 child: GestureDetector(
                                                                                   onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
                                                                                   child: FilterForLeadsWidget(
@@ -9488,7 +9490,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             2.0,
                                                                         borderRadius:
                                                                             8.0,
-                                                                        margin: const EdgeInsetsDirectional.fromSTEB(
+                                                                        margin: EdgeInsetsDirectional.fromSTEB(
                                                                             16.0,
                                                                             4.0,
                                                                             16.0,
@@ -9503,13 +9505,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             false,
                                                                       ),
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       width:
                                                                           10.0)),
                                                                 ),
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 10.0)),
                                                         ),
                                                       if (responsiveVisibility(
@@ -9519,7 +9521,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                         Expanded(
                                                           child: Padding(
                                                             padding:
-                                                                const EdgeInsets.all(
+                                                                EdgeInsets.all(
                                                                     7.0),
                                                             child: Builder(
                                                               builder:
@@ -9620,7 +9622,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 24.0,
                                                                           ),
                                                                           fillColor:
-                                                                              const Color(0x4CA097F6),
+                                                                              Color(0x4CA097F6),
                                                                           elevation:
                                                                               0.0,
                                                                           borderColor:
@@ -9630,7 +9632,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           borderRadius:
                                                                               8.0,
                                                                           margin:
-                                                                              const EdgeInsets.all(4.0),
+                                                                              EdgeInsets.all(4.0),
                                                                           hidesUnderline:
                                                                               true,
                                                                           isOverButton:
@@ -9723,7 +9725,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 24.0,
                                                                           ),
                                                                           fillColor:
-                                                                              const Color(0x4CA097F6),
+                                                                              Color(0x4CA097F6),
                                                                           elevation:
                                                                               0.0,
                                                                           borderColor:
@@ -9733,7 +9735,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           borderRadius:
                                                                               8.0,
                                                                           margin:
-                                                                              const EdgeInsets.all(4.0),
+                                                                              EdgeInsets.all(4.0),
                                                                           hidesUnderline:
                                                                               true,
                                                                           isOverButton:
@@ -9826,7 +9828,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 24.0,
                                                                           ),
                                                                           fillColor:
-                                                                              const Color(0x4CA097F6),
+                                                                              Color(0x4CA097F6),
                                                                           elevation:
                                                                               0.0,
                                                                           borderColor:
@@ -9836,7 +9838,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           borderRadius:
                                                                               8.0,
                                                                           margin:
-                                                                              const EdgeInsets.all(4.0),
+                                                                              EdgeInsets.all(4.0),
                                                                           hidesUnderline:
                                                                               true,
                                                                           isOverButton:
@@ -9929,7 +9931,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 24.0,
                                                                           ),
                                                                           fillColor:
-                                                                              const Color(0x4CA097F6),
+                                                                              Color(0x4CA097F6),
                                                                           elevation:
                                                                               0.0,
                                                                           borderColor:
@@ -9939,7 +9941,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           borderRadius:
                                                                               8.0,
                                                                           margin:
-                                                                              const EdgeInsets.all(4.0),
+                                                                              EdgeInsets.all(4.0),
                                                                           hidesUnderline:
                                                                               true,
                                                                           isOverButton:
@@ -9961,7 +9963,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           width:
                                                                               100.0,
                                                                           decoration:
-                                                                              const BoxDecoration(),
+                                                                              BoxDecoration(),
                                                                         ),
                                                                       ),
                                                                     ),
@@ -10007,7 +10009,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         children: [
                                                                           AlignedTooltip(
                                                                             content: Padding(
-                                                                                padding: const EdgeInsets.all(4.0),
+                                                                                padding: EdgeInsets.all(4.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'npk8ysja' /* Architect */,
@@ -10032,9 +10034,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             tailLength:
                                                                                 12.0,
                                                                             waitDuration:
-                                                                                const Duration(milliseconds: 100),
+                                                                                Duration(milliseconds: 100),
                                                                             showDuration:
-                                                                                const Duration(milliseconds: 1500),
+                                                                                Duration(milliseconds: 1500),
                                                                             triggerMode:
                                                                                 TooltipTriggerMode.tap,
                                                                             child:
@@ -10052,7 +10054,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           ),
                                                                           AlignedTooltip(
                                                                             content: Padding(
-                                                                                padding: const EdgeInsets.all(4.0),
+                                                                                padding: EdgeInsets.all(4.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '3apklaj4' /* Consultant */,
@@ -10077,9 +10079,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             tailLength:
                                                                                 12.0,
                                                                             waitDuration:
-                                                                                const Duration(milliseconds: 100),
+                                                                                Duration(milliseconds: 100),
                                                                             showDuration:
-                                                                                const Duration(milliseconds: 1500),
+                                                                                Duration(milliseconds: 1500),
                                                                             triggerMode:
                                                                                 TooltipTriggerMode.tap,
                                                                             child:
@@ -10097,7 +10099,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                           ),
                                                                           AlignedTooltip(
                                                                             content: Padding(
-                                                                                padding: const EdgeInsets.all(4.0),
+                                                                                padding: EdgeInsets.all(4.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'vdo69ydn' /* West Region */,
@@ -10122,9 +10124,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             tailLength:
                                                                                 12.0,
                                                                             waitDuration:
-                                                                                const Duration(milliseconds: 100),
+                                                                                Duration(milliseconds: 100),
                                                                             showDuration:
-                                                                                const Duration(milliseconds: 1500),
+                                                                                Duration(milliseconds: 1500),
                                                                             triggerMode:
                                                                                 TooltipTriggerMode.tap,
                                                                             child:
@@ -10177,7 +10179,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                         child:
@@ -10190,7 +10192,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               [
                                                                             AlignedTooltip(
                                                                               content: Padding(
-                                                                                  padding: const EdgeInsets.all(4.0),
+                                                                                  padding: EdgeInsets.all(4.0),
                                                                                   child: Text(
                                                                                     FFLocalizations.of(context).getText(
                                                                                       'avvx3u0s' /* Edit Lead */,
@@ -10207,8 +10209,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               elevation: 4.0,
                                                                               tailBaseWidth: 24.0,
                                                                               tailLength: 12.0,
-                                                                              waitDuration: const Duration(milliseconds: 100),
-                                                                              showDuration: const Duration(milliseconds: 600),
+                                                                              waitDuration: Duration(milliseconds: 100),
+                                                                              showDuration: Duration(milliseconds: 600),
                                                                               triggerMode: TooltipTriggerMode.tap,
                                                                               child: InkWell(
                                                                                 splashColor: Colors.transparent,
@@ -10229,7 +10231,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                       ),
                                                                                     }.withoutNulls,
                                                                                     extra: <String, dynamic>{
-                                                                                      kTransitionInfoKey: const TransitionInfo(
+                                                                                      kTransitionInfoKey: TransitionInfo(
                                                                                         hasTransition: true,
                                                                                         transitionType: PageTransitionType.fade,
                                                                                         duration: Duration(milliseconds: 0),
@@ -10246,7 +10248,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                             ),
                                                                             AlignedTooltip(
                                                                               content: Padding(
-                                                                                  padding: const EdgeInsets.all(4.0),
+                                                                                  padding: EdgeInsets.all(4.0),
                                                                                   child: Text(
                                                                                     FFLocalizations.of(context).getText(
                                                                                       '5b4f0gab' /* View */,
@@ -10263,8 +10265,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               elevation: 4.0,
                                                                               tailBaseWidth: 24.0,
                                                                               tailLength: 12.0,
-                                                                              waitDuration: const Duration(milliseconds: 100),
-                                                                              showDuration: const Duration(milliseconds: 600),
+                                                                              waitDuration: Duration(milliseconds: 100),
+                                                                              showDuration: Duration(milliseconds: 600),
                                                                               triggerMode: TooltipTriggerMode.tap,
                                                                               child: InkWell(
                                                                                 splashColor: Colors.transparent,
@@ -10285,7 +10287,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                       ),
                                                                                     }.withoutNulls,
                                                                                     extra: <String, dynamic>{
-                                                                                      kTransitionInfoKey: const TransitionInfo(
+                                                                                      kTransitionInfoKey: TransitionInfo(
                                                                                         hasTransition: true,
                                                                                         transitionType: PageTransitionType.fade,
                                                                                         duration: Duration(milliseconds: 0),
@@ -10300,7 +10302,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 ),
                                                                               ),
                                                                             ),
-                                                                          ].divide(const SizedBox(width: 2.0)),
+                                                                          ].divide(SizedBox(width: 2.0)),
                                                                         ),
                                                                       ),
                                                                     ]
@@ -10352,13 +10354,13 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                       Colors
                                                                           .transparent,
                                                                   checkboxCheckColor:
-                                                                      const Color(
+                                                                      Color(
                                                                           0x8A000000),
                                                                   checkboxUnselectedBorderColor:
-                                                                      const Color(
+                                                                      Color(
                                                                           0x8A000000),
                                                                   checkboxSelectedBorderColor:
-                                                                      const Color(
+                                                                      Color(
                                                                           0x8A000000),
                                                                 );
                                                               },
@@ -10366,18 +10368,18 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                           ),
                                                         ),
                                                     ].divide(
-                                                        const SizedBox(height: 10.0)),
+                                                        SizedBox(height: 10.0)),
                                                   ),
                                                 ),
                                               if (_model
                                                       .leadsDesktopChoiceChipsValue ==
                                                   'Kanban')
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 0.0, 25.0),
                                                   child: Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -10400,7 +10402,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     .start,
                                                             children: [
                                                               Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         8.0,
@@ -10418,7 +10420,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryBackground,
-                                                                    boxShadow: const [
+                                                                    boxShadow: [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -10437,7 +10439,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             12.0,
@@ -10479,7 +10481,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 ),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                 child: AutoSizeText(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '68mzv7n4' /* 2 */,
@@ -10498,7 +10500,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 12.0,
                                                                                 0.0,
@@ -10509,7 +10511,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               scrollDirection: Axis.vertical,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -10530,7 +10532,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -10542,9 +10544,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Align(
-                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                     child: Padding(
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: AutoSizeText(
                                                                                                         FFLocalizations.of(context).getText(
@@ -10561,7 +10563,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                   ),
                                                                                                 ),
                                                                                                 Align(
-                                                                                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                                  alignment: AlignmentDirectional(1.0, 0.0),
                                                                                                   child: FFButtonWidget(
                                                                                                     onPressed: () async {
                                                                                                       context.pushNamed(
@@ -10588,8 +10590,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                     ),
                                                                                                     options: FFButtonOptions(
                                                                                                       height: 30.0,
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                             fontFamily: 'Readex Pro',
@@ -10598,7 +10600,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                       elevation: 2.0,
-                                                                                                      borderSide: const BorderSide(
+                                                                                                      borderSide: BorderSide(
                                                                                                         color: Colors.transparent,
                                                                                                         width: 1.0,
                                                                                                       ),
@@ -10609,7 +10611,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   '6n7addzu' /* ashish@jollyclamp.com */,
@@ -10642,7 +10644,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                       ),
                                                                                                   minFontSize: 12.0,
                                                                                                 ),
-                                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                                              ].divide(SizedBox(width: 10.0)),
                                                                                             ),
                                                                                           ],
                                                                                         ),
@@ -10651,7 +10653,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                   ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation14']!),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -10672,7 +10674,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -10684,9 +10686,9 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Align(
-                                                                                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                                                                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                                                                                     child: Padding(
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                       child: SelectionArea(
                                                                                                           child: AutoSizeText(
                                                                                                         FFLocalizations.of(context).getText(
@@ -10703,7 +10705,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                   ),
                                                                                                 ),
                                                                                                 Align(
-                                                                                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                                                                                  alignment: AlignmentDirectional(1.0, 0.0),
                                                                                                   child: FFButtonWidget(
                                                                                                     onPressed: () {
                                                                                                       print('Button pressed ...');
@@ -10713,8 +10715,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                     ),
                                                                                                     options: FFButtonOptions(
                                                                                                       height: 30.0,
-                                                                                                      padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                      iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                      padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                      iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                       color: FlutterFlowTheme.of(context).secondary,
                                                                                                       textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                             fontFamily: 'Readex Pro',
@@ -10723,7 +10725,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                             letterSpacing: 0.0,
                                                                                                           ),
                                                                                                       elevation: 2.0,
-                                                                                                      borderSide: const BorderSide(
+                                                                                                      borderSide: BorderSide(
                                                                                                         color: Colors.transparent,
                                                                                                         width: 1.0,
                                                                                                       ),
@@ -10734,7 +10736,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   '432k9wof' /* disha.jain@elde.co.in */,
@@ -10767,7 +10769,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                       ),
                                                                                                   minFontSize: 12.0,
                                                                                                 ),
-                                                                                              ].divide(const SizedBox(width: 10.0)),
+                                                                                              ].divide(SizedBox(width: 10.0)),
                                                                                             ),
                                                                                           ],
                                                                                         ),
@@ -10785,7 +10787,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 ),
                                                               ),
                                                               Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         8.0,
@@ -10803,7 +10805,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryBackground,
-                                                                    boxShadow: const [
+                                                                    boxShadow: [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -10822,7 +10824,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             12.0,
@@ -10864,7 +10866,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 ),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                 child: AutoSizeText(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '8dgm8szc' /* 2 */,
@@ -10883,7 +10885,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 12.0,
                                                                                 0.0,
@@ -10895,7 +10897,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               scrollDirection: Axis.vertical,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -10916,7 +10918,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -10928,7 +10930,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: AutoSizeText(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         'b4g2asi8' /* Ravi Sabale */,
@@ -10951,8 +10953,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                   ),
                                                                                                   options: FFButtonOptions(
                                                                                                     height: 30.0,
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Readex Pro',
@@ -10961,7 +10963,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                           letterSpacing: 0.0,
                                                                                                         ),
                                                                                                     elevation: 2.0,
-                                                                                                    borderSide: const BorderSide(
+                                                                                                    borderSide: BorderSide(
                                                                                                       color: Colors.transparent,
                                                                                                       width: 1.0,
                                                                                                     ),
@@ -10971,7 +10973,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'rkrtqts1' /* ravi.sabale@gmail.com */,
@@ -11011,7 +11013,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                   ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation16']!),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -11032,7 +11034,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -11044,7 +11046,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: AutoSizeText(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         'e604ky87' /* Nishant Desai */,
@@ -11067,8 +11069,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                   ),
                                                                                                   options: FFButtonOptions(
                                                                                                     height: 30.0,
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Readex Pro',
@@ -11077,7 +11079,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                           letterSpacing: 0.0,
                                                                                                         ),
                                                                                                     elevation: 2.0,
-                                                                                                    borderSide: const BorderSide(
+                                                                                                    borderSide: BorderSide(
                                                                                                       color: Colors.transparent,
                                                                                                       width: 1.0,
                                                                                                     ),
@@ -11087,7 +11089,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   '7umprg0s' /* nishant.desai@gmail.com */,
@@ -11136,7 +11138,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                 ),
                                                               ),
                                                               Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         12.0,
                                                                         8.0,
@@ -11154,7 +11156,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .secondaryBackground,
-                                                                    boxShadow: const [
+                                                                    boxShadow: [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             4.0,
@@ -11173,7 +11175,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             12.0,
                                                                             12.0,
@@ -11215,7 +11217,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                 ),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                alignment: AlignmentDirectional(0.0, 0.0),
                                                                                 child: AutoSizeText(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'akxp9h8g' /* 2 */,
@@ -11234,7 +11236,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                         Expanded(
                                                                           child:
                                                                               Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 12.0,
                                                                                 0.0,
@@ -11246,7 +11248,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                               scrollDirection: Axis.vertical,
                                                                               children: [
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -11267,7 +11269,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -11279,7 +11281,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: Text(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         '69d6sbwt' /* Prajessh */,
@@ -11301,8 +11303,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                   ),
                                                                                                   options: FFButtonOptions(
                                                                                                     height: 30.0,
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Readex Pro',
@@ -11311,7 +11313,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                           letterSpacing: 0.0,
                                                                                                         ),
                                                                                                     elevation: 2.0,
-                                                                                                    borderSide: const BorderSide(
+                                                                                                    borderSide: BorderSide(
                                                                                                       color: Colors.transparent,
                                                                                                       width: 1.0,
                                                                                                     ),
@@ -11321,7 +11323,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'anurew6m' /* prajeesh.sht@saintgobain.com */,
@@ -11355,7 +11357,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                   ).animateOnPageLoad(animationsMap['containerOnPageLoadAnimation18']!),
                                                                                 ),
                                                                                 Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 8.0),
                                                                                   child: InkWell(
                                                                                     splashColor: Colors.transparent,
                                                                                     focusColor: Colors.transparent,
@@ -11376,7 +11378,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                         ),
                                                                                       ),
                                                                                       child: Padding(
-                                                                                        padding: const EdgeInsets.all(12.0),
+                                                                                        padding: EdgeInsets.all(12.0),
                                                                                         child: Column(
                                                                                           mainAxisSize: MainAxisSize.max,
                                                                                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -11388,7 +11390,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               children: [
                                                                                                 Expanded(
                                                                                                   child: Padding(
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
                                                                                                     child: Text(
                                                                                                       FFLocalizations.of(context).getText(
                                                                                                         '9qjpa4it' /* Amit  Shah */,
@@ -11410,8 +11412,8 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                   ),
                                                                                                   options: FFButtonOptions(
                                                                                                     height: 30.0,
-                                                                                                    padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
-                                                                                                    iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                                                                                                    padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                                                                                                    iconPadding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                                                                                                     color: FlutterFlowTheme.of(context).secondary,
                                                                                                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                                           fontFamily: 'Readex Pro',
@@ -11420,7 +11422,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                                           letterSpacing: 0.0,
                                                                                                         ),
                                                                                                     elevation: 2.0,
-                                                                                                    borderSide: const BorderSide(
+                                                                                                    borderSide: BorderSide(
                                                                                                       color: Colors.transparent,
                                                                                                       width: 1.0,
                                                                                                     ),
@@ -11430,7 +11432,7 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                                               ],
                                                                                             ),
                                                                                             Padding(
-                                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+                                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                                                                                               child: AutoSizeText(
                                                                                                 FFLocalizations.of(context).getText(
                                                                                                   'ffop1n08' /* amit.shah@gmail.com */,
@@ -11472,26 +11474,26 @@ class _CRMDashboardWidgetState extends State<CRMDashboardWidget>
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ].divide(const SizedBox(
+                                                            ].divide(SizedBox(
                                                                 width: 15.0)),
                                                           ),
                                                         ),
-                                                      ].divide(const SizedBox(
+                                                      ].divide(SizedBox(
                                                           height: 10.0)),
                                                     ),
                                                   ),
                                                 ),
                                             ]
-                                                .divide(const SizedBox(height: 10.0))
+                                                .divide(SizedBox(height: 10.0))
                                                 .addToStart(
-                                                    const SizedBox(height: 10.0)),
+                                                    SizedBox(height: 10.0)),
                                           ),
                                         ),
                                     ],
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       'h50wg23m' /* Opportunities Coming Soon !!! */,

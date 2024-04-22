@@ -1,6 +1,12 @@
+import '/company_management/edit_company/edit_company_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'view_company_widget.dart' show ViewCompanyWidget;
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class ViewCompanyModel extends FlutterFlowModel<ViewCompanyWidget> {
   ///  State fields for stateful widgets in this component.

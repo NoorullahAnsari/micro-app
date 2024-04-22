@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'remarks_model.dart';
 export 'remarks_model.dart';
 
@@ -40,7 +42,7 @@ class _RemarksWidgetState extends State<RemarksWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       width: 120.0,
       child: TextFormField(
         controller: _model.textController,

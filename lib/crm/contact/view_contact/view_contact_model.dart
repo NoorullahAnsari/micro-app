@@ -1,8 +1,16 @@
+import '/backend/supabase/supabase.dart';
+import '/crm/contact/edit_contact/edit_contact_widget.dart';
 import '/crm/contact/t_a_g_s/t_a_g_s_widget.dart';
+import '/flutter_flow/flutter_flow_choice_chips.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'view_contact_widget.dart' show ViewContactWidget;
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class ViewContactModel extends FlutterFlowModel<ViewContactWidget> {
   ///  State fields for stateful widgets in this component.

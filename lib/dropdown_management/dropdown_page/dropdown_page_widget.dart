@@ -8,7 +8,10 @@ import '/dropdown_management/outward_material_outward_warehouse/outward_material
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'dropdown_page_model.dart';
 export 'dropdown_page_model.dart';
 
@@ -92,7 +95,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                   ),
                 }.withoutNulls,
                 extra: <String, dynamic>{
-                  kTransitionInfoKey: const TransitionInfo(
+                  kTransitionInfoKey: TransitionInfo(
                     hasTransition: true,
                     transitionType: PageTransitionType.fade,
                     duration: Duration(milliseconds: 0),
@@ -114,7 +117,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
           ),
           actions: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -174,13 +177,13 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                 ),
               Expanded(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, -1.0),
+                  alignment: AlignmentDirectional(0.0, -1.0),
                   child: Container(
                     width: double.infinity,
-                    constraints: const BoxConstraints(
+                    constraints: BoxConstraints(
                       maxWidth: 970.0,
                     ),
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
@@ -197,7 +200,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                 Container(
                                   width: double.infinity,
                                   height: 24.0,
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                 ),
                               TextFormField(
                                 controller: _model.textController,
@@ -286,7 +289,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                                 insetPadding: EdgeInsets.zero,
                                                 backgroundColor:
                                                     Colors.transparent,
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                         0.0, 0.0)
                                                     .resolve(Directionality.of(
                                                         context)),
@@ -352,7 +355,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                                 .secondaryText,
                                             size: 20.0,
                                           ),
-                                          tileColor: const Color(0xFFFDFBFB),
+                                          tileColor: Color(0xFFFDFBFB),
                                           dense: false,
                                         ),
                                       ),
@@ -373,7 +376,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -438,7 +441,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                               .secondaryText,
                                           size: 20.0,
                                         ),
-                                        tileColor: const Color(0xFFFDFBFB),
+                                        tileColor: Color(0xFFFDFBFB),
                                         dense: false,
                                       ),
                                     ),
@@ -459,7 +462,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -524,7 +527,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                               .secondaryText,
                                           size: 20.0,
                                         ),
-                                        tileColor: const Color(0xFFFDFBFB),
+                                        tileColor: Color(0xFFFDFBFB),
                                         dense: false,
                                       ),
                                     ),
@@ -545,7 +548,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -610,7 +613,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                               .secondaryText,
                                           size: 20.0,
                                         ),
-                                        tileColor: const Color(0xFFFDFBFB),
+                                        tileColor: Color(0xFFFDFBFB),
                                         dense: false,
                                       ),
                                     ),
@@ -631,7 +634,7 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -696,14 +699,14 @@ class _DropdownPageWidgetState extends State<DropdownPageWidget> {
                                               .secondaryText,
                                           size: 20.0,
                                         ),
-                                        tileColor: const Color(0xFFFDFBFB),
+                                        tileColor: Color(0xFFFDFBFB),
                                         dense: false,
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
-                            ].divide(const SizedBox(height: 10.0)),
+                            ].divide(SizedBox(height: 10.0)),
                           ),
                         ),
                       ],

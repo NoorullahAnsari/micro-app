@@ -7,6 +7,7 @@ import '/flutter_flow/form_field_controller.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'create_company_model.dart';
@@ -66,9 +67,9 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
     return Container(
       width: double.infinity,
       height: double.infinity,
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Align(
-        alignment: const AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: SingleChildScrollView(
           primary: false,
           child: Column(
@@ -76,14 +77,14 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                 child: Container(
-                  constraints: const BoxConstraints(
+                  constraints: BoxConstraints(
                     maxWidth: 500.0,
                   ),
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 4.0,
                         color: Color(0x33000000),
@@ -96,7 +97,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                     borderRadius: BorderRadius.circular(20.0),
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Form(
                       key: _model.formKey,
                       autovalidateMode: AutovalidateMode.always,
@@ -106,9 +107,9 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
                                 child: AutoSizeText(
                                   FFLocalizations.of(context).getText(
@@ -128,9 +129,9 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                               ),
                             ),
                             Container(
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 20.0, 0.0),
                                 child: SingleChildScrollView(
                                   child: Column(
@@ -141,7 +142,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                         children: [
                                           Expanded(
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 0.0),
                                               child: TextFormField(
@@ -254,7 +255,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -361,11 +362,11 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                                   .asValidator(context),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 7.0)),
+                                        ].divide(SizedBox(width: 7.0)),
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: FlutterFlowDropDown<String>(
                                           controller: _model
                                                   .dropDownValueController ??=
@@ -409,7 +410,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                           borderWidth: 2.0,
                                           borderRadius: 8.0,
                                           margin:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 4.0, 16.0, 4.0),
                                           hidesUnderline: true,
                                           isOverButton: true,
@@ -421,7 +422,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
                                           Expanded(
-                                            child: SizedBox(
+                                            child: Container(
                                               width: 120.0,
                                               child: TextFormField(
                                                 controller:
@@ -431,7 +432,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                                 onChanged: (_) =>
                                                     EasyDebounce.debounce(
                                                   '_model.textController3',
-                                                  const Duration(milliseconds: 2000),
+                                                  Duration(milliseconds: 2000),
                                                   () async {
                                                     safeSetState(() {
                                                       _model.simpleSearchResults =
@@ -449,6 +450,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                                               .map((r) =>
                                                                   r.object)
                                                               .toList();
+                                                      ;
                                                     });
                                                   },
                                                 ),
@@ -552,11 +554,13 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 10.0)),
+                                        ].divide(SizedBox(width: 10.0)),
                                       ),
                                       Builder(
                                         builder: (context) {
                                           if (_model.textController3.text !=
+                                                  null &&
+                                              _model.textController3.text !=
                                                   '') {
                                             return Builder(
                                               builder: (context) {
@@ -575,7 +579,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                                     return Theme(
                                                       data: ThemeData(
                                                         checkboxTheme:
-                                                            const CheckboxThemeData(
+                                                            CheckboxThemeData(
                                                           visualDensity:
                                                               VisualDensity
                                                                   .standard,
@@ -667,7 +671,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                                     return Theme(
                                                       data: ThemeData(
                                                         checkboxTheme:
-                                                            const CheckboxThemeData(
+                                                            CheckboxThemeData(
                                                           visualDensity:
                                                               VisualDensity
                                                                   .standard,
@@ -744,13 +748,13 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                           }
                                         },
                                       ),
-                                    ].divide(const SizedBox(height: 10.0)),
+                                    ].divide(SizedBox(height: 10.0)),
                                   ),
                                 ),
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -758,7 +762,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                   Expanded(
                                     child: Align(
                                       alignment:
-                                          const AlignmentDirectional(0.0, 0.05),
+                                          AlignmentDirectional(0.0, 0.05),
                                       child: FFButtonWidget(
                                         onPressed: () async {
                                           Navigator.pop(context);
@@ -771,10 +775,10 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                           width: 240.0,
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
@@ -788,7 +792,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                                         .primaryText,
                                                 letterSpacing: 0.0,
                                               ),
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -801,7 +805,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                   Expanded(
                                     child: Align(
                                       alignment:
-                                          const AlignmentDirectional(0.0, 0.05),
+                                          AlignmentDirectional(0.0, 0.05),
                                       child: FFButtonWidget(
                                         onPressed: () async {
                                           if (_model.formKey.currentState ==
@@ -859,10 +863,10 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                           width: 240.0,
                                           height: 40.0,
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .secondary,
@@ -877,7 +881,7 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                                 letterSpacing: 0.0,
                                               ),
                                           elevation: 2.0,
-                                          borderSide: const BorderSide(
+                                          borderSide: BorderSide(
                                             color: Colors.transparent,
                                             width: 1.0,
                                           ),
@@ -888,13 +892,13 @@ class _CreateCompanyWidgetState extends State<CreateCompanyWidget> {
                                     ),
                                   ),
                                 ]
-                                    .divide(const SizedBox(width: 10.0))
-                                    .around(const SizedBox(width: 10.0)),
+                                    .divide(SizedBox(width: 10.0))
+                                    .around(SizedBox(width: 10.0)),
                               ),
                             ),
                           ]
-                              .addToStart(const SizedBox(height: 15.0))
-                              .addToEnd(const SizedBox(height: 15.0)),
+                              .addToStart(SizedBox(height: 15.0))
+                              .addToEnd(SizedBox(height: 15.0)),
                         ),
                       ),
                     ),

@@ -7,6 +7,8 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'scan_outward_moving_average_model.dart';
 export 'scan_outward_moving_average_model.dart';
 
@@ -97,7 +99,7 @@ class _ScanOutwardMovingAverageWidgetState
   Widget build(BuildContext context) {
     return FutureBuilder<List<ItemManagementRow>>(
       future: FFAppState().items(
-        uniqueQueryKey: widget.authenticatedCompany?.id.toString(),
+        uniqueQueryKey: widget.authenticatedCompany?.id?.toString(),
         requestFn: () => ItemManagementTable().queryRows(
           queryFn: (q) => q.eq(
             'company',
@@ -124,9 +126,9 @@ class _ScanOutwardMovingAverageWidgetState
         return Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: const BoxDecoration(),
+          decoration: BoxDecoration(),
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: SingleChildScrollView(
               primary: false,
               child: Column(
@@ -135,14 +137,14 @@ class _ScanOutwardMovingAverageWidgetState
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                     child: Container(
-                      constraints: const BoxConstraints(
+                      constraints: BoxConstraints(
                         maxWidth: 670.0,
                       ),
                       decoration: BoxDecoration(
                         color: FlutterFlowTheme.of(context).secondaryBackground,
-                        boxShadow: const [
+                        boxShadow: [
                           BoxShadow(
                             blurRadius: 4.0,
                             color: Color(0x33000000),
@@ -155,7 +157,7 @@ class _ScanOutwardMovingAverageWidgetState
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Form(
                           key: _model.formKey,
                           autovalidateMode: AutovalidateMode.always,
@@ -165,9 +167,9 @@ class _ScanOutwardMovingAverageWidgetState
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 0.0, 15.0),
                                     child: AutoSizeText(
                                       FFLocalizations.of(context).getText(
@@ -187,9 +189,9 @@ class _ScanOutwardMovingAverageWidgetState
                                   ),
                                 ),
                                 Container(
-                                  decoration: const BoxDecoration(),
+                                  decoration: BoxDecoration(),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         20.0, 0.0, 20.0, 0.0),
                                     child: SingleChildScrollView(
                                       primary: false,
@@ -198,7 +200,7 @@ class _ScanOutwardMovingAverageWidgetState
                                         children: [
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(-1.0, 0.0),
+                                                AlignmentDirectional(-1.0, 0.0),
                                             child: SingleChildScrollView(
                                               child: Column(
                                                 mainAxisSize: MainAxisSize.max,
@@ -227,7 +229,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
@@ -252,11 +254,11 @@ class _ScanOutwardMovingAverageWidgetState
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     -1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -288,7 +290,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       Row(
@@ -298,7 +300,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
@@ -324,7 +326,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -351,7 +353,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       Row(
@@ -361,7 +363,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
@@ -387,7 +389,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -423,7 +425,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       if (widget
@@ -437,7 +439,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                             Container(
                                                               width: 130.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Text(
                                                                 FFLocalizations.of(
                                                                         context)
@@ -546,7 +548,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                         ),
                                                       Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 -1.0, 0.0),
                                                         child: Row(
                                                           mainAxisSize:
@@ -555,7 +557,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                             Container(
                                                               width: 130.0,
                                                               decoration:
-                                                                  const BoxDecoration(),
+                                                                  BoxDecoration(),
                                                               child: Text(
                                                                 FFLocalizations.of(
                                                                         context)
@@ -580,7 +582,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                             ),
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -612,7 +614,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                     ),
                                                               ),
                                                             ),
-                                                          ].divide(const SizedBox(
+                                                          ].divide(SizedBox(
                                                               width: 5.0)),
                                                         ),
                                                       ),
@@ -623,7 +625,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                           Container(
                                                             width: 130.0,
                                                             decoration:
-                                                                const BoxDecoration(),
+                                                                BoxDecoration(),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
@@ -649,7 +651,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                           Expanded(
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -681,7 +683,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                               ),
                                                             ),
                                                           ),
-                                                        ].divide(const SizedBox(
+                                                        ].divide(SizedBox(
                                                             width: 5.0)),
                                                       ),
                                                       Builder(
@@ -689,7 +691,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                           final parameters = widget
                                                                   .itemMasterParameters
                                                                   ?.dropdownValues
-                                                                  .toList() ??
+                                                                  ?.toList() ??
                                                               [];
                                                           return SingleChildScrollView(
                                                             primary: false,
@@ -713,7 +715,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                       width:
                                                                           130.0,
                                                                       decoration:
-                                                                          const BoxDecoration(),
+                                                                          BoxDecoration(),
                                                                       child:
                                                                           Text(
                                                                         parametersItem,
@@ -751,12 +753,12 @@ class _ScanOutwardMovingAverageWidgetState
                                                                                 0.0,
                                                                           ),
                                                                     ),
-                                                                  ].divide(const SizedBox(
+                                                                  ].divide(SizedBox(
                                                                       width:
                                                                           11.0)),
                                                                 );
                                                               }).divide(
-                                                                  const SizedBox(
+                                                                  SizedBox(
                                                                       height:
                                                                           7.0)),
                                                             ),
@@ -785,7 +787,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                               final values = widget
                                                                       .inventoryParameters
                                                                       ?.dropdownValues
-                                                                      .toList() ??
+                                                                      ?.toList() ??
                                                                   [];
                                                               return SingleChildScrollView(
                                                                 primary: false,
@@ -810,7 +812,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                           width:
                                                                               130.0,
                                                                           decoration:
-                                                                              const BoxDecoration(),
+                                                                              BoxDecoration(),
                                                                           child:
                                                                               Text(
                                                                             valuesItem,
@@ -837,7 +839,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                             child:
                                                                                 ItemparameterWidget(
                                                                               key: Key(
-                                                                                'Key1c2_$valuesItem',
+                                                                                'Key1c2_${valuesItem}',
                                                                               ),
                                                                               value: () {
                                                                                 if (valuesItem == 'HR Coil No') {
@@ -860,7 +862,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                         ),
                                                                       ],
                                                                     );
-                                                                  }).divide(const SizedBox(
+                                                                  }).divide(SizedBox(
                                                                       height:
                                                                           10.0)),
                                                                 ),
@@ -894,7 +896,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                 children: [
                                                                   Expanded(
                                                                     child:
-                                                                        SizedBox(
+                                                                        Container(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -1000,7 +1002,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                   ),
                                                                   Expanded(
                                                                     child:
-                                                                        SizedBox(
+                                                                        Container(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -1104,7 +1106,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
@@ -1232,7 +1234,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                   ),
                                                                   Expanded(
                                                                     child:
-                                                                        SizedBox(
+                                                                        Container(
                                                                       width:
                                                                           150.0,
                                                                       child:
@@ -1328,7 +1330,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                ].divide(const SizedBox(
+                                                                ].divide(SizedBox(
                                                                     width:
                                                                         5.0)),
                                                               ),
@@ -1457,25 +1459,25 @@ class _ScanOutwardMovingAverageWidgetState
                                                       ),
                                                       Container(
                                                         decoration:
-                                                            const BoxDecoration(),
+                                                            BoxDecoration(),
                                                       ),
                                                     ],
                                                   ),
                                                   Container(
-                                                    decoration: const BoxDecoration(),
+                                                    decoration: BoxDecoration(),
                                                   ),
                                                 ].divide(
-                                                    const SizedBox(height: 10.0)),
+                                                    SizedBox(height: 10.0)),
                                               ),
                                             ),
                                           ),
-                                        ].divide(const SizedBox(height: 10.0)),
+                                        ].divide(SizedBox(height: 10.0)),
                                       ),
                                     ),
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -1483,7 +1485,7 @@ class _ScanOutwardMovingAverageWidgetState
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.05),
+                                              AlignmentDirectional(0.0, 0.05),
                                           child: FFButtonWidget(
                                             onPressed: () async {
                                               Navigator.pop(context);
@@ -1495,9 +1497,9 @@ class _ScanOutwardMovingAverageWidgetState
                                             options: FFButtonOptions(
                                               width: 240.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -1512,7 +1514,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                         .primaryText,
                                                     letterSpacing: 0.0,
                                                   ),
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -1525,7 +1527,7 @@ class _ScanOutwardMovingAverageWidgetState
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.05),
+                                              AlignmentDirectional(0.0, 0.05),
                                           child: FFButtonWidget(
                                             onPressed: () async {
                                               Navigator.pop(context);
@@ -1537,9 +1539,9 @@ class _ScanOutwardMovingAverageWidgetState
                                             options: FFButtonOptions(
                                               width: 240.0,
                                               height: 40.0,
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
-                                              iconPadding: const EdgeInsetsDirectional
+                                              iconPadding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 0.0),
                                               color:
                                                   FlutterFlowTheme.of(context)
@@ -1555,7 +1557,7 @@ class _ScanOutwardMovingAverageWidgetState
                                                     letterSpacing: 0.0,
                                                   ),
                                               elevation: 2.0,
-                                              borderSide: const BorderSide(
+                                              borderSide: BorderSide(
                                                 color: Colors.transparent,
                                                 width: 1.0,
                                               ),
@@ -1566,13 +1568,13 @@ class _ScanOutwardMovingAverageWidgetState
                                         ),
                                       ),
                                     ]
-                                        .divide(const SizedBox(width: 10.0))
-                                        .around(const SizedBox(width: 10.0)),
+                                        .divide(SizedBox(width: 10.0))
+                                        .around(SizedBox(width: 10.0)),
                                   ),
                                 ),
                               ]
-                                  .addToStart(const SizedBox(height: 15.0))
-                                  .addToEnd(const SizedBox(height: 15.0)),
+                                  .addToStart(SizedBox(height: 15.0))
+                                  .addToEnd(SizedBox(height: 15.0)),
                             ),
                           ),
                         ),

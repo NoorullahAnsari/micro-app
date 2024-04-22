@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:typed_data';
+import '../schema/structs/index.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
 import 'api_manager.dart';
@@ -14,8 +16,8 @@ class CreateUserCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "email": "$email",
-  "password": "$password"
+  "email": "${email}",
+  "password": "${password}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Create User',
@@ -67,7 +69,7 @@ class InsertUserCall {
     String? inventoryModule = '',
   }) async {
     final ffApiRequestBody = '''
-{ "email": "$email", "password": "$password", "fullName": "$fullName", "phone": $phone, "company": "$company", "status": "$status", "isOwner": $isOwner, "isSuperAdmin": $isSuperAdmin, "userModule": "$userModule", "itemMasterModule": "$itemMasterModule", "inventoryModule": "$inventoryModule" }''';
+{ "email": "${email}", "password": "${password}", "fullName": "${fullName}", "phone": ${phone}, "company": "${company}", "status": "${status}", "isOwner": ${isOwner}, "isSuperAdmin": ${isSuperAdmin}, "userModule": "${userModule}", "itemMasterModule": "${itemMasterModule}", "inventoryModule": "${inventoryModule}" }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Insert User',
       apiUrl: 'https://ohxojdqymoudkyfoozps.supabase.co/rest/v1/userManagement',
@@ -104,8 +106,8 @@ class LoginCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "email": "$email",
-  "password": "$password"
+  "email": "${email}",
+  "password": "${password}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Login',
@@ -147,8 +149,8 @@ class UpdateUserCall {
   }) async {
     final ffApiRequestBody = '''
 {
-  "email": "$email",
-  "password": "$password"
+  "email": "${email}",
+  "password": "${password}"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'Update User',
@@ -157,7 +159,7 @@ class UpdateUserCall {
       headers: {
         'apikey':
             'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9oeG9qZHF5bW91ZGt5Zm9venBzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDk5NTgyMjMsImV4cCI6MjAyNTUzNDIyM30.g6dLgSSeUT0uWwS_4IRdLqwmA9SNkjyZmDraGKe6-I8',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
         'Content-Type': 'application/json',
       },
       params: {},

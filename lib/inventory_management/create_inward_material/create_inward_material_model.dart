@@ -1,10 +1,20 @@
+import '/backend/schema/structs/index.dart';
 import '/backend/supabase/supabase.dart';
 import '/components/side_nav_widget.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/inventory_management/add_item/add_item_widget.dart';
+import '/inventory_management/add_item_copy/add_item_copy_widget.dart';
 import '/item_management/itemparameter/itemparameter_widget.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'create_inward_material_widget.dart' show CreateInwardMaterialWidget;
 import 'package:flutter/material.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class CreateInwardMaterialModel
     extends FlutterFlowModel<CreateInwardMaterialWidget> {
